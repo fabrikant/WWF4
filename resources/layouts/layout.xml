@@ -25,7 +25,7 @@
 
 	 <drawable id="SunEvents" class="SunEventsDrawable">
 		<param name="locX">33</param>
-		<param name="locY">158</param>
+		<param name="locY">157</param>
 		<param name="width">174</param>
 		<param name="height">25</param>
 	</drawable>
@@ -37,5 +37,24 @@
 		<param name="height">50</param>
 	</drawable>
 	 
+	 <drawable id="Data1" class="DataDrawable">
+		<param name="locX">33</param>
+		<param name="locY">182</param>
+		<param name="width">87</param>
+		<param name="height">25</param>
+	</drawable>
 	 
+	 <drawable id="Data2" class="DataDrawable">
+		<param name="locX">120</param>
+		<param name="locY">182</param>
+		<param name="width">87</param>
+		<param name="height">25</param>
+	</drawable>
+
+	 <drawable id="Top" class="TopDrawable">
+		<param name="locX">0</param>
+		<param name="locY">0</param>
+		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
+		<param name="height">32</param>
+	</drawable>
 </layout>

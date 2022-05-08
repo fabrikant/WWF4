@@ -62,13 +62,13 @@ class WeatherDrawable extends BasicDrawable{
 	}
 	
 	function readWeather(){
-//		if (lastWeatharUpdate == null){
-//			return;
-//		}else if (lastWeaterRead != null){
-//			if(lastWeaterRead == lastWeatharUpdate){
-//				return;
-//			}
-//		}
+		if (lastWeatharUpdate == null){
+			return;
+		}else if (lastWeaterRead != null){
+			if(lastWeaterRead == lastWeatharUpdate){
+				return;
+			}
+		}
 		
 		//need read
 		//load data
@@ -113,7 +113,7 @@ class WeatherDrawable extends BasicDrawable{
 		var windDirection = windDirection((height*0.4).toNumber(), direction.toNumber(), [offset, 0], [windArrowSize, windArrowSize]);
 		dc.fillPolygon(windDirection);
 		
-		dc.drawText(offset+10, height*2/3, fontSmall, speed, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+		dc.drawText(offset+(width-offset)/2, height*2/3, fontSmall, speed, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		
 		
 	}

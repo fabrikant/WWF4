@@ -50,17 +50,11 @@ class WWF4View extends WatchUi.WatchFace {
 				}
 			}
 		}
+		Application.getApp().registerEvents();
     }
 
     // Update the view
     function onUpdate(dc as Dc) {
-        // Get and show the current time
-//        var clockTime = System.getClockTime();
-//        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
-//        var view = View.findDrawableById("TimeLabel") as Text;
-//        view.setText(timeString);
-
-        // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
     }
 

@@ -22,7 +22,7 @@ class BasicDrawable extends WatchUi.Drawable{
 	
 	public function drawBorder(dc as Graphics.Dc){
 		return;
-		dc.setColor(Global.getForegraundColor() , Global.getBackgroundColor());
+		dc.setColor(Global.getAccentColor() , Global.getAccentColor());
 		dc.drawRectangle(locX, locY, width, height);
 	}
 	
