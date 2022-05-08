@@ -3,9 +3,9 @@
 	<property id="keyOW" type="string">69bcb8de48220cd2b2fb7a8400c68d1e</property>
 	<property id="WinSpeeddUnit" type="number">0</property>
 	
-	<property id="ShowBluetooth" type="number">0</property>
-	<property id="ShowAlarm" type="boolean">true</property>
-	<property id="ShowDND" type="boolean">true</property>
+	<property id="ShowBluetooth" type="number">1</property>
+	<property id="ShowAlarm" type="boolean">false</property>
+	<property id="ShowDND" type="boolean">false</property>
 	<property id="ShowDate" type="boolean">true</property>
 	
 	

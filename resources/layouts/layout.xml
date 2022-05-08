@@ -6,7 +6,6 @@
 		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
 		<param name="height">Toybox.System.getDeviceSettings().screenHeight</param>
 	</drawable>
-	
  	    
 	 <drawable id="Time" class="TimeDrawable">
 		<param name="locX">33</param>
@@ -63,6 +62,21 @@
 		<param name="locY">207</param>
 		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
 		<param name="height">33</param>
+	</drawable>
+
+	<drawable id="Decoration" class="DecorationDrawable">
+		<param name="locX">0</param>
+		<param name="locY">0</param>
+		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
+		<param name="height">Toybox.System.getDeviceSettings().screenHeight</param>
+		
+		<param name="decoration">[
+			{:method=>:setPenWidth, :params => [2]},
+			{:method=>:drawLine, :params => [40,182,200,182]},
+			<!-- 
+			{:method=>:drawLine, :params => [Toybox.System.getDeviceSettings().screenWidth/2,182,Toybox.System.getDeviceSettings().screenWidth/2,197]},
+			 -->
+			]</param>
 	</drawable>
 
 	 <drawable id="Circle" class="CircleDrawable">

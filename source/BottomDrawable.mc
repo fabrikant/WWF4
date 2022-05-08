@@ -17,7 +17,7 @@ class BottomDrawable extends BasicDrawable{
 		dc.setColor(Global.getForegraundColor(), Global.getForegraundColor());
 		dc.clear();
 		
-		if (Application.Properties.getValue("ShowDND")){
+		if (Application.Properties.getValue("ShowDate")){
 			dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
 			var now = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
 			var center = getCenterForFont(fontSmall);
