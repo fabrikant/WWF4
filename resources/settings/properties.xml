@@ -6,6 +6,7 @@
 	<property id="ShowBluetooth" type="number">0</property>
 	<property id="ShowAlarm" type="boolean">true</property>
 	<property id="ShowDND" type="boolean">true</property>
+	<property id="ShowDate" type="boolean">true</property>
 	
 	
 	<property id="Data1" type="number">0</property>

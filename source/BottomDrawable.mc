@@ -17,11 +17,13 @@ class BottomDrawable extends BasicDrawable{
 		dc.setColor(Global.getForegraundColor(), Global.getForegraundColor());
 		dc.clear();
 		
-		dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
-		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
-		var center = getCenterForFont(fontSmall);
-		var value = now.day_of_week+", "+now.day+" "+now.month;
-		dc.drawText(center[0], center[1], fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+		if (Application.Properties.getValue("ShowDND")){
+			dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
+			var now = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
+			var center = getCenterForFont(fontSmall);
+			var value = now.day_of_week+", "+now.day+" "+now.month;
+			dc.drawText(center[0], center[1], fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+		}
 		drawBorder(dc);
 	}
 	
