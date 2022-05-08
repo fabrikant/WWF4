@@ -17,7 +17,7 @@ class TopDrawable extends BasicDrawable{
 		dc.clear();
 
 		dc.setPenWidth(1);
-		dc.setColor(Global.getAccentColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
 		var value = Math.round(System.getSystemStats().battery);
 		var k = 0.45;
 		
@@ -37,18 +37,17 @@ class TopDrawable extends BasicDrawable{
 		dc.fillRectangle(external[0]+1, external[1]+1, external[2]-2, external[3]-2);
 		
 		if (value > 20){
-			dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_TRANSPARENT);
+			dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
 		}else{
-			dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
+			dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
 		}
 
 		var inner = [external[0]+2,external[1]+2,external[2]-4,external[3]-4];
 		dc.fillRectangle(inner[0], inner[1], inner[2]*value/100, inner[3]);
 
 		var center = getCenterForFont(fontSmall);
-		dc.setColor(Global.getAccentColor(), Graphics.COLOR_TRANSPARENT);
-		//dc.drawText(locX+ width/2, center[1], fontSmall, value.format("%d")+"%", Graphics.TEXT_JUSTIFY_LEFT |Graphics.TEXT_JUSTIFY_VCENTER);
-		dc.drawText(locX+ width/2, center[1], fontSmall, 100.format("%d")+"%", Graphics.TEXT_JUSTIFY_LEFT |Graphics.TEXT_JUSTIFY_VCENTER);
+		dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
+		dc.drawText(locX+ width/2, center[1], fontSmall, value.format("%d")+"%", Graphics.TEXT_JUSTIFY_LEFT |Graphics.TEXT_JUSTIFY_VCENTER);
 		
 		
 		drawBorder(dc);

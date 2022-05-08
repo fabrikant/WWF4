@@ -16,13 +16,6 @@
 		<param name="autocenter">false</param>
 	</drawable>
 	 
-	 <drawable id="Circle" class="CircleDrawable">
-		<param name="locX">155</param>
-		<param name="locY">25</param>
-		<param name="width">58</param>
-		<param name="height">58</param>
-	</drawable>
-
 	 <drawable id="SunEvents" class="SunEventsDrawable">
 		<param name="locX">33</param>
 		<param name="locY">157</param>
@@ -33,7 +26,7 @@
 	 <drawable id="Weather" class="WeatherDrawable">
 		<param name="locX">33</param>
 		<param name="locY">33</param>
-		<param name="width">122</param>
+		<param name="width">121</param>
 		<param name="height">50</param>
 	</drawable>
 	 
@@ -57,4 +50,27 @@
 		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
 		<param name="height">32</param>
 	</drawable>
+
+	 <drawable id="Right" class="RightDrawable">
+		<param name="locX">207</param>
+		<param name="locY">0</param>
+		<param name="width">33</param>
+		<param name="height">Toybox.System.getDeviceSettings().screenHeight</param>
+	</drawable>
+	
+	 <drawable id="Bottom" class="BottomDrawable">
+		<param name="locX">0</param>
+		<param name="locY">207</param>
+		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
+		<param name="height">33</param>
+	</drawable>
+
+	 <drawable id="Circle" class="CircleDrawable">
+		<param name="locX">154</param>
+		<param name="locY">25</param>
+		<param name="width">58</param>
+		<param name="height">58</param>
+	</drawable>
+
+	
 </layout>
