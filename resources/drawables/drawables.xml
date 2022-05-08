@@ -1,0 +1,23 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+	
+	<bitmap id="heart" filename="png-25/heart.png">
+		<palette disableTransparency="false">
+		     <color>FF0000</color>
+		</palette>
+	</bitmap>
+	
+	<bitmap id="heartEmpty" filename="png-25/heart-empty.png">
+		<palette disableTransparency="false">
+		     <color>FF0000</color>
+		</palette>
+	</bitmap>
+
+	<bitmap id="sunEvent" filename="png-25/sun-event.png" >
+		<palette disableTransparency="false">
+		     <color>000000</color>
+		</palette>
+	</bitmap>
+	
+	
+</drawables>
