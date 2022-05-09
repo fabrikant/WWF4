@@ -100,20 +100,23 @@ class WeatherDrawable extends BasicDrawable{
 		dc.fillRoundedRectangle(0, 0, width+RADIUS_CORNER+1, height+RADIUS_CORNER+1, RADIUS_CORNER);
 		dc.setColor(Global.getForegraundColor(), Graphics.COLOR_TRANSPARENT);
 		
+		//image
 		var y = ((dc.getHeight() - image.getHeight())/2).toNumber();
 		dc.drawBitmap(offset, y, Application.loadResource(res));
 		
+		//temperature
 		offset += image.getWidth()+8;
 		var center = getCenterForFont(fontMed);
 		dc.drawText(offset, center[1]-locY, fontMed, temp, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
 		
+		//wind arrow
 		offset += dc.getTextWidthInPixels(temp, fontMed);
-		
 		var windArrowSize = (height*2/3).toNumber();
 		var windDirection = windDirection((height*0.4).toNumber(), direction.toNumber(), [offset, 0], [windArrowSize, windArrowSize]);
 		dc.fillPolygon(windDirection);
 		
-		dc.drawText(offset+(width-offset)/2, height*2/3, fontSmall, speed, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+		//wind speed
+		dc.drawText(offset+(width-offset)/2, height*2/3+2, fontSmall, speed, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		
 		
 	}

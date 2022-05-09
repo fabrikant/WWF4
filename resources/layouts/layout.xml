@@ -25,7 +25,7 @@
 	 <drawable id="Weather" class="WeatherDrawable">
 		<param name="locX">33</param>
 		<param name="locY">33</param>
-		<param name="width">121</param>
+		<param name="width">118</param>
 		<param name="height">50</param>
 	</drawable>
 	 
@@ -80,10 +80,10 @@
 	</drawable>
 
 	 <drawable id="Circle" class="CircleDrawable">
-		<param name="locX">154</param>
-		<param name="locY">25</param>
-		<param name="width">58</param>
-		<param name="height">58</param>
+		<param name="locX">148</param>
+		<param name="locY">23</param>
+		<param name="width">62</param>
+		<param name="height">62</param>
 	</drawable>
 
 	
