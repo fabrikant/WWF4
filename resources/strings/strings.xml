@@ -1,3 +1,13 @@
 <strings>
     <string id="AppName">WWF4</string>
+
+    <string id="keyOW">API key openweathermap.org</string>
+    <string id="WinSpeeddUnit">Wind speed unit</string>
+    <string id="ShowBluetooth">Show bluetooth indicator</string>
+    <string id="ShowAlarm">Show alarm indicator</string>
+    <string id="ShowDND">Show DND indicator</string>
+    <string id="ShowDate">Show date</string>
+
+    <string id="Data1">Data field left</string>
+    <string id="Data2">Data field right</string>
 </strings>

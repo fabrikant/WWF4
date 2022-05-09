@@ -59,6 +59,7 @@ class RightDrawable extends BasicDrawable{
 			}
 		}
 		
+		center[1] -= 8;
 		var top = center[1];
 		var bottom = center[1];
 		var x = locX + 5;

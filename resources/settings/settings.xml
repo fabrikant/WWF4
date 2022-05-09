@@ -1,0 +1,38 @@
+<settings>
+	
+	<setting propertyKey="@Properties.keyOW" title="@Strings.keyOW">
+		<settingConfig type="alphaNumeric" />
+	</setting>
+
+  	<setting propertyKey="@Properties.WinSpeeddUnit" title="@Strings.WinSpeeddUnit">
+		<settingConfig type="numeric" min="0" max="5"/>
+	</setting>
+
+ 	<setting propertyKey="@Properties.ShowBluetooth" title="@Strings.ShowBluetooth">
+		<settingConfig type="numeric" min="0" max="2"/>
+	</setting>
+
+	<setting propertyKey="@Properties.ShowAlarm"
+		title="@Strings.ShowAlarm">
+		<settingConfig type="boolean" />
+	</setting>
+	
+	<setting propertyKey="@Properties.ShowDND"
+		title="@Strings.ShowDND">
+		<settingConfig type="boolean" />
+	</setting>
+	
+	<setting propertyKey="@Properties.ShowDate"
+		title="@Strings.ShowDate">
+		<settingConfig type="boolean" />
+	</setting>
+
+ 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
+		<settingConfig type="numeric" />
+	</setting>
+
+ 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
+		<settingConfig type="numeric" />
+	</setting>
+
+</settings>
