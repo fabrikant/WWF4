@@ -2,12 +2,43 @@
     <string id="AppName">WWF4</string>
 
     <string id="keyOW">API key openweathermap.org</string>
+    <string id="Theme">Theme</string>
+    
+    <string id="ThemeDark">Dark</string>
+    <string id="ThemeLight">Light</string>
+    <string id="ThemeInstinctLike1">Instinct like</string>
+    
+    
+    <string id="InvertCircle">invert colors in a circle!!</string>
+    
     <string id="WinSpeeddUnit">Wind speed unit</string>
+ 	<!--WIND UNITS -->
+	<!--USE VERY!!!! SHOT STRING. its displayed on screen-->
+	<string id="SpeedUnitMSec" scope="foreground">m/s</string>
+	<string id="SpeedUnitKmH" scope="foreground">km/h</string>
+	<string id="SpeedUnitMileH" scope="foreground">mph</string>
+	<string id="SpeedUnitFtSec" scope="foreground">fps</string>
+	<string id="SpeedUnitBof" scope="foreground">bouf</string>
+	<string id="SpeedUnitKnots" scope="foreground">knots</string>
+    
     <string id="ShowBluetooth">Show bluetooth indicator</string>
+    <string id="ShowBluetoothIfConnect">if connected</string>
+    <string id="ShowBluetoothIfDisconnect">if disconnected</string>
+    <string id="ShowBluetoothHide">hide</string>
+    
+    
     <string id="ShowAlarm">Show alarm indicator</string>
     <string id="ShowDND">Show DND indicator</string>
     <string id="ShowDate">Show date</string>
 
     <string id="Data1">Data field left</string>
     <string id="Data2">Data field right</string>
+    
+     <string id="Style">Style</string>
+     
+     
+	<!--FIELD TYPES -->
+	<string id="FIELD_TYPE_STEPS" scope="foreground">Steps</string>
+	<string id="FIELD_TYPE_CALORIES" scope="foreground">Calories</string>
+     
 </strings>

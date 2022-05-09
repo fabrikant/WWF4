@@ -9,12 +9,16 @@ class RightDrawable extends BasicDrawable{
 	
 	function initialize(params as Lang.Dictonary) {
 		BasicDrawable.initialize(params);
+		onSettingsChanged();
+		Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
+	}
+	
+	public function onSettingsChanged(){
 		imageBluetooth = null;
 		imageMessage = null;
 		imageDND = null;
 		imageAlarm = null;
-	}
-	
+	}	
 	
 	public function draw(dc as Graphics.Dc){
 

@@ -11,6 +11,11 @@ class DataDrawable extends BasicDrawable{
 	
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
+		onSettingsChanged();
+		Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
+	}
+	
+	public function onSettingsChanged(){
 		oldType = null;
 		image = null;
 	}
@@ -28,7 +33,7 @@ class DataDrawable extends BasicDrawable{
 		var dataType = Application.Properties.getValue(identifier);
 		
 		if (oldType == null || oldType != dataType || image == null){
-			var res = loadImage(dataType);
+			var res = findRes(dataType);
 			if (res != null){
 				image = createImage(res);
 			}
@@ -70,7 +75,7 @@ class DataDrawable extends BasicDrawable{
 	}
 	
 	
-	private function loadImage(dataType){
+	private function findRes(dataType){
 		var ref = {
 			CALORIES => Rez.Drawables.Callory,
 			DISTANCE => Rez.Drawables.Distance,

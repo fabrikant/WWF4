@@ -6,10 +6,17 @@ using Toybox.Time;
 using Toybox.Time.Gregorian;
 
 class BottomDrawable extends BasicDrawable{
-
+	
+	var showField;
 	
 	function initialize(params as Lang.Dictonary) {
 		BasicDrawable.initialize(params);
+		onSettingsChanged();
+		Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
+	}
+	
+	public function onSettingsChanged(){
+		showField = Application.Properties.getValue("ShowDate");
 	}
 	
 	public function draw(dc as Graphics.Dc){
@@ -18,7 +25,7 @@ class BottomDrawable extends BasicDrawable{
 		dc.setColor(bkColor, bkColor);
 		dc.clear();
 		
-		if (Application.Properties.getValue("ShowDate")){
+		if (showField){
 			dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 			var now = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
 			var center = getCenterForFont(fontSmall);

@@ -7,6 +7,8 @@ using Toybox.Background;
 (:background)
 class WWF4App extends Application.AppBase {
 
+	var mView;
+	
     function initialize() {
         AppBase.initialize();
     }
@@ -19,9 +21,17 @@ class WWF4App extends Application.AppBase {
     function onStop(state as Dictionary?) {
     }
 
+	// triggered by settings change in GCM
+	function onSettingsChanged() { 
+	    mView.onSettingsChanged();
+	    registerEvents();
+	    WatchUi.requestUpdate();   // update the view to reflect changes
+	}
+ 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new WWF4View() ] as Array<Views or InputDelegates>;
+    	mView = new WWF4View();
+        return [ mView ] as Array<Views or InputDelegates>;
     }
 
 	///////////////////////////////////////////////////////////////////////////

@@ -12,7 +12,10 @@ class CircleDrawable extends BasicDrawable{
 	
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
-		
+		onSettingsChanged();
+	}
+
+	public function onSettingsChanged(){
 		image = Application.loadResource(Rez.Drawables.heart);
 		imageEmpty = Application.loadResource(Rez.Drawables.heartEmpty);
 		
@@ -23,8 +26,8 @@ class CircleDrawable extends BasicDrawable{
 		var fontCenter = getCenterForFont(fontMed);
 		var offsetY = fontCenter[1] - center[1];
 		textY = fontCenter[1] + (height/4).toNumber()-5;
-		invertColor = true;
-	}
+		invertColor = Application.Properties.getValue("InvertCircle");
+	}	
 	
 	public function draw(dc as Graphics.Dc){
 
@@ -34,6 +37,7 @@ class CircleDrawable extends BasicDrawable{
 		var bkColor = backgroundColor();
 		var fColor = foregroundColor();
 		
+		//System.println(invertColor);
 		if (invertColor){
 			bkColor = (~bkColor) & (0x00FFFFFF);
 			fColor  = (~fColor)  & (0x00FFFFFF);

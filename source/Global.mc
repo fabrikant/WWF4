@@ -10,11 +10,7 @@ var fontMed as WatchUi.FontResource;
 var fontSmall as WatchUi.FontResource;
 
 var lastWeatharUpdate as Toybox.Time.Moment = null;
-
-//[backSize, forSize, backCenter, forCenter, Аccent]
-//var theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
-//var theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_DK_GRAY];
-var theme = [Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+var theme as Toybox.Lang.Array<Number>;
 
 enum{
 
@@ -38,6 +34,10 @@ enum{
 	BLUETOOTH_SHOW_IF_CONNECT = 0,
 	BLUETOOTH_SHOW_IF_DISCONNECT,
 	BLUETOOTH_HIDE,
+	
+	THEME_DARK = 0,
+	THEME_LIGHT,
+	THEME_INSTINCT_LIKE_1,
 	
 //	HR,
 //	STEPS,

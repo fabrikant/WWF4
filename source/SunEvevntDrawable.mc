@@ -12,7 +12,12 @@ class SunEventsDrawable extends BasicDrawable{
 	
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
-		
+		sunCalculator = new SunCalc();
+		onSettingsChanged();
+		Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
+	}
+	
+	public function onSettingsChanged(){
 		image = createImage(Rez.Drawables.sunEvent);
 		var imageWidth = image.getDc().getWidth();
 		imageX = locX + ((width - imageWidth)/2).toNumber();
@@ -20,7 +25,6 @@ class SunEventsDrawable extends BasicDrawable{
 		var offset = 8;
 		sunriseX = imageX - offset;
 		sunsetX = imageX + imageWidth + offset;
-		sunCalculator = new SunCalc();
 	}
 	
 	public function draw(dc as Graphics.Dc){

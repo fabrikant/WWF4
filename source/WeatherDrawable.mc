@@ -11,9 +11,15 @@ class WeatherDrawable extends BasicDrawable{
 	
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
-		lastWeaterRead = null;
+		onSettingsChanged();
+		Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
 	}
 	
+	public function onSettingsChanged(){
+		lastWeaterRead = null;
+		buffBitmap = null;		
+	}
+
 	public function draw(dc as Graphics.Dc){
 		
 		dc.setClip(locX, locY, width, height);

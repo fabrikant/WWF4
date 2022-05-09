@@ -7,9 +7,12 @@ using Toybox.Activity;
 class WWF4View extends WatchUi.WatchFace {
 
 	var circle;
+	var notifyOnSettingsChanged;
 	
     function initialize() {
         WatchFace.initialize();
+        setTheme();
+        notifyOnSettingsChanged = [];
     }
 
     // Load your resources here
@@ -61,6 +64,42 @@ class WWF4View extends WatchUi.WatchFace {
 	function onPartialUpdate(dc as Dc){
 		circle.draw(dc);
 	}
+	
+	function onSettingsChanged(){
+		setTheme();
+		circle.onSettingsChanged();
+		for (var i = 0; i < notifyOnSettingsChanged.size(); i++){
+			var id = notifyOnSettingsChanged[i];
+			var obj = findDrawableById(id);
+			obj.onSettingsChanged();
+			
+//			if(weak.stillAlive()){
+//				var obj = weak.get();
+//				obj.onSettingsChanged();
+//			}
+		}
+	}
+	
+	function registerNotifyOnSettingsChanged(id){
+		if (notifyOnSettingsChanged.indexOf(id)){
+			notifyOnSettingsChanged.add(id);
+		}
+	}
+	
+	function setTheme(){
+
+		//[backcgroundColorSize, foregroundColorSize, backcgroundColorCenter, foregroundColorCenter, АccentColor]
+		var themeNumber = Application.Properties.getValue("Theme");
+		if (themeNumber == THEME_DARK){
+			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_DK_GRAY];
+		}else if (themeNumber == THEME_LIGHT){
+			theme = [Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+		}else if (themeNumber == THEME_INSTINCT_LIKE_1){
+			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+		}else{
+			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+		}
+	} 
 	
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from

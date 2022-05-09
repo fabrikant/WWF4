@@ -2,6 +2,7 @@ using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.System;
 using Toybox.Lang;
+using Toybox.Application;
 
 class BasicDrawable extends WatchUi.Drawable{
 
@@ -13,6 +14,7 @@ class BasicDrawable extends WatchUi.Drawable{
 			centerPosition = -1;
 		}
 		Drawable.initialize(params);
+		
 	}
 	
 	public function beforeDraw(dc as Graphics.Dc){
