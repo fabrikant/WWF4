@@ -13,12 +13,13 @@ class SunEventsDrawable extends BasicDrawable{
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
 		
-		image = Application.loadResource(Rez.Drawables.sunEvent);
-		imageX = locX + ((width - image.getWidth())/2).toNumber();
+		image = createImage(Rez.Drawables.sunEvent);
+		var imageWidth = image.getDc().getWidth();
+		imageX = locX + ((width - imageWidth)/2).toNumber();
 
 		var offset = 8;
 		sunriseX = imageX - offset;
-		sunsetX = imageX + image.getWidth() + offset;
+		sunsetX = imageX + imageWidth + offset;
 		sunCalculator = new SunCalc();
 	}
 	

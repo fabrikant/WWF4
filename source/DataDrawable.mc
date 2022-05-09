@@ -30,14 +30,14 @@ class DataDrawable extends BasicDrawable{
 		if (oldType == null || oldType != dataType || image == null){
 			var res = loadImage(dataType);
 			if (res != null){
-				image = Application.loadResource(res);
+				image = createImage(res);
 			}
 		}
 		oldType = dataType;
 		
 		var offset = 5;
 		dc.drawBitmap(locX+offset, locY, image);
-		offset += image.getWidth();
+		offset += image.getDc().getWidth();
 		
 		var value="";
 		if (dataType == CALORIES){

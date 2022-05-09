@@ -80,7 +80,7 @@ class WeatherDrawable extends BasicDrawable{
 		if (res == null){
 			res = Rez.Drawables.NA;
 		}
-		var image = Application.loadResource(res);
+		var image = createImage(res);
 		var temp = Global.temperatureToString(Application.Storage.getValue(STORAGE_KEY_TEMP));
 		if (! temp.equals("")){
 			temp = temp+"°";
@@ -106,18 +106,11 @@ class WeatherDrawable extends BasicDrawable{
 		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		
 		//image
-		var y = ((dc.getHeight() - image.getHeight())/2).toNumber();
-
-//		dc.setColor(Global.getAccentColor(), Global.getAccentColor());
-//		dc.fillRoundedRectangle(0, 0, width+RADIUS_CORNER+1, height+RADIUS_CORNER+1, RADIUS_CORNER);
-//		var bitmapRes = Application.loadResource(res);
-//		var weatherImage = new Graphics.BufferedBitmap({:bitmapResource => bitmapRes});
-//		weatherImage.setPalette([ Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT]);
-//		dc.drawBitmap(offset, y, weatherImage);
-		dc.drawBitmap(offset, y, Application.loadResource(res));
+		var y = ((dc.getHeight() - image.getDc().getHeight())/2).toNumber();
+		dc.drawBitmap(offset, y, image);
 		
 		//temperature
-		offset += image.getWidth()+8;
+		offset += image.getDc().getWidth()+8;
 		var center = getCenterForFont(fontMed);
 		dc.drawText(offset, center[1]-locY, fontMed, temp, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
 		
@@ -129,7 +122,6 @@ class WeatherDrawable extends BasicDrawable{
 		
 		//wind speed
 		dc.drawText(offset+(width-offset)/2, height*2/3+2, fontSmall, speed, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
-		
 		
 	}
 	

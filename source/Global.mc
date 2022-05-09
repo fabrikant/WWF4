@@ -11,6 +11,11 @@ var fontSmall as WatchUi.FontResource;
 
 var lastWeatharUpdate as Toybox.Time.Moment = null;
 
+//[backSize, forSize, backCenter, forCenter, Аccent]
+//var theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+//var theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_DK_GRAY];
+var theme = [Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+
 enum{
 
 	STORAGE_KEY_RESPONCE_CODE,

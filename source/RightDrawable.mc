@@ -36,7 +36,7 @@ class RightDrawable extends BasicDrawable{
 		
 		if ((showBtProperty == BLUETOOTH_SHOW_IF_CONNECT && connected) ||(showBtProperty == BLUETOOTH_SHOW_IF_DISCONNECT && !connected)){
 			if (imageBluetooth == null){
-				imageBluetooth = Application.loadResource(Rez.Drawables.Bluetooth);
+				imageBluetooth = createImage(Rez.Drawables.Bluetooth);
 			}
 			showBt = true;
 		}
@@ -44,7 +44,7 @@ class RightDrawable extends BasicDrawable{
 		if (System.getDeviceSettings().alarmCount > 0){
 			if (Application.Properties.getValue("ShowAlarm")){
 				if (imageAlarm == null){
-					imageAlarm = Application.loadResource(Rez.Drawables.Alarm);
+					imageAlarm = createImage(Rez.Drawables.Alarm);
 				}
 				showAlarm = true;
 			}
@@ -53,7 +53,7 @@ class RightDrawable extends BasicDrawable{
 		if (System.getDeviceSettings().doNotDisturb){
 			if (Application.Properties.getValue("ShowDND")){
 				if (imageDND == null){
-					imageDND = Application.loadResource(Rez.Drawables.DND);
+					imageDND = createImage(Rez.Drawables.DND);
 				}
 				showDND = true;
 			}
@@ -65,22 +65,22 @@ class RightDrawable extends BasicDrawable{
 		
 		if (notifications > 0){
 			if (imageMessage == null){
-				imageMessage = Application.loadResource(Rez.Drawables.Message);
+				imageMessage = createImage(Rez.Drawables.Message);
 			}
 			
-			top -= imageMessage.getHeight();
+			top -= imageMessage.getDc().getHeight();
 			dc.drawBitmap(x, top, imageMessage);
 			dc.drawText(x, bottom, fontSmall, notifications, Graphics.TEXT_JUSTIFY_LEFT);
 			bottom += dc.getFontHeight(fontSmall);	
 		}
 		
 		if (showBt){
-			top -= imageBluetooth.getHeight();
+			top -= imageBluetooth.getDc().getHeight();
 			dc.drawBitmap(x, top, imageBluetooth);
 		}
 		if(showDND){
 			dc.drawBitmap(x, bottom, imageDND);
-			bottom += imageDND.getHeight();
+			bottom += imageDND.getDc().getHeight();
 		}
 		if(showAlarm){
 			dc.drawBitmap(x, bottom, imageAlarm);

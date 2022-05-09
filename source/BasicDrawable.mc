@@ -6,11 +6,6 @@ using Toybox.Lang;
 class BasicDrawable extends WatchUi.Drawable{
 
 	var centerPosition;
-	//[backSize, forSize, backCenter, forCenter, Аccent]
-	//var theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
-	//var theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_DK_GRAY];
-	var theme = [Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
-	
 	
 	function initialize(params as Lang.Dictonary) {
 		centerPosition = params[:centerPosition];
@@ -41,6 +36,22 @@ class BasicDrawable extends WatchUi.Drawable{
 		return [locX + width/2, locY + height/2];
 	}
 	
+	public function getCenterForFont(font as WatchUi.FontResource) as Lang.Array<Lang.Number>{
+		var center = getCenter();
+		center[1] += Graphics.getFontDescent(font)/4.toNumber()-1;
+		return center;
+	}
+	
+	function createImage(resorse){
+		var _bitmap = Application.loadResource(resorse);
+		var _bufferedBitmap = new Graphics.BufferedBitmap({
+			:bitmapResource => _bitmap,
+			:width => _bitmap.getWidth(),
+			:height => _bitmap.getHeight()
+		});
+		_bufferedBitmap.setPalette([foregroundColor(), Graphics.COLOR_TRANSPARENT]);
+		return _bufferedBitmap;
+	}
 	
 	function backgroundColor(){
 		switch (centerPosition){
@@ -75,16 +86,4 @@ class BasicDrawable extends WatchUi.Drawable{
 		return theme[4];
 	}
 	
-	public function getCenterForFont(font as WatchUi.FontResource) as Lang.Array<Lang.Number>{
-	
-		var center = getCenter();
-//		System.println("Graphics.getFontDescent(font) = "+Graphics.getFontDescent(font));
-//		System.println("Graphics.getFontAscent(font) = "+Graphics.getFontAscent(font));
-//		System.println("Graphics.getFontHeight(font) = "+Graphics.getFontHeight(font));
-//		System.println(center[1]);
-		//center[1] -= (Graphics.getFontDescent(font)-Graphics.getFontAscent(font))/2;
-		center[1] += Graphics.getFontDescent(font)/4.toNumber()-1;
-		//System.println(center[1]);
-		return center;
-	}
 }
