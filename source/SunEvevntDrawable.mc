@@ -27,7 +27,7 @@ class SunEventsDrawable extends BasicDrawable{
 		dc.setClip(locX, locY, width, height);
 
 		var center = getCenterForFont(fontMed);
-		dc.setColor(Global.getForegraundColor() , Graphics.COLOR_TRANSPARENT);
+		dc.setColor(foregroundColor() , Graphics.COLOR_TRANSPARENT);
 		dc.drawBitmap(imageX, locY, image);
 		
 		

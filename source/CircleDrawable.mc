@@ -31,11 +31,15 @@ class CircleDrawable extends BasicDrawable{
 		dc.setClip(locX, locY, width, height);
 		dc.setAntiAlias(true);
 		dc.setPenWidth(4);
+		var bkColor = backgroundColor();
+		var fColor = foregroundColor();
+		
 		if (invertColor){
-			dc.setColor(Global.getForegraundColor(), Graphics.COLOR_TRANSPARENT);
-		}else{
-			dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
+			bkColor = (~bkColor) & (0x00FFFFFF);
+			fColor  = (~fColor)  & (0x00FFFFFF);
 		}
+		
+		dc.setColor(bkColor, Graphics.COLOR_TRANSPARENT);
 		
 		var center = getCenter();
 		var r = width/2.toNumber()-2;
@@ -67,11 +71,7 @@ class CircleDrawable extends BasicDrawable{
 			}
 		}
 		
-		if (invertColor){
-			dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
-		}else{
-			dc.setColor(Global.getForegraundColor(), Graphics.COLOR_TRANSPARENT);
-		}
+		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 
 		if (value != null){
 			if (now.sec%2==0){

@@ -44,10 +44,11 @@ class WeatherDrawable extends BasicDrawable{
 	}
 	
 	function drawNoData(dc, reason){
-
-		dc.setColor(Global.getBackgroundColor(), Global.getBackgroundColor());
+		
+		var bkColor = backgroundColor();
+		dc.setColor(bkColor, bkColor);
 		dc.fillRoundedRectangle(locX, locY, width, height, RADIUS_CORNER);
-		dc.setColor(Global.getForegraundColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 		var center = getCenterForFont(fontSmall);
 		dc.drawText(center[0], center[1], fontSmall, reason, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 		
@@ -69,6 +70,8 @@ class WeatherDrawable extends BasicDrawable{
 				return;
 			}
 		}
+		var bkColor = backgroundColor();
+		var fColor = foregroundColor();
 		
 		//need read
 		//load data
@@ -91,17 +94,26 @@ class WeatherDrawable extends BasicDrawable{
 		buffBitmap = new Graphics.BufferedBitmap({ 
 			:width => width, 
 			:height => height, 
-			:palette => [Global.getBackgroundColor(), Global.getForegraundColor(), Global.getAccentColor(), Graphics.COLOR_TRANSPARENT]});
+			//:palette => [Global.getBackgroundColor(), Global.getForegraundColor(), Global.getAccentColor(), Graphics.COLOR_TRANSPARENT]
+			});
 		
 		var dc = buffBitmap.getDc();
-		dc.setColor(Global.getForegraundColor(), Global.getForegraundColor());
+		var sizeColor = backgroundColorSize();
+		dc.setColor(sizeColor, sizeColor);
 		dc.fillRectangle(0, 0, width, height);
-		dc.setColor(Global.getBackgroundColor(), Global.getBackgroundColor());
+		dc.setColor(bkColor, bkColor);
 		dc.fillRoundedRectangle(0, 0, width+RADIUS_CORNER+1, height+RADIUS_CORNER+1, RADIUS_CORNER);
-		dc.setColor(Global.getForegraundColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		
 		//image
 		var y = ((dc.getHeight() - image.getHeight())/2).toNumber();
+
+//		dc.setColor(Global.getAccentColor(), Global.getAccentColor());
+//		dc.fillRoundedRectangle(0, 0, width+RADIUS_CORNER+1, height+RADIUS_CORNER+1, RADIUS_CORNER);
+//		var bitmapRes = Application.loadResource(res);
+//		var weatherImage = new Graphics.BufferedBitmap({:bitmapResource => bitmapRes});
+//		weatherImage.setPalette([ Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT]);
+//		dc.drawBitmap(offset, y, weatherImage);
 		dc.drawBitmap(offset, y, Application.loadResource(res));
 		
 		//temperature

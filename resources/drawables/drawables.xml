@@ -15,19 +15,19 @@
 
 	<bitmap id="sunEvent" filename="png-25/sun-event.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
 	<bitmap id="Callory" filename="png-25/1041.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
 	<bitmap id="Distance" filename="png-25/location.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	

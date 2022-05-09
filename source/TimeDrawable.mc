@@ -16,7 +16,7 @@ class TimeDrawable extends BasicDrawable{
 	}
 	
 	public function draw(dc as Graphics.Dc){
-		
+
 		dc.setClip(locX, locY, width, height);
 		var center = getCenterForFont(fontBig);
 		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
@@ -30,7 +30,7 @@ class TimeDrawable extends BasicDrawable{
             }
         }
 		var time = Lang.format("$1$:$2$", [hours.format(hourFormat), now.min.format("%02d")]);
-		dc.setColor(Global.getForegraundColor() , Graphics.COLOR_TRANSPARENT);
+		dc.setColor(foregroundColor() , Graphics.COLOR_TRANSPARENT);
 		dc.drawText(center[0], center[1], fontBig, time, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 		
 		drawBorder(dc);

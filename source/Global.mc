@@ -192,16 +192,4 @@ module Global{
 		}	
 		return value.format("%d");
 	}
-		
-	function getBackgroundColor() as Graphics.ColorValue{
-		return Graphics.COLOR_WHITE;
-	}
-	
-	function getForegraundColor() as Graphics.ColorValue{
-		return  Graphics.COLOR_BLACK;
-	}
-	
-	function getAccentColor() as Graphics.ColorValue{
-		return Graphics. COLOR_DK_GRAY;
-	}
 }

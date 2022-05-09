@@ -16,12 +16,15 @@ class DataDrawable extends BasicDrawable{
 	}
 	
 	public function draw(dc as Graphics.Dc){
+	
+		var bkColor = backgroundColor();
+		var fColor = foregroundColor();
 		
 		dc.setClip(locX, locY, width, height);
-		dc.setColor(Global.getBackgroundColor(), Global.getBackgroundColor());
+		dc.setColor(bkColor, bkColor);
 		dc.fillRoundedRectangle(locX, locY, width, height, RADIUS_CORNER);
-		dc.setColor(Global.getForegraundColor(), Graphics.COLOR_TRANSPARENT);
-		
+
+		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		var dataType = Application.Properties.getValue(identifier);
 		
 		if (oldType == null || oldType != dataType || image == null){

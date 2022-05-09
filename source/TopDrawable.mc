@@ -10,14 +10,17 @@ class TopDrawable extends BasicDrawable{
 		BasicDrawable.initialize(params);
 	}
 	
-	
 	public function draw(dc as Graphics.Dc){
+
+		var bkColor = backgroundColor();
+		var fColor = foregroundColor();
+
 		dc.setClip(locX, locY, width, height);
-		dc.setColor(Global.getForegraundColor(), Global.getForegraundColor());
+		dc.setColor(bkColor, bkColor);
 		dc.clear();
 
 		dc.setPenWidth(1);
-		dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		var value = Math.round(System.getSystemStats().battery);
 		var k = 0.45;
 		
@@ -33,7 +36,7 @@ class TopDrawable extends BasicDrawable{
 		var hContact = external[3]*0.6;
 		var wContact = external[2];
 		dc.fillRoundedRectangle(external[0]+3, external[1] + (external[3]-hContact)/2-1, wContact, hContact, 3);
-		dc.setColor(Global.getForegraundColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(bkColor, Graphics.COLOR_TRANSPARENT);
 		dc.fillRectangle(external[0]+1, external[1]+1, external[2]-2, external[3]-2);
 		
 		if (value > 20){
@@ -46,7 +49,7 @@ class TopDrawable extends BasicDrawable{
 		dc.fillRectangle(inner[0], inner[1], inner[2]*value/100, inner[3]);
 
 		var center = getCenterForFont(fontSmall);
-		dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		dc.drawText(locX+ width/2, center[1], fontSmall, value.format("%d")+"%", Graphics.TEXT_JUSTIFY_LEFT |Graphics.TEXT_JUSTIFY_VCENTER);
 		
 		

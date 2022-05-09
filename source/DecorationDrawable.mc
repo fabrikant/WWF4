@@ -16,7 +16,7 @@ class DecorationDrawable extends BasicDrawable{
 	
 	public function draw(dc as Graphics.Dc){
 		dc.setClip(locX, locY, width, height);
-		dc.setColor(Global.getAccentColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(accentColor(), Graphics.COLOR_TRANSPARENT);
 		
 		for (var i=0; i<decorations.size(); i++){
 			
@@ -28,10 +28,7 @@ class DecorationDrawable extends BasicDrawable{
 			}else if(symbol == :setPenWidth){
 				met.invoke(p[0]);
 			}
-			
 		}
-		
-		
 	}
 	
 }

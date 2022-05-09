@@ -13,18 +13,16 @@ class GroundDrawable extends BasicDrawable{
 		var a = (Toybox.Math.sqrt(r*r/2)+3).toNumber();
 		xy = r-a;
 		wh = height-2*xy;
-//		System.println("xy="+xy);
-//		System.println("wh="+wh);		
 	}
 	
 	public function draw(dc as Graphics.Dc){
 		
-		beforeDraw(dc);
-		dc.setColor(Global.getForegraundColor(), Global.getForegraundColor());
-		//dc.setColor(Global.getAccentColor(), Global.getAccentColor());
+		var bkColor = backgroundColorSize();
+		dc.setClip(locX, locY, width, height);
+		dc.setColor(bkColor, bkColor);
 		dc.fillRectangle(locX, locY, width, height);
-		
-		dc.setColor(Global.getBackgroundColor(), Global.getBackgroundColor());
+		bkColor = backgroundColor();
+		dc.setColor(bkColor, bkColor);
 		dc.fillRoundedRectangle(xy, xy, wh, wh, RADIUS_CORNER);
 				
 	}

@@ -14,11 +14,12 @@ class BottomDrawable extends BasicDrawable{
 	
 	public function draw(dc as Graphics.Dc){
 		dc.setClip(locX, locY, width, height);
-		dc.setColor(Global.getForegraundColor(), Global.getForegraundColor());
+		var bkColor = backgroundColor();
+		dc.setColor(bkColor, bkColor);
 		dc.clear();
 		
 		if (Application.Properties.getValue("ShowDate")){
-			dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
+			dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 			var now = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
 			var center = getCenterForFont(fontSmall);
 			var value = now.day_of_week+", "+now.day+" "+now.month;

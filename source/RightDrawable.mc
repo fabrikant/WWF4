@@ -17,11 +17,14 @@ class RightDrawable extends BasicDrawable{
 	
 	
 	public function draw(dc as Graphics.Dc){
+
+		var bkColor = backgroundColor();
+
 		dc.setClip(locX, locY, width, height);
-		dc.setColor(Global.getForegraundColor(), Global.getForegraundColor());
+		dc.setColor(bkColor, bkColor);
 		dc.clear();
 		
-		dc.setColor(Global.getBackgroundColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 		var showBt = false;
 		var showAlarm = false;
 		var showDND = false;

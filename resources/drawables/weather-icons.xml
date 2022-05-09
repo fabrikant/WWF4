@@ -2,63 +2,63 @@
 
 	<bitmap id="NA" filename="png-35/999-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
 	<!-- Cloud -->
 	<bitmap id="Code800d" filename="png-35/100-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code800n" filename="png-35/150-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code801d" filename="png-35/102-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code801n" filename="png-35/152-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code802d" filename="png-35/103-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code802n" filename="png-35/153-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code803d" filename="png-35/101-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code803n" filename="png-35/151-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code804d" filename="png-35/104-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code804n" filename="png-35/104-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
@@ -66,111 +66,111 @@
 	<!-- Thunderstorm -->
 	<bitmap id="Code200d" filename="png-35/304-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code200n" filename="png-35/304-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code201d" filename="png-35/302-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code201n" filename="png-35/302-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code202d" filename="png-35/303-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code202n" filename="png-35/303-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code210d" filename="png-35/1043.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code210n" filename="png-35/1043.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code211d" filename="png-35/2015.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code211n" filename="png-35/2015.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code212d" filename="png-35/1014.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code212n" filename="png-35/1014.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
 	<bitmap id="Code221d" filename="png-35/1014.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code221n" filename="png-35/1014.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code230d" filename="png-35/304-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code230n" filename="png-35/304-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code231d" filename="png-35/2024.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code231n" filename="png-35/2024.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code232d" filename="png-35/2024.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code232n" filename="png-35/2024.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
@@ -178,100 +178,100 @@
  	<!-- Drizzle -->
  	<bitmap id="Code300d" filename="png-35/309-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code300n" filename="png-35/309-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code301d" filename="png-35/312-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code301n" filename="png-35/312-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code302d" filename="png-35/1035.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code302n" filename="png-35/1035.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code310d" filename="png-35/314-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code310n" filename="png-35/314-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
 	<bitmap id="Code311d" filename="png-35/315-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code311n" filename="png-35/315-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code312d" filename="png-35/316-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code312n" filename="png-35/316-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code313d" filename="png-35/317-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code313n" filename="png-35/317-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
  	<bitmap id="Code314d" filename="png-35/318-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code314n" filename="png-35/318-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
   	<bitmap id="Code321d" filename="png-35/308-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code321n" filename="png-35/308-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
@@ -279,111 +279,111 @@
 	<!-- Rain -->
    	<bitmap id="Code500d" filename="png-35/300-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code500n" filename="png-35/350-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
  
   	<bitmap id="Code501d" filename="png-35/301-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code501n" filename="png-35/351-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code502d" filename="png-35/305-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code502n" filename="png-35/305-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code503d" filename="png-35/306-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code503n" filename="png-35/306-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code504d" filename="png-35/307-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code504n" filename="png-35/307-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code511d" filename="png-35/1015.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code511n" filename="png-35/1015.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code520d" filename="png-35/1003.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code520n" filename="png-35/1003.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code521d" filename="png-35/1064.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code521n" filename="png-35/1064.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code522d" filename="png-35/2006.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code522n" filename="png-35/2006.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code531d" filename="png-35/301-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code531n" filename="png-35/351-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
@@ -391,233 +391,233 @@
 	<!-- Snow -->
    	<bitmap id="Code600d" filename="png-35/407-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code600n" filename="png-35/457-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code601d" filename="png-35/400-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code601n" filename="png-35/400-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code602d" filename="png-35/401-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code602n" filename="png-35/401-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code611d" filename="png-35/408-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code611n" filename="png-35/408-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code612d" filename="png-35/409-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code612n" filename="png-35/409-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code613d" filename="png-35/410-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code613n" filename="png-35/410-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code615d" filename="png-35/406-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code615n" filename="png-35/456-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code616d" filename="png-35/404-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code616n" filename="png-35/404-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code620d" filename="png-35/1033.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code620n" filename="png-35/1033.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code621d" filename="png-35/1004.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code621n" filename="png-35/1004.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
    	<bitmap id="Code622d" filename="png-35/499-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code622n" filename="png-35/499-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
 	<!-- Atmosphere -->
   	<bitmap id="Code701d" filename="png-35/500-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code701n" filename="png-35/500-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code711d" filename="png-35/1025.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code711n" filename="png-35/1025.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code721d" filename="png-35/502-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code721n" filename="png-35/502-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code731d" filename="png-35/2010.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code731n" filename="png-35/2010.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code741d" filename="png-35/1017.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code741n" filename="png-35/1017.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code751d" filename="png-35/1051.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code751n" filename="png-35/1051.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code761d" filename="png-35/504-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code761n" filename="png-35/504-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code762d" filename="png-35/504-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code762n" filename="png-35/504-fill.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code771d" filename="png-35/1602.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code771n" filename="png-35/1602.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
   	<bitmap id="Code781d" filename="png-35/1002.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 	<bitmap id="Code781n" filename="png-35/1002.png" >
 		<palette disableTransparency="false">
-		     <color>000000</color>
+		     <color>555555</color>
 		</palette>
 	</bitmap>
 
