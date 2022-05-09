@@ -97,10 +97,14 @@ class WeatherDrawable extends BasicDrawable{
 		var offset = 5;
 		
 		//create buffBitmap
+		var palette = [];
+		palette.addAll(theme);
+		palette.add(Graphics.COLOR_TRANSPARENT);
+		
 		buffBitmap = new Graphics.BufferedBitmap({ 
 			:width => width, 
 			:height => height, 
-			//:palette => [Global.getBackgroundColor(), Global.getForegraundColor(), Global.getAccentColor(), Graphics.COLOR_TRANSPARENT]
+			:palette => palette
 			});
 		
 		var dc = buffBitmap.getDc();

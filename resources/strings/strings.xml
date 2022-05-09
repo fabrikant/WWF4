@@ -34,8 +34,8 @@
     <string id="Data1">Data field left</string>
     <string id="Data2">Data field right</string>
     
-     <string id="Style">Style</string>
-     
+    <string id="Style">Style</string>
+    <string id="Style">Data</string> 
      
 	<!--FIELD TYPES -->
 	<string id="FIELD_TYPE_STEPS" scope="foreground">Steps</string>

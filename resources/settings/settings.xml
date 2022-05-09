@@ -54,19 +54,21 @@
         </settingConfig>	
      </setting>
 
+    <group id="Style" title="Data">
 
- 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
-		<settingConfig type="list">
-            <listEntry value="0">@Strings.FIELD_TYPE_CALORIES</listEntry>
-            <listEntry value="1">@Strings.FIELD_TYPE_STEPS</listEntry>
-        </settingConfig>	
-	</setting>
-
- 	<setting propertyKey="@Properties.Data2" title="@Strings.Data2">
-		<settingConfig type="list">
-            <listEntry value="0">@Strings.FIELD_TYPE_CALORIES</listEntry>
-            <listEntry value="1">@Strings.FIELD_TYPE_STEPS</listEntry>
-        </settingConfig>	
-	</setting>
-
+	 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
+			<settingConfig type="list">
+	            <listEntry value="0">@Strings.FIELD_TYPE_CALORIES</listEntry>
+	            <listEntry value="1">@Strings.FIELD_TYPE_STEPS</listEntry>
+	        </settingConfig>	
+		</setting>
+	
+	 	<setting propertyKey="@Properties.Data2" title="@Strings.Data2">
+			<settingConfig type="list">
+	            <listEntry value="0">@Strings.FIELD_TYPE_CALORIES</listEntry>
+	            <listEntry value="1">@Strings.FIELD_TYPE_STEPS</listEntry>
+	        </settingConfig>	
+		</setting>
+		
+	</group>
 </settings>
