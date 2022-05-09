@@ -34,7 +34,7 @@ class DataDrawable extends BasicDrawable{
 		
 		var offset = 5;
 		dc.drawBitmap(locX+offset, locY, image);
-		offset += offset + image.getWidth();
+		offset += image.getWidth();
 		
 		var value="";
 		if (dataType == CALORIES){

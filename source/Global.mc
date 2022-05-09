@@ -122,7 +122,13 @@ module Global{
 		}else{ /*mile*/
 			value = rawData/160934.4;
 		}
-		return value.format("%.2f");
+		var fString = "%.2f";
+		if (value >= 10){
+			fString = "%.1f";
+		}if (value >= 100){
+			fString = "%d";
+		}
+		return value.format(fString);
 	}
 
 	function speedToString(rawData){
