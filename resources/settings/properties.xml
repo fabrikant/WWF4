@@ -13,8 +13,11 @@
 	<property id="ShowDate" type="boolean">false</property>
 	
 	
-	<property id="CircleType" type="number">0</property>
+	<property id="CircleType" type="number">1</property>
+
+	<property id="TopType" type="number">1</property>
+	<property id="BottomType" type="number">2</property>
 	
-	<property id="Data1" type="number">0</property>
-	<property id="Data2" type="number">1</property>
+	<property id="Data1" type="number">1</property>
+	<property id="Data2" type="number">2</property>
 </properties>

@@ -6,7 +6,7 @@ using Toybox.Math;
 
 class WeatherDrawable extends BasicDrawable{
 
-	var lastWeaterRead;
+	var lastWeatherRead;
 	var buffBitmap;
 	
 	function initialize(params as Lang.Dictonary){
@@ -16,7 +16,7 @@ class WeatherDrawable extends BasicDrawable{
 	}
 	
 	public function onSettingsChanged(){
-		lastWeaterRead = null;
+		lastWeatherRead = null;
 		buffBitmap = null;		
 	}
 
@@ -24,7 +24,7 @@ class WeatherDrawable extends BasicDrawable{
 		
 		dc.setClip(locX, locY, width, height);
 
-		if (lastWeatharUpdate == null){
+		if (lastWeatherUpdate == null){
 
 			var geoLatLong = [Application.Storage.getValue("Lat"), Application.Storage.getValue("Lon")];
 			var responseCode = Application.Storage.getValue("STORAGE_KEY_RESPONCE_CODE");
@@ -40,7 +40,7 @@ class WeatherDrawable extends BasicDrawable{
 			}
 		}else{
 			
-			if (Time.now().value() - lastWeatharUpdate > 10800){
+			if (Time.now().value() - lastWeatherUpdate > 10800){
 				drawNoData(dc, "old data");
 			}else{
 				drawWeather(dc);
@@ -69,10 +69,10 @@ class WeatherDrawable extends BasicDrawable{
 	}
 	
 	function readWeather(){
-		if (lastWeatharUpdate == null){
+		if (lastWeatherUpdate == null){
 			return;
-		}else if (lastWeaterRead != null){
-			if(lastWeaterRead == lastWeatharUpdate){
+		}else if (lastWeatherRead != null){
+			if(lastWeatherRead == lastWeatherUpdate){
 				return;
 			}
 		}
@@ -81,7 +81,7 @@ class WeatherDrawable extends BasicDrawable{
 		
 		//need read
 		//load data
-		lastWeaterRead = lastWeatharUpdate;
+		lastWeatherRead = lastWeatherUpdate;
 		var res = findResByCode(Application.Storage.getValue(STORAGE_KEY_WEATHER_ID), Application.Storage.getValue(STORAGE_KEY_ICON));
 		if (res == null){
 			res = Rez.Drawables.NA;

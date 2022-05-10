@@ -38,7 +38,7 @@ class DataDrawable extends BasicDrawable{
 		}
 		
 		var offset = 5;
-		if (image == null){
+		if (image != null){
 			dc.drawBitmap(locX+offset, locY, image);
 			offset += image.getDc().getWidth();
 		}

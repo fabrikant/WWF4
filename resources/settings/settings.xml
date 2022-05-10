@@ -63,17 +63,41 @@
         	</settingConfig>	
 		</setting>
 		
+
+	 	<setting propertyKey="@Properties.TopType" title="@Strings.TopType">
+			<settingConfig type="list">
+				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+	            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+	            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+	            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+	            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+        	</settingConfig>	
+		</setting>
+
+	 	<setting propertyKey="@Properties.BottomType" title="@Strings.BottomType">
+			<settingConfig type="list">
+				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+	            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+	            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+	            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+	            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+        	</settingConfig>	
+		</setting>
+
+
 	 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
 			<settingConfig type="list">
-	            <listEntry value="0">@Strings.FIELD_TYPE_CALORIES</listEntry>
-	            <listEntry value="1">@Strings.FIELD_TYPE_STEPS</listEntry>
+				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+	            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
+	            <listEntry value="2">@Strings.FIELD_TYPE_STEPS</listEntry>
 	        </settingConfig>	
 		</setting>
 	
 	 	<setting propertyKey="@Properties.Data2" title="@Strings.Data2">
 			<settingConfig type="list">
-	            <listEntry value="0">@Strings.FIELD_TYPE_CALORIES</listEntry>
-	            <listEntry value="1">@Strings.FIELD_TYPE_STEPS</listEntry>
+				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+	            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
+	            <listEntry value="2">@Strings.FIELD_TYPE_STEPS</listEntry>
 	        </settingConfig>	
 		</setting>
 		

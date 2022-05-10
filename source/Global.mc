@@ -9,7 +9,7 @@ var fontBig as WatchUi.FontResource;
 var fontMed as WatchUi.FontResource;
 var fontSmall as WatchUi.FontResource;
 
-var lastWeatharUpdate as Toybox.Time.Moment = null;
+var lastWeatherUpdate as Toybox.Time.Moment = null;
 var theme as Toybox.Lang.Array<Number>;
 
 enum{
@@ -28,19 +28,29 @@ enum{
 	STORAGE_KEY_WEATHER_ID,
 	STORAGE_KEY_WEATHER_CITY,
 
-	CALORIES = 0,
-	DISTANCE,
-
 	BLUETOOTH_SHOW_IF_CONNECT = 0,
 	BLUETOOTH_SHOW_IF_DISCONNECT,
 	BLUETOOTH_HIDE,
+
+	EMPTY = 0,
+
+	CALORIES = 1,
+	DISTANCE,
+
+	TOP_BOTTOM_TYPE_BATTERY = 1,
+	TOP_BOTTOM_TYPE_DATE,
+	TOP_BOTTOM_TYPE_WEATHER_CONDITION,
+	TOP_BOTTOM_TYPE_CITY,
+
 	
 	THEME_DARK = 0,
 	THEME_LIGHT,
 	THEME_INSTINCT_LIKE_1,
 	
-	CIRCLE_TYPE_HR = 0,
+	
+	CIRCLE_TYPE_HR = 1,
 	CIRCLE_TYPE_SECONDS,
+	
 	
 //	HR,
 //	STEPS,

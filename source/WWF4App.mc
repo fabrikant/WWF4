@@ -46,7 +46,7 @@ class WWF4App extends Application.AppBase {
 	    	if (data[STORAGE_KEY_RESPONCE_CODE] != null){
 	     		Application.Storage.setValue(STORAGE_KEY_RESPONCE_CODE, data[STORAGE_KEY_RESPONCE_CODE]);
 		        if (data[STORAGE_KEY_RESPONCE_CODE].toNumber() == 200){
-		        	lastWeatharUpdate = data[STORAGE_KEY_UPDATE_MOMENT];
+		        	lastWeatherUpdate = data[STORAGE_KEY_UPDATE_MOMENT];
 		        	var keys = data.keys();
 		        	for (var i=0; i < keys.size(); i++){
 		        		if (data[keys[i]]==null){

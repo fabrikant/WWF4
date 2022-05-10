@@ -31,8 +31,8 @@ class WWF4View extends WatchUi.WatchFace {
     // loading resources into memory.
     function onShow() {
     
-    	if (lastWeatharUpdate == null){
-    		lastWeatharUpdate = Application.Storage.getValue(STORAGE_KEY_UPDATE_MOMENT);
+    	if (lastWeatherUpdate == null){
+    		lastWeatherUpdate = Application.Storage.getValue(STORAGE_KEY_UPDATE_MOMENT);
     	}
     	
        	var location = Activity.getActivityInfo().currentLocation;

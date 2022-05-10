@@ -37,12 +37,21 @@
     <string id="Style">Style</string>
     <string id="Style">Data</string> 
     <string id="CircleType" scope="foreground">Circle data type</string>
+
+    <string id="TopType" scope="foreground">Header</string>
+    <string id="BottomType" scope="foreground">Footer</string>
      
 	<!--FIELD TYPES -->
+	<string id="FIELD_TYPE_EMPTY" scope="foreground">Empty</string>
 	<string id="FIELD_TYPE_STEPS" scope="foreground">Steps</string>
 	<string id="FIELD_TYPE_CALORIES" scope="foreground">Calories</string>
 	<string id="FIELD_TYPE_HR" scope="foreground">Heart rate</string>
 	<string id="FIELD_TYPE_SECONDS" scope="foreground">Seconds</string>
+	
+	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>
+	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>
+	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Weather condition</string>
+	<string id="FIELD_TYPE_CITY" scope="foreground">City</string>
 
      
 </strings>
