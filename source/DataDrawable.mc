@@ -6,7 +6,6 @@ using Toybox.ActivityMonitor;
 
 class DataDrawable extends BasicDrawable{
 
-	var oldType;
 	var image, imageX;
 	
 	function initialize(params as Lang.Dictonary){
@@ -16,7 +15,6 @@ class DataDrawable extends BasicDrawable{
 	}
 	
 	public function onSettingsChanged(){
-		oldType = null;
 		image = null;
 	}
 	
@@ -32,17 +30,18 @@ class DataDrawable extends BasicDrawable{
 		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		var dataType = Application.Properties.getValue(identifier);
 		
-		if (oldType == null || oldType != dataType || image == null){
+		if (image == null){
 			var res = findRes(dataType);
 			if (res != null){
 				image = createImage(res);
 			}
 		}
-		oldType = dataType;
 		
 		var offset = 5;
-		dc.drawBitmap(locX+offset, locY, image);
-		offset += image.getDc().getWidth();
+		if (image == null){
+			dc.drawBitmap(locX+offset, locY, image);
+			offset += image.getDc().getWidth();
+		}
 		
 		var value="";
 		if (dataType == CALORIES){

@@ -54,8 +54,15 @@
         </settingConfig>	
      </setting>
 
-    <group id="Style" title="Data">
+    <group id="Data" title="Data">
 
+	 	<setting propertyKey="@Properties.CircleType" title="@Strings.CircleType">
+			<settingConfig type="list">
+	            <listEntry value="0">@Strings.FIELD_TYPE_HR</listEntry>
+	            <listEntry value="1">@Strings.FIELD_TYPE_SECONDS</listEntry>
+        	</settingConfig>	
+		</setting>
+		
 	 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
 			<settingConfig type="list">
 	            <listEntry value="0">@Strings.FIELD_TYPE_CALORIES</listEntry>
@@ -71,4 +78,5 @@
 		</setting>
 		
 	</group>
+	
 </settings>

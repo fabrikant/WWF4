@@ -36,9 +36,13 @@
     
     <string id="Style">Style</string>
     <string id="Style">Data</string> 
+    <string id="CircleType" scope="foreground">Circle data type</string>
      
 	<!--FIELD TYPES -->
 	<string id="FIELD_TYPE_STEPS" scope="foreground">Steps</string>
 	<string id="FIELD_TYPE_CALORIES" scope="foreground">Calories</string>
+	<string id="FIELD_TYPE_HR" scope="foreground">Heart rate</string>
+	<string id="FIELD_TYPE_SECONDS" scope="foreground">Seconds</string>
+
      
 </strings>

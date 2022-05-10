@@ -7,8 +7,9 @@ using Toybox.Activity;
 
 class CircleDrawable extends BasicDrawable{
 	
-	var image, imageEmpty, imageX, imageY, textY;
-	var invertColor;
+	var image, imageEmpty, imageX, imageY, textX, textY;
+	var invertColor, fieldType;
+	var bkColor, fColor;
 	
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
@@ -16,32 +17,51 @@ class CircleDrawable extends BasicDrawable{
 	}
 
 	public function onSettingsChanged(){
-		image = Application.loadResource(Rez.Drawables.heart);
-		imageEmpty = Application.loadResource(Rez.Drawables.heartEmpty);
 		
-		imageX = locX + ((width - image.getWidth())/2).toNumber();
-		imageY = locY + ((height/2 - image.getHeight())/2).toNumber()+3;
-		
-		var center = getCenter();
-		var fontCenter = getCenterForFont(fontMed);
-		var offsetY = fontCenter[1] - center[1];
-		textY = fontCenter[1] + (height/4).toNumber()-5;
+		fieldType = Application.Properties.getValue("CircleType");
 		invertColor = Application.Properties.getValue("InvertCircle");
+		
+		bkColor = backgroundColor();
+		fColor = foregroundColor();
+		
+		if (invertColor){
+			bkColor = (~bkColor) & (0x00FFFFFF);
+			fColor  = (~fColor)  & (0x00FFFFFF);
+		}
+		
+		image = null;
+		imageEmpty = null; 
+		imageX = null;
+		imageY = null;
+
+		var fontCenter = getCenterForFont(fontMed);
+		textX = fontCenter[0];
+		
+		if (fieldType == CIRCLE_TYPE_HR){
+		
+			image = Application.loadResource(Rez.Drawables.heart);
+			imageEmpty = Application.loadResource(Rez.Drawables.heartEmpty);
+			
+			imageX = locX + ((width - image.getWidth())/2).toNumber();
+			imageY = locY + ((height/2 - image.getHeight())/2).toNumber()+3;
+			
+			var center = getCenter();
+			
+			var offsetY = fontCenter[1] - center[1];
+			textY = fontCenter[1] + (height/4).toNumber()-5;
+			
+		}else if (fieldType == CIRCLE_TYPE_SECONDS){
+			textY = fontCenter[1];
+		}
 	}	
 	
 	public function draw(dc as Graphics.Dc){
 
 		dc.setClip(locX, locY, width, height);
-		dc.setAntiAlias(true);
-		dc.setPenWidth(4);
-		var bkColor = backgroundColor();
-		var fColor = foregroundColor();
-		
-		//System.println(invertColor);
-		if (invertColor){
-			bkColor = (~bkColor) & (0x00FFFFFF);
-			fColor  = (~fColor)  & (0x00FFFFFF);
+		if (Graphics.Dc has :setAntiAlias){
+			dc.setAntiAlias(true);
 		}
+		dc.setPenWidth(4);
 		
 		dc.setColor(bkColor, Graphics.COLOR_TRANSPARENT);
 		
@@ -66,7 +86,17 @@ class CircleDrawable extends BasicDrawable{
 			dc.drawArc(center[0], center[1], r, Graphics.ARC_CLOCKWISE, 90, degreeEnd);
 		}
 		
-				
+		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
+		if (fieldType == CIRCLE_TYPE_HR){
+			drawHR(dc, now);
+		}else if (fieldType == CIRCLE_TYPE_SECONDS){
+			drawSeconds(dc, now);
+		}
+		
+		drawBorder(dc);
+	}
+
+	private function drawHR(dc, now){
 		var value = null;
 		var info = Activity.getActivityInfo();
 		if (info != null){
@@ -75,23 +105,20 @@ class CircleDrawable extends BasicDrawable{
 			}
 		}
 		
-		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
-
 		if (value != null){
 			if (now.sec%2==0){
 				dc.drawBitmap(imageX, imageY, image);
 			}else{
 				dc.drawBitmap(imageX, imageY, imageEmpty);
 			}
-			dc.drawText(center[0], textY, fontMed, value, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(textX, textY, fontMed, value, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		}else{
 			dc.drawBitmap(imageX, imageY, image);
-			dc.drawText(center[0], textY, fontMed, "n/a", Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(textX, textY, fontMed, "n/a", Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		}
-		
-		
-		drawBorder(dc);
 	}
-
-
+	
+	private function drawSeconds(dc, now){
+		dc.drawText(textX, textY, fontMed, now.sec, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+	}
 }
