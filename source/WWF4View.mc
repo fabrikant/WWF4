@@ -11,8 +11,9 @@ class WWF4View extends WatchUi.WatchFace {
 	
     function initialize() {
         WatchFace.initialize();
-        setTheme();
         notifyOnSettingsChanged = [];
+        nowIsDay = true;
+        setTheme();
     }
 
     // Load your resources here
@@ -58,6 +59,11 @@ class WWF4View extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc as Dc) {
+		
+		if (dayThemeIsSet != nowIsDay){
+			onSettingsChanged();
+		}
+	
         View.onUpdate(dc);
     }
 
@@ -73,10 +79,6 @@ class WWF4View extends WatchUi.WatchFace {
 			var obj = findDrawableById(id);
 			obj.onSettingsChanged();
 			
-//			if(weak.stillAlive()){
-//				var obj = weak.get();
-//				obj.onSettingsChanged();
-//			}
 		}
 	}
 	
@@ -88,8 +90,16 @@ class WWF4View extends WatchUi.WatchFace {
 	
 	function setTheme(){
 
+		var themeKey = "Theme";
+		dayThemeIsSet = true;
+		
+		if(!nowIsDay){
+			themeKey = "NightTheme";
+			dayThemeIsSet = false;
+		}
+		
 		//[backcgroundColorSize, foregroundColorSize, backcgroundColorCenter, foregroundColorCenter, АccentColor]
-		var themeNumber = Application.Properties.getValue("Theme");
+		var themeNumber = Application.Properties.getValue(themeKey);
 		if (themeNumber == THEME_DARK){
 			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_DK_GRAY];
 		}else if (themeNumber == THEME_LIGHT){

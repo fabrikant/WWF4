@@ -2,8 +2,13 @@
     <iq:application entry="WWF4App" id="93dc3cb2b63c4a6a9648c31e9c1c6d69" launcherIcon="@Drawables.LauncherIcon" minApiLevel="3.1.0" name="@Strings.AppName" type="watchface" version="0.0.0">
         <iq:products>
             <iq:product id="fenix6s"/>
+            <iq:product id="fenix6spro"/>
+            <iq:product id="fr245"/>
+            <iq:product id="fr245m"/>
             <iq:product id="fr645m"/>
             <iq:product id="vivoactive3"/>
+            <iq:product id="vivoactive3m"/>
+            <iq:product id="vivoactive3mlte"/>
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="Background"/>

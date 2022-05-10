@@ -41,7 +41,7 @@ class WeatherDrawable extends BasicDrawable{
 		}else{
 			
 			if (Time.now().value() - lastWeatherUpdate > 10800){
-				drawNoData(dc, "old data");
+				drawNoData(dc, "To old\ndata");
 			}else{
 				drawWeather(dc);
 			}			

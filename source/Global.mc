@@ -11,6 +11,10 @@ var fontSmall as WatchUi.FontResource;
 
 var lastWeatherUpdate as Toybox.Time.Moment = null;
 var theme as Toybox.Lang.Array<Number>;
+var nowIsDay;
+var dayThemeIsSet;
+//var dndModeIsNight;
+//var stopUiUpdate;
 
 enum{
 

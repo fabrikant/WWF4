@@ -4,6 +4,7 @@ using Toybox.Time;
 using Toybox.System;
 using Toybox.Position;
 using Toybox.Time.Gregorian;
+using Toybox.Application;
 
 class SunEventsDrawable extends BasicDrawable{
 
@@ -18,6 +19,7 @@ class SunEventsDrawable extends BasicDrawable{
 	}
 	
 	public function onSettingsChanged(){
+		
 		image = createImage(Rez.Drawables.sunEvent);
 		var imageWidth = image.getDc().getWidth();
 		imageX = locX + ((width - imageWidth)/2).toNumber();
@@ -52,6 +54,7 @@ class SunEventsDrawable extends BasicDrawable{
 				    }
 				).toRadians();
 				var today = Time.today();
+				today = today.add(new Time.Duration(Gregorian.SECONDS_PER_DAY));
 				sunriseMoment = sunCalculator.calculate(today, myLocation[0], myLocation[1], SUNRISE);
 				sunsetMoment  = sunCalculator.calculate(today, myLocation[0], myLocation[1], SUNSET);
 			}
@@ -67,8 +70,15 @@ class SunEventsDrawable extends BasicDrawable{
 		}else{
 			sunset = momentToString(sunsetMoment);
 		}
+	
+		nowIsDay = true;
+		if (sunriseMoment != null && sunsetMoment != null){
+			var now = Time.now();
+			if ( !(now.greaterThan(sunriseMoment) && now.lessThan(sunsetMoment))){
+				nowIsDay = false;
+			}
+		} 
 
-		
 		dc.drawText(sunriseX, center[1], fontMed, sunrise, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);				
 		dc.drawText(sunsetX, center[1], fontMed, sunset, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);				
 			
@@ -85,7 +95,8 @@ class SunEventsDrawable extends BasicDrawable{
 				hours = hours - 12;
 			}
 		}
-	
+		
+		//System.println(info.day+"."+info.month+"."+info.year+" "+hours.format(f)+":"+info.min.format("%02d"));
 		return hours.format(f)+":"+info.min.format("%02d");
 	}
 }

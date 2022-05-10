@@ -13,6 +13,14 @@
 	            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
 	        </settingConfig>
 		</setting>
+	  	
+	  	<setting propertyKey="@Properties.NightTheme" title="@Strings.NightTheme">
+	        <settingConfig type="list">
+	            <listEntry value="0">@Strings.ThemeDark</listEntry>
+	            <listEntry value="1">@Strings.ThemeLight</listEntry>
+	            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
+	        </settingConfig>
+		</setting>
 	
 		<setting propertyKey="@Properties.InvertCircle"
 			title="@Strings.InvertCircle">

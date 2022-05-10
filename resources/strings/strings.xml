@@ -3,11 +3,12 @@
 
     <string id="keyOW">API key openweathermap.org</string>
     <string id="Theme">Theme</string>
+   	<string id="NightTheme">Night theme</string>
     
     <string id="ThemeDark">Dark</string>
     <string id="ThemeLight">Light</string>
     <string id="ThemeInstinctLike1">Instinct like</string>
-    
+
     
     <string id="InvertCircle">invert colors in a circle!!</string>
     
