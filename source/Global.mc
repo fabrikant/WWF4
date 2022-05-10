@@ -54,6 +54,7 @@ enum{
 	STEPS,
 	FLOOR,
 	O2,
+	ELEVATION,
 	
 //	ACTIVE_DAY,
 //	ACTIVE_WEEK,
@@ -62,7 +63,6 @@ enum{
 //	TIME1,
 //	PRESSURE,
 //	TEMPERATURE,
-//	ELEVATION,
 //	SOLAR_CHARGE,
 //	WEATHER_PRESSURE,
 //	WEATHER_HUM,
@@ -118,6 +118,19 @@ enum{
 //	STATUS_FIELDS_COUNT = 6,	
 }
 module Global{
+
+	function elevationToString(rawData){
+		var value = rawData;//meters
+		if (System.getDeviceSettings().elevationUnits ==  System.UNIT_STATUTE){ /*foot*/
+			value = rawData*3.281;
+		}
+		if (value > 9999){
+			value = (value/1000).format("%.1f")+"k";
+		}else{
+			value = value.format("%d");
+		}
+		return value;
+	}
 
 	function distanceToString(rawData){
 		var value = rawData;//santimeters

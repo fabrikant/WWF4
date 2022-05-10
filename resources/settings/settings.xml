@@ -93,6 +93,7 @@
 	            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
 	            <listEntry value="4">@Strings.FIELD_TYPE_FLOOR</listEntry>
 	            <listEntry value="5">@Strings.FIELD_TYPE_O2</listEntry>
+            	<listEntry value="6">@Strings.FIELD_TYPE_ELEVATION</listEntry>
 	        </settingConfig>	
 		</setting>
 	
@@ -102,8 +103,9 @@
 	            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
 	            <listEntry value="2">@Strings.FIELD_TYPE_DISTANCE</listEntry>
 	            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
+	            <listEntry value="4">@Strings.FIELD_TYPE_FLOOR</listEntry>
 	            <listEntry value="5">@Strings.FIELD_TYPE_O2</listEntry>
-	            
+            	<listEntry value="6">@Strings.FIELD_TYPE_ELEVATION</listEntry>
 	        </settingConfig>	
 		</setting>
 		

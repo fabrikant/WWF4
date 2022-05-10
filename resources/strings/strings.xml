@@ -50,6 +50,7 @@
 	<string id="FIELD_TYPE_DISTANCE" scope="foreground">Distance</string>
 	<string id="FIELD_TYPE_FLOOR" scope="foreground">Floor</string>
 	<string id="FIELD_TYPE_O2" scope="foreground">Oxygen saturation</string>
+	<string id="FIELD_TYPE_ELEVATION" scope="foreground">Elevation above sea level</string>
 
 	
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>

@@ -3,6 +3,7 @@ using Toybox.Graphics;
 using Toybox.Time;
 using Toybox.System;
 using Toybox.ActivityMonitor;
+using Toybox.Activity;
 
 class DataDrawable extends BasicDrawable{
 
@@ -55,12 +56,32 @@ class DataDrawable extends BasicDrawable{
 			value = getFloor();
 		}else if (dataType == O2){
 			value = getOxygenSaturation();
+		}else if (dataType == ELEVATION){
+			value = getElevation();
 		}
 		
 		var center = getCenterForFont(fontMed);
 		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
 		
 		drawBorder(dc);
+	}
+	
+	function getElevation(){
+
+		var value = null;
+
+		var info = Activity.getActivityInfo();
+		if (info != null){
+			if (info has :altitude){
+				if (info.altitude != null){
+					value = Global.elevationToString(info.altitude);
+				}
+			}
+		}
+		if (value == null){
+			value = "N/A";
+		}
+		return value;
 	}
 	
 	function getOxygenSaturation(){
@@ -133,6 +154,7 @@ class DataDrawable extends BasicDrawable{
 			DISTANCE => Rez.Drawables.Distance,
 			STEPS => Rez.Drawables.Steps,
 			FLOOR => Rez.Drawables.Floor,
+			ELEVATION => Rez.Drawables.Elevation,
 		};
 		return ref[dataType];
 	}
