@@ -51,6 +51,10 @@ class DataDrawable extends BasicDrawable{
 			value = getDistance();
 		}else if (dataType == STEPS){
 			value = getSteps();
+		}else if (dataType == FLOOR){
+			value = getFloor();
+		}else if (dataType == O2){
+			value = getOxygenSaturation();
 		}
 		
 		var center = getCenterForFont(fontMed);
@@ -59,6 +63,37 @@ class DataDrawable extends BasicDrawable{
 		drawBorder(dc);
 	}
 	
+	function getOxygenSaturation(){
+	
+		var value = null;
+		var info = Activity.getActivityInfo();
+		var postfix = "";
+		if (info != null){
+			if (info has :currentOxygenSaturation){
+				if (info.currentOxygenSaturation != null){
+					value = info.currentOxygenSaturation;
+				}
+			}
+		}
+		
+		if (value == null){
+			value = "N/A";
+		}else if (value < 100){
+			postfix = "%";
+		}
+		return "O2 " + value + postfix;
+	}	
+	
+	function getFloor(){
+		var value = "";
+		var info = ActivityMonitor.getInfo();
+		if (info has :floorsClimbed){
+			value = info.floorsClimbed.toString()
+				+"|"+info.floorsDescended.toString();
+		}
+		return value;
+	}
+		
 	function getSteps(){
 		var value = "";
 		var info = ActivityMonitor.getInfo();
@@ -97,6 +132,7 @@ class DataDrawable extends BasicDrawable{
 			CALORIES => Rez.Drawables.Callory,
 			DISTANCE => Rez.Drawables.Distance,
 			STEPS => Rez.Drawables.Steps,
+			FLOOR => Rez.Drawables.Floor,
 		};
 		return ref[dataType];
 	}

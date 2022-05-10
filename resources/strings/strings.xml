@@ -48,6 +48,8 @@
 	<string id="FIELD_TYPE_HR" scope="foreground">Heart rate</string>
 	<string id="FIELD_TYPE_SECONDS" scope="foreground">Seconds</string>
 	<string id="FIELD_TYPE_DISTANCE" scope="foreground">Distance</string>
+	<string id="FIELD_TYPE_FLOOR" scope="foreground">Floor</string>
+	<string id="FIELD_TYPE_O2" scope="foreground">Oxygen saturation</string>
 
 	
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>

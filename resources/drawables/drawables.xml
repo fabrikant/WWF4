@@ -36,5 +36,10 @@
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	
+
+	<bitmap id="Floor" filename="png-25/stairs.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>	
 </drawables>
