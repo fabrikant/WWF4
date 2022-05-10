@@ -4,53 +4,101 @@
 		<settingConfig type="alphaNumeric" />
 	</setting>
 
-    <group id="Style" title="@Strings.Style">
 
-	  	<setting propertyKey="@Properties.Theme" title="@Strings.Theme">
-	        <settingConfig type="list">
-	            <listEntry value="0">@Strings.ThemeDark</listEntry>
-	            <listEntry value="1">@Strings.ThemeLight</listEntry>
-	            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
-	        </settingConfig>
-		</setting>
-	  	
-	  	<setting propertyKey="@Properties.NightTheme" title="@Strings.NightTheme">
-	        <settingConfig type="list">
-	            <listEntry value="0">@Strings.ThemeDark</listEntry>
-	            <listEntry value="1">@Strings.ThemeLight</listEntry>
-	            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
-	        </settingConfig>
-		</setting>
+  	<setting propertyKey="@Properties.Theme" title="@Strings.Theme">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ThemeDark</listEntry>
+            <listEntry value="1">@Strings.ThemeLight</listEntry>
+            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
+        </settingConfig>
+	</setting>
+  	
+  	<setting propertyKey="@Properties.NightTheme" title="@Strings.NightTheme">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ThemeDark</listEntry>
+            <listEntry value="1">@Strings.ThemeLight</listEntry>
+            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
+        </settingConfig>
+	</setting>
+
+	<setting propertyKey="@Properties.InvertCircle"
+		title="@Strings.InvertCircle">
+		<settingConfig type="boolean" />
+	</setting>
+
+ 	<setting propertyKey="@Properties.ShowBluetooth" title="@Strings.ShowBluetooth">
+		<settingConfig type="list">
+            <listEntry value="0">@Strings.ShowBluetoothIfConnect</listEntry>
+            <listEntry value="1">@Strings.ShowBluetoothIfDisconnect</listEntry>
+            <listEntry value="2">@Strings.ShowBluetoothHide</listEntry>
+        </settingConfig>	
+	</setting>
+
+	<setting propertyKey="@Properties.ShowAlarm"
+		title="@Strings.ShowAlarm">
+		<settingConfig type="boolean" />
+	</setting>
 	
-		<setting propertyKey="@Properties.InvertCircle"
-			title="@Strings.InvertCircle">
-			<settingConfig type="boolean" />
-		</setting>
+	<setting propertyKey="@Properties.ShowDND"
+		title="@Strings.ShowDND">
+		<settingConfig type="boolean" />
+	</setting>
 	
-	 	<setting propertyKey="@Properties.ShowBluetooth" title="@Strings.ShowBluetooth">
-			<settingConfig type="list">
-	            <listEntry value="0">@Strings.ShowBluetoothIfConnect</listEntry>
-	            <listEntry value="1">@Strings.ShowBluetoothIfDisconnect</listEntry>
-	            <listEntry value="2">@Strings.ShowBluetoothHide</listEntry>
-	        </settingConfig>	
-		</setting>
+
+ 	<setting propertyKey="@Properties.CircleType" title="@Strings.CircleType">
+		<settingConfig type="list">
+            <listEntry value="1">@Strings.FIELD_TYPE_HR</listEntry>
+            <listEntry value="2">@Strings.FIELD_TYPE_SECONDS</listEntry>
+       	</settingConfig>	
+	</setting>
 	
-		<setting propertyKey="@Properties.ShowAlarm"
-			title="@Strings.ShowAlarm">
-			<settingConfig type="boolean" />
-		</setting>
-		
-		<setting propertyKey="@Properties.ShowDND"
-			title="@Strings.ShowDND">
-			<settingConfig type="boolean" />
-		</setting>
-		
-		<setting propertyKey="@Properties.ShowDate"
-			title="@Strings.ShowDate">
-			<settingConfig type="boolean" />
-		</setting>
-	</group>
+
+ 	<setting propertyKey="@Properties.TopType" title="@Strings.TopType">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+       	</settingConfig>	
+	</setting>
+
+ 	<setting propertyKey="@Properties.BottomType" title="@Strings.BottomType">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+       	</settingConfig>	
+	</setting>
+
+
+ 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
+            <listEntry value="2">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
+            <listEntry value="4">@Strings.FIELD_TYPE_FLOOR</listEntry>
+            <listEntry value="5">@Strings.FIELD_TYPE_O2</listEntry>
+           	<listEntry value="6">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+        </settingConfig>	
+	</setting>
+
+ 	<setting propertyKey="@Properties.Data2" title="@Strings.Data2">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
+            <listEntry value="2">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
+            <listEntry value="4">@Strings.FIELD_TYPE_FLOOR</listEntry>
+            <listEntry value="5">@Strings.FIELD_TYPE_O2</listEntry>
+           	<listEntry value="6">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+        </settingConfig>	
+	</setting>
 	
+
   	<setting propertyKey="@Properties.WinSpeeddUnit" title="@Strings.WinSpeeddUnit">
 		<settingConfig type="list">
             <listEntry value="0">@Strings.SpeedUnitMSec</listEntry>
@@ -62,61 +110,5 @@
         </settingConfig>	
      </setting>
 
-    <group id="Data" title="Data">
-
-	 	<setting propertyKey="@Properties.CircleType" title="@Strings.CircleType">
-			<settingConfig type="list">
-	            <listEntry value="0">@Strings.FIELD_TYPE_HR</listEntry>
-	            <listEntry value="1">@Strings.FIELD_TYPE_SECONDS</listEntry>
-        	</settingConfig>	
-		</setting>
-		
-
-	 	<setting propertyKey="@Properties.TopType" title="@Strings.TopType">
-			<settingConfig type="list">
-				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-	            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
-	            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
-	            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
-	            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
-        	</settingConfig>	
-		</setting>
-
-	 	<setting propertyKey="@Properties.BottomType" title="@Strings.BottomType">
-			<settingConfig type="list">
-				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-	            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
-	            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
-	            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
-	            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
-        	</settingConfig>	
-		</setting>
-
-
-	 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
-			<settingConfig type="list">
-				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-	            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
-	            <listEntry value="2">@Strings.FIELD_TYPE_DISTANCE</listEntry>
-	            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
-	            <listEntry value="4">@Strings.FIELD_TYPE_FLOOR</listEntry>
-	            <listEntry value="5">@Strings.FIELD_TYPE_O2</listEntry>
-            	<listEntry value="6">@Strings.FIELD_TYPE_ELEVATION</listEntry>
-	        </settingConfig>	
-		</setting>
-	
-	 	<setting propertyKey="@Properties.Data2" title="@Strings.Data2">
-			<settingConfig type="list">
-				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-	            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
-	            <listEntry value="2">@Strings.FIELD_TYPE_DISTANCE</listEntry>
-	            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
-	            <listEntry value="4">@Strings.FIELD_TYPE_FLOOR</listEntry>
-	            <listEntry value="5">@Strings.FIELD_TYPE_O2</listEntry>
-            	<listEntry value="6">@Strings.FIELD_TYPE_ELEVATION</listEntry>
-	        </settingConfig>	
-		</setting>
-		
-	</group>
-	
+ 	
 </settings>

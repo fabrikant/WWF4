@@ -2,7 +2,7 @@
     <string id="AppName">WWF4</string>
 
     <string id="keyOW">API key openweathermap.org</string>
-    <string id="Theme">Theme</string>
+    <string id="Theme">Day theme</string>
    	<string id="NightTheme">Night theme</string>
     
     <string id="ThemeDark">Dark</string>
@@ -10,7 +10,7 @@
     <string id="ThemeInstinctLike1">Instinct like</string>
 
     
-    <string id="InvertCircle">invert colors in a circle!!</string>
+    <string id="InvertCircle">invert colors in a circle</string>
     
     <string id="WinSpeeddUnit">Wind speed unit</string>
  	<!--WIND UNITS -->
@@ -35,12 +35,10 @@
     <string id="Data1">Data field left</string>
     <string id="Data2">Data field right</string>
     
-    <string id="Style">Style</string>
-    <string id="Style">Data</string> 
-    <string id="CircleType" scope="foreground">Circle data type</string>
+     <string id="CircleType" scope="foreground">Circle data</string>
 
-    <string id="TopType" scope="foreground">Header</string>
-    <string id="BottomType" scope="foreground">Footer</string>
+    <string id="TopType" scope="foreground">Header data</string>
+    <string id="BottomType" scope="foreground">Footer data</string>
      
 	<!--FIELD TYPES -->
 	<string id="FIELD_TYPE_EMPTY" scope="foreground">Empty</string>
@@ -58,6 +56,5 @@
 	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>
 	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Weather condition</string>
 	<string id="FIELD_TYPE_CITY" scope="foreground">City</string>
-
      
 </strings>

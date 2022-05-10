@@ -78,7 +78,7 @@ class TopBottomDrawable extends BasicDrawable{
 		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
 		var center = getCenterForFont(fontSmall);
-		var value = now.day_of_week+", "+now.day+" "+now.month;
+		var value = Lang.format("$1$, $2$ $3$", [now.day_of_week, now.day, now.month]);
 		dc.drawText(center[0], center[1], fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
 	}
 	
