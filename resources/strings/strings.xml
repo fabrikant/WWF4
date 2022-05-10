@@ -47,6 +47,8 @@
 	<string id="FIELD_TYPE_CALORIES" scope="foreground">Calories</string>
 	<string id="FIELD_TYPE_HR" scope="foreground">Heart rate</string>
 	<string id="FIELD_TYPE_SECONDS" scope="foreground">Seconds</string>
+	<string id="FIELD_TYPE_DISTANCE" scope="foreground">Distance</string>
+
 	
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>
 	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>

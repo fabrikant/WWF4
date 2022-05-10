@@ -89,7 +89,8 @@
 			<settingConfig type="list">
 				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
 	            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
-	            <listEntry value="2">@Strings.FIELD_TYPE_STEPS</listEntry>
+	            <listEntry value="2">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+	            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
 	        </settingConfig>	
 		</setting>
 	
@@ -97,7 +98,8 @@
 			<settingConfig type="list">
 				<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
 	            <listEntry value="1">@Strings.FIELD_TYPE_CALORIES</listEntry>
-	            <listEntry value="2">@Strings.FIELD_TYPE_STEPS</listEntry>
+	            <listEntry value="2">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+	            <listEntry value="3">@Strings.FIELD_TYPE_STEPS</listEntry>
 	        </settingConfig>	
 		</setting>
 		

@@ -6,7 +6,7 @@ using Toybox.ActivityMonitor;
 
 class DataDrawable extends BasicDrawable{
 
-	var image, imageX;
+	var image, dataType;
 	
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
@@ -16,6 +16,7 @@ class DataDrawable extends BasicDrawable{
 	
 	public function onSettingsChanged(){
 		image = null;
+		dataType = Application.Properties.getValue(identifier);
 	}
 	
 	public function draw(dc as Graphics.Dc){
@@ -26,10 +27,9 @@ class DataDrawable extends BasicDrawable{
 		dc.setClip(locX, locY, width, height);
 		dc.setColor(bkColor, bkColor);
 		dc.fillRoundedRectangle(locX, locY, width, height, RADIUS_CORNER);
-
 		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
-		var dataType = Application.Properties.getValue(identifier);
-		
+			
+		//image
 		if (image == null){
 			var res = findRes(dataType);
 			if (res != null){
@@ -37,6 +37,7 @@ class DataDrawable extends BasicDrawable{
 			}
 		}
 		
+		//data
 		var offset = 5;
 		if (image != null){
 			dc.drawBitmap(locX+offset, locY, image);
@@ -48,13 +49,30 @@ class DataDrawable extends BasicDrawable{
 			value = getCalories();
 		}else if (dataType == DISTANCE){
 			value = getDistance();
+		}else if (dataType == STEPS){
+			value = getSteps();
 		}
 		
 		var center = getCenterForFont(fontMed);
 		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+		
 		drawBorder(dc);
 	}
 	
+	function getSteps(){
+		var value = "";
+		var info = ActivityMonitor.getInfo();
+		if (info has :steps){
+			value = info.steps;
+			if (value > 99999){
+				value = (value/1000).format("%d")+"k";
+			}else if (value > 9999){
+				value = (value.toFloat()/1000).format("%.1f")+"k";
+			}
+		}
+		return value;
+	}
+
 	function getCalories(){
 		var value = "";
 		var info = ActivityMonitor.getInfo();
@@ -78,6 +96,7 @@ class DataDrawable extends BasicDrawable{
 		var ref = {
 			CALORIES => Rez.Drawables.Callory,
 			DISTANCE => Rez.Drawables.Distance,
+			STEPS => Rez.Drawables.Steps,
 		};
 		return ref[dataType];
 	}
