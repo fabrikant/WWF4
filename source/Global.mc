@@ -154,7 +154,7 @@ module Global{
 
 	function speedToString(rawData){
 		var value = rawData;//meters/sec
-		var unit =  Application.Properties.getValue("WinSpeeddUnit");
+		var unit =  Application.Properties.getValue("WindSpeeddUnit");
 		if (unit == UNIT_SPEED_KMH){ /*km/h*/
 			value = rawData*3.6;
 		}else if (unit == UNIT_SPEED_MLH){ /*mile/h*/

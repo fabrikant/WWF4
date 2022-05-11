@@ -99,7 +99,7 @@
 	</setting>
 	
 
-  	<setting propertyKey="@Properties.WinSpeeddUnit" title="@Strings.WinSpeeddUnit">
+  	<setting propertyKey="@Properties.WindSpeeddUnit" title="@Strings.WindSpeeddUnit">
 		<settingConfig type="list">
             <listEntry value="0">@Strings.SpeedUnitMSec</listEntry>
             <listEntry value="1">@Strings.SpeedUnitKmH</listEntry>

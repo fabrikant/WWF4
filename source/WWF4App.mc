@@ -33,6 +33,10 @@ class WWF4App extends Application.AppBase {
     	mView = new WWF4View();
         return [ mView ] as Array<Views or InputDelegates>;
     }
+	
+	function getSettingsView(){
+		return [new GeneralMenu(), new SimpleMenuDelegate()];
+	}
 
 	///////////////////////////////////////////////////////////////////////////
 	// Background

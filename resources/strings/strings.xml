@@ -10,9 +10,9 @@
     <string id="ThemeInstinctLike1">Instinct like</string>
 
     
-    <string id="InvertCircle">invert colors in a circle</string>
+    <string id="InvertCircle">invert circle colors</string>
     
-    <string id="WinSpeeddUnit">Wind speed unit</string>
+    <string id="WindSpeeddUnit">Wind speed unit</string>
  	<!--WIND UNITS -->
 	<!--USE VERY!!!! SHOT STRING. its displayed on screen-->
 	<string id="SpeedUnitMSec" scope="foreground">m/s</string>
@@ -24,21 +24,21 @@
     
     <string id="ShowBluetooth">Show bluetooth indicator</string>
     <string id="ShowBluetoothIfConnect">if connected</string>
-    <string id="ShowBluetoothIfDisconnect">if disconnected</string>
-    <string id="ShowBluetoothHide">hide</string>
+    <string id="ShowBluetoothIfDisconnect">if not connected</string>
+    <string id="ShowBluetoothHide">always hide</string>
     
     
     <string id="ShowAlarm">Show alarm indicator</string>
     <string id="ShowDND">Show DND indicator</string>
     <string id="ShowDate">Show date</string>
 
-    <string id="Data1">Data field left</string>
-    <string id="Data2">Data field right</string>
+    <string id="Data1">Left field data type</string>
+    <string id="Data2">Right field data type</string>
     
-     <string id="CircleType" scope="foreground">Circle data</string>
+     <string id="CircleType" scope="foreground">Circle data type</string>
 
-    <string id="TopType" scope="foreground">Header data</string>
-    <string id="BottomType" scope="foreground">Footer data</string>
+    <string id="TopType" scope="foreground">Header data type</string>
+    <string id="BottomType" scope="foreground">Footer data type</string>
      
 	<!--FIELD TYPES -->
 	<string id="FIELD_TYPE_EMPTY" scope="foreground">Empty</string>
@@ -56,5 +56,8 @@
 	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>
 	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Weather condition</string>
 	<string id="FIELD_TYPE_CITY" scope="foreground">City</string>
-     
+    
+	<!-- Menu -->
+ 	<string id="MenuHeader" scope="foreground">Settings</string>
+
 </strings>
