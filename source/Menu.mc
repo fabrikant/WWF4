@@ -101,8 +101,8 @@ class Item extends WatchUi.MenuItem{
 	}
 
 	function onSelectItem(){
-		var subscribtion = self.method(:onSelectSubmenuItem);
-		var submenu = new SelectMenu(getLabel(), submenuPattern, getId(), subscribtion);
+		var weak = self.weak();
+		var submenu = new SelectMenu(getLabel(), submenuPattern, getId(), weak);
 		WatchUi.pushView(submenu, new SimpleMenuDelegate(), WatchUi.SLIDE_IMMEDIATE);
 	}	
 
@@ -130,49 +130,46 @@ class TogleItem extends WatchUi.ToggleMenuItem{
 //SUBMENU
 class SelectMenu extends WatchUi.Menu2{
 
-	var callback; 
 	
-	function initialize(title, pattern, propName, callback){
-		
-		self.callback = callback;
-		var subscribtion = self.method(:onSelectItem);
+	function initialize(title, pattern, propName, callbackWeak){
 		
 		Menu2.initialize({:title=> title});
 		var propValue = Application.Properties.getValue(propName);
 		var keys = pattern.keys();
 		for (var i=0; i<keys.size(); i++){
-			addItem(new SelectItem(keys[i], pattern[keys[i]], subscribtion));
+			addItem(new SelectItem(keys[i], pattern[keys[i]], callbackWeak));
 			if (propValue == keys[i]){
 				setFocus(i);
 			}
 		}
-	}
-	
-	function onSelectItem(itemId){
-		callback.invoke(itemId);
-		WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);	
 	}
 }
 
 //*****************************************************************************
 class SelectItem extends WatchUi.MenuItem{
 	
-	var callback;
+	var callbackWeak;
 	
-	function initialize(identifier, resLabel, callback) {
-		self.callback = callback; 
+	function initialize(identifier, resLabel, callbackWeak) {
+		self.callbackWeak = callbackWeak; 
 		MenuItem.initialize(Application.loadResource(resLabel), null, identifier, {});
 	}
 
 	function onSelectItem(){
-		callback.invoke(getId());
+		if (callbackWeak.stillAlive()){
+			var obj = callbackWeak.get();
+			if (obj != null){
+				obj.onSelectSubmenuItem(getId());
+			}
+		}
+		WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);	
+		
 	}
 }
 
 //*****************************************************************************
 //DELEGATE
 class SimpleMenuDelegate extends WatchUi.Menu2InputDelegate{
-	
 	
 	function initialize() {
         Menu2InputDelegate.initialize();
