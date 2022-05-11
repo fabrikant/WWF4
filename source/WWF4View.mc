@@ -22,6 +22,7 @@ class WWF4View extends WatchUi.WatchFace {
     	fontBig = Application.loadResource(Rez.Fonts.big);
     	fontMed = Application.loadResource(Rez.Fonts.medium);
     	fontSmall = Application.loadResource(Rez.Fonts.small);
+    	fontHr = Application.loadResource(Rez.Fonts.hr);
     	
         setLayout(Rez.Layouts.WatchFace(dc));
         circle = findDrawableById("Circle");

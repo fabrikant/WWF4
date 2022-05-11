@@ -43,12 +43,12 @@ class CircleDrawable extends BasicDrawable{
 			imageEmpty = Application.loadResource(Rez.Drawables.heartEmpty);
 			
 			imageX = locX + ((width - image.getWidth())/2).toNumber();
-			imageY = locY + ((height/2 - image.getHeight())/2).toNumber()+3;
+			imageY = locY + ((height/2 - image.getHeight())/2).toNumber()+5;
 			
 			var center = getCenter();
 			
 			var offsetY = fontCenter[1] - center[1];
-			textY = fontCenter[1] + (height/4).toNumber()-5;
+			textY = fontCenter[1] + (height/4).toNumber()-6;
 			
 		}else if (fieldType == CIRCLE_TYPE_SECONDS){
 			textY = fontCenter[1];
@@ -58,15 +58,15 @@ class CircleDrawable extends BasicDrawable{
 	public function draw(dc as Graphics.Dc){
 
 		dc.setClip(locX, locY, width, height);
-		if (Graphics.Dc has :setAntiAlias){
-			dc.setAntiAlias(true);
-		}
-		dc.setPenWidth(4);
+//		if (Graphics.Dc has :setAntiAlias){
+//			dc.setAntiAlias(true);
+//		}
+		dc.setPenWidth(7);
 		
 		dc.setColor(bkColor, Graphics.COLOR_TRANSPARENT);
 		
 		var center = getCenter();
-		var r = width/2.toNumber()-2;
+		var r = width/2.toNumber()-4;
 		dc.fillCircle(center[0], center[1], r);
 		
 		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
@@ -111,7 +111,7 @@ class CircleDrawable extends BasicDrawable{
 			}else{
 				dc.drawBitmap(imageX, imageY, imageEmpty);
 			}
-			dc.drawText(textX, textY, fontMed, value, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(textX, textY, fontHr, value, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		}else{
 			dc.drawBitmap(imageX, imageY, image);
 			dc.drawText(textX, textY, fontMed, "n/a", Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);

@@ -8,6 +8,8 @@ const RADIUS_CORNER = 15;
 var fontBig as WatchUi.FontResource; 
 var fontMed as WatchUi.FontResource;
 var fontSmall as WatchUi.FontResource;
+var fontHr as WatchUi.FontResource;
+
 
 var lastWeatherUpdate as Toybox.Time.Moment = null;
 var theme as Toybox.Lang.Array<Number>;
