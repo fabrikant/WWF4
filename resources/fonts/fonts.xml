@@ -5,7 +5,4 @@
 		filename="roboto/roboto-25.fnt" />
 	<font id="small" scope="foreground" antialias="false"
 		filename="roboto/roboto-20.fnt" />
-	<font id="hr" scope="foreground" antialias="false"
-		filename="roboto/roboto-number-22.fnt" />
-		
 </fonts>
