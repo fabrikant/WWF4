@@ -76,6 +76,7 @@ class GeneralMenu extends WatchUi.Menu2{
 			THEME_DARK => Rez.Strings.ThemeDark,
 			THEME_LIGHT => Rez.Strings.ThemeLight,
 			THEME_INSTINCT_LIKE_1 => Rez.Strings.ThemeInstinctLike1,
+			THEME_INSTINCT_LIKE_2 => Rez.Strings.ThemeInstinctLike2,
 		};
 	}
 
