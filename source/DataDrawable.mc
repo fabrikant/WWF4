@@ -8,6 +8,7 @@ using Toybox.Activity;
 class DataDrawable extends BasicDrawable{
 
 	var image, dataType;
+	var additionalValue;
 	
 	function initialize(params as Lang.Dictonary){
 		BasicDrawable.initialize(params);
@@ -18,6 +19,7 @@ class DataDrawable extends BasicDrawable{
 	public function onSettingsChanged(){
 		image = null;
 		dataType = Application.Properties.getValue(identifier);
+		additionalValue = null;
 	}
 	
 	public function draw(dc as Graphics.Dc){
@@ -76,6 +78,8 @@ class DataDrawable extends BasicDrawable{
 			value = getOxygenSaturation();
 		}else if (dataType == ELEVATION){
 			value = getElevation();
+		}else if (dataType == TIME_ZONE){
+			value = getSecondTime();
 		}
 		return value;
 	}
@@ -157,6 +161,13 @@ class DataDrawable extends BasicDrawable{
 		return value;
 	}
 	
+	function getSecondTime(){
+		if (additionalValue == null){
+			additionalValue = Application.Properties.getValue("T1TZ")*60 - System.getClockTime().timeZoneOffset;
+		}
+		return Global.momentToString(Time.now().add(new Time.Duration(additionalValue)));
+	}
+
 	
 	function findRes(dataType){
 		var ref = {
@@ -166,6 +177,7 @@ class DataDrawable extends BasicDrawable{
 			FLOOR => Rez.Drawables.Floor,
 			ELEVATION => Rez.Drawables.Elevation,
 			O2 => Rez.Drawables.O2,
+			TIME_ZONE => Rez.Drawables.TimeZone,
 		};
 		return ref[dataType];
 	}

@@ -80,6 +80,7 @@
             <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
        	</settingConfig>	
 	</setting>
 
@@ -96,6 +97,7 @@
             <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
       	</settingConfig>	
 	</setting>
 
@@ -109,6 +111,7 @@
             <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
         </settingConfig>	
 	</setting>
 
@@ -121,9 +124,13 @@
             <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
         </settingConfig>	
 	</setting>
 	
+  	<setting propertyKey="@Properties.T1TZ" title="@Strings.T1TZ">
+		<settingConfig type="numeric" min="-720" max="840"/>
+	</setting>
 
   	<setting propertyKey="@Properties.WindSpeeddUnit" title="@Strings.WindSpeeddUnit">
 		<settingConfig type="list">

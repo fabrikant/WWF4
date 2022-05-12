@@ -2,6 +2,8 @@ using Toybox.Graphics;
 using Toybox.WatchUi;
 using Toybox.System;
 using Toybox.Application;
+using Toybox.Time;
+using Toybox.Lang;
 
 const RADIUS_CORNER = 15;
 
@@ -55,6 +57,7 @@ enum{
 	FLOOR,
 	O2,
 	ELEVATION,
+	TIME_ZONE,
 	
 //	ACTIVE_DAY,
 //	ACTIVE_WEEK,
@@ -209,4 +212,18 @@ module Global{
 		}	
 		return value.format("%d");
 	}
+
+	function momentToString(moment){
+		var greg = Time.Gregorian.info(moment, Time.FORMAT_SHORT);
+        var hours = greg.hour;
+        var hourFormat = "%02d";
+        if (!System.getDeviceSettings().is24Hour) {
+        	hourFormat = "%d";
+            if (hours > 12) {
+                hours = hours - 12;
+            }
+        }
+		return Lang.format("$1$:$2$", [hours.format(hourFormat), greg.min.format("%02d")]);
+	}
+	
 }

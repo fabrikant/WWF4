@@ -54,5 +54,11 @@
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
+	
+	<bitmap id="TimeZone" filename="png-25/time-zones.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>	
 
 </drawables>

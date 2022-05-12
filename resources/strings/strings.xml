@@ -43,6 +43,9 @@
     <string id="Top" scope="foreground">Header data type</string>
     <string id="Bottom" scope="foreground">Footer data type</string>
      
+	<!--SECOND TIME -->
+	<string id="T1TZ" scope="foreground">Time zone ±UTC (minutes)</string>
+
 	<!--FIELD TYPES -->
 	<string id="FIELD_TYPE_EMPTY" scope="foreground">Empty</string>
 	<string id="FIELD_TYPE_STEPS" scope="foreground">Steps</string>
@@ -53,6 +56,7 @@
 	<string id="FIELD_TYPE_FLOOR" scope="foreground">Floor</string>
 	<string id="FIELD_TYPE_O2" scope="foreground">Oxygen saturation</string>
 	<string id="FIELD_TYPE_ELEVATION" scope="foreground">Elevation above sea level</string>
+	<string id="FIELD_TYPE_TIME1" scope="foreground">Second time</string>
 
 	
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>

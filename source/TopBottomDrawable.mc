@@ -11,10 +11,11 @@ class TopBottomDrawable extends DataDrawable{
 	var lastWeatherRead, lastValue;
 	
 	function initialize(params as Lang.Dictonary) {
-		isTop = params[:isTop];
 		BasicDrawable.initialize(params);
+		DataDrawable.initialize(params);
+		isTop = params[:isTop];
 		onSettingsChanged();
-		Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
+		//Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
 	}
 	
 	public function onSettingsChanged(){
@@ -87,8 +88,11 @@ class TopBottomDrawable extends DataDrawable{
 			}
 		}
 		lastWeatherRead = lastWeatherUpdate;
-		lastValue = Application.Storage.getValue(dataType);
-		
+		if (dataType == TOP_BOTTOM_TYPE_WEATHER_CONDITION){
+			lastValue = Application.Storage.getValue(STORAGE_KEY_WEATHER_MAIN);
+		}if (dataType == TOP_BOTTOM_TYPE_CITY){
+			lastValue = Application.Storage.getValue(STORAGE_KEY_WEATHER_CITY);
+		}
 	}
 
 	

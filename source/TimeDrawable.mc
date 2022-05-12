@@ -19,17 +19,7 @@ class TimeDrawable extends BasicDrawable{
 
 		dc.setClip(locX, locY, width, height);
 		var center = getCenterForFont(fontBig);
-		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-		
-        var hours = now.hour;
-        var hourFormat = "%02d";
-        if (!System.getDeviceSettings().is24Hour) {
-        	hourFormat = "%d";
-            if (hours > 12) {
-                hours = hours - 12;
-            }
-        }
-		var time = Lang.format("$1$:$2$", [hours.format(hourFormat), now.min.format("%02d")]);
+		var time = Global.momentToString(Time.now());
 		dc.setColor(foregroundColor() , Graphics.COLOR_TRANSPARENT);
 		dc.drawText(center[0], center[1], fontBig, time, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 		

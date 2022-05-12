@@ -49,6 +49,7 @@ class GeneralMenu extends WatchUi.Menu2{
 			FLOOR => Rez.Strings.FIELD_TYPE_FLOOR,
 			O2 => Rez.Strings.FIELD_TYPE_O2,
 			ELEVATION => Rez.Strings.FIELD_TYPE_ELEVATION,
+			TIME_ZONE => Rez.Strings.FIELD_TYPE_TIME1,
 		};
 	}
 

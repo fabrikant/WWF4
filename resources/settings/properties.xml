@@ -25,5 +25,6 @@
 	<property id="Data2" type="number">6</property>
 
 	<property id="WindSpeeddUnit" type="number">0</property>
+	<property id="T1TZ" type="number">0</property>
 
 </properties>
