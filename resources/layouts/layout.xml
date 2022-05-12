@@ -75,6 +75,14 @@
 		<param name="isTop">false</param>
 	</drawable>
 
+	 <drawable id="Left" class="LeftDrawable">
+		<param name="locX">0</param>
+		<param name="locY">33</param>
+		<param name="width">33</param>
+		<param name="height">Toybox.System.getDeviceSettings().screenHeight-66</param>
+		<param name="centerPosition">false</param>
+	</drawable>
+
 	<drawable id="Decoration" class="DecorationDrawable">
 		<param name="locX">0</param>
 		<param name="locY">0</param>

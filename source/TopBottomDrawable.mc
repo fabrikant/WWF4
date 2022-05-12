@@ -111,6 +111,10 @@ class TopBottomDrawable extends DataDrawable{
 	
 	function drawBattery(dc){
 	
+		if (Graphics.Dc has :setAntiAlias){
+			dc.setAntiAlias(true);
+		}
+
 		var bkColor = backgroundColor();
 		var fColor = foregroundColor();
 
