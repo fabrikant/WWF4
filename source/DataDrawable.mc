@@ -39,7 +39,9 @@ class DataDrawable extends BasicDrawable{
 		//draw field
 		var offset = 5;
 		if (image != null){
-			dc.drawBitmap(locX+offset, locY, image);
+			var imageHeight = image.getDc().getHeight();
+			var yOffset = imageHeight >= height ? 0 : ((height - imageHeight)/2).toNumber();
+			dc.drawBitmap(locX+offset, locY+yOffset, image);
 			offset += image.getDc().getWidth();
 		}
 		var center = getCenterForFont(fontMed);
@@ -107,10 +109,7 @@ class DataDrawable extends BasicDrawable{
 		}
 		
 		if (value != null){
-			if (value < 100){
-				postfix = "%";
-			}
-			return "O2 " + value + postfix;
+			return value + "%";
 		}
 		return value;
 		

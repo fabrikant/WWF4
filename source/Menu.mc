@@ -14,6 +14,7 @@ class GeneralMenu extends WatchUi.Menu2{
 		addItem(new Item("NightTheme", Rez.Strings.NightTheme, subMenuPatternThemes()));
 		addItem(new TogleItem("DNDisNight", Rez.Strings.DNDisNight));
 		addItem(new TogleItem("InvertCircle", Rez.Strings.InvertCircle));
+		addItem(new TogleItem("ShowBatteryScale", Rez.Strings.ShowBatteryScale));
 		addItem(new Item("ShowBluetooth", Rez.Strings.ShowBluetooth, subMenuPatternBluetooth()));		
 		addItem(new TogleItem("ShowAlarm", Rez.Strings.ShowAlarm));		
 		addItem(new TogleItem("ShowDND", Rez.Strings.ShowDND));		

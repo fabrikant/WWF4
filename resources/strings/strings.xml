@@ -12,6 +12,7 @@
     
     <string id="DNDisNight">Set night theme in DND mode</string>
     <string id="InvertCircle">invert circle colors</string>
+    <string id="ShowBatteryScale">Show the battery scale</string>
     
     <string id="WindSpeeddUnit">Wind speed unit</string>
  	<!--WIND UNITS -->

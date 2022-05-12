@@ -30,6 +30,11 @@
 		title="@Strings.InvertCircle">
 		<settingConfig type="boolean" />
 	</setting>
+	
+	<setting propertyKey="@Properties.ShowBatteryScale"
+		title="@Strings.ShowBatteryScale">
+		<settingConfig type="boolean" />
+	</setting>
 
  	<setting propertyKey="@Properties.ShowBluetooth" title="@Strings.ShowBluetooth">
 		<settingConfig type="list">

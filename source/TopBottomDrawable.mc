@@ -67,7 +67,9 @@ class TopBottomDrawable extends DataDrawable{
 		var offset = ((width-widthData)/2).toNumber(); 
 		
 		if (image != null){
-			dc.drawBitmap(locX+offset, locY, image);
+			var imageHeight = image.getDc().getHeight();
+			var yOffset = imageHeight >= height ? 0 : ((height - imageHeight)/2).toNumber();
+			dc.drawBitmap(locX+offset, locY+yOffset, image);
 			offset += image.getDc().getWidth();
 		}
 		var center = getCenterForFont(fontMed);
