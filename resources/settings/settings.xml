@@ -54,6 +54,10 @@
 		<settingConfig type="boolean" />
 	</setting>
 	
+	<setting propertyKey="@Properties.ShowAmPm"
+		title="@Strings.ShowAmPm">
+		<settingConfig type="boolean" />
+	</setting>
 
  	<setting propertyKey="@Properties.CircleType" title="@Strings.CircleType">
 		<settingConfig type="list">

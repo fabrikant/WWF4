@@ -5,7 +5,7 @@ using Toybox.Application;
 
 class LeftDrawable extends BasicDrawable{
 
-	var drawScale;
+	var drawScale, showAmPm;
 	
 	function initialize(params as Lang.Dictonary) {
 		BasicDrawable.initialize(params);
@@ -15,33 +15,35 @@ class LeftDrawable extends BasicDrawable{
 	
 	public function onSettingsChanged(){
 		drawScale = Application.Properties.getValue("ShowBatteryScale");
+		showAmPm = Application.Properties.getValue("ShowAmPm");
 	}	
 	
 	public function draw(dc as Graphics.Dc){
 		beforeDraw(dc as Graphics.Dc);
-		
-		drawBattery(dc);
-		drawAmPm(dc);
+		if (drawScale){
+			drawBattery(dc);
+		}
+		if (showAmPm){ 
+			drawAmPm(dc);
+		}
 		drawBorder(dc);
 	}
 	
 	function drawAmPm(dc){
-		
 		if (!System.getDeviceSettings().is24Hour) {
 			var center = getCenterForFont(fontSmall);
 			var now = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         	var value = now.hour > 11 ? "P" : "A";
+        	var xOfset = dc.getTextWidthInPixels("M", fontSmall)-2;
         	dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
-			dc.drawText(locX+width-5, center[1]- Graphics.getFontAscent(fontSmall), fontSmall, value, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(locX+width-xOfset, center[1]- Graphics.getFontAscent(fontSmall), fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(locX+width-xOfset, center[1], fontSmall, "M", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 		}
 		
 	}
 	
 	function drawBattery(dc){
 		
-		if (!drawScale){
-			return;
-		}
 		var value = Math.round(System.getSystemStats().battery);
 		var bkColor = backgroundColor();
 		var fColor = foregroundColor();

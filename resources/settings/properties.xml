@@ -12,6 +12,8 @@
 	<property id="ShowBluetooth" type="number">1</property>
 	<property id="ShowAlarm" type="boolean">false</property>
 	<property id="ShowDND" type="boolean">false</property>
+	<property id="ShowAmPm" type="boolean">false</property>
+	
 	<property id="ShowBatteryScale" type="boolean">false</property>
 	
 	<property id="CircleType" type="number">1</property>
