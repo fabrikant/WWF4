@@ -4,7 +4,9 @@
 	
 	<property id="Theme" type="number">0</property>
 	<property id="NightTheme" type="number">1</property>
+	<property id="DNDisNight" type="boolean">true</property>
 	
+
 	<property id="InvertCircle" type="boolean">false</property>
 	
 	<property id="ShowBluetooth" type="number">1</property>

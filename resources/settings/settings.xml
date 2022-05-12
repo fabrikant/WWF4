@@ -21,6 +21,11 @@
         </settingConfig>
 	</setting>
 
+	<setting propertyKey="@Properties.DNDisNight"
+		title="@Strings.DNDisNight">
+		<settingConfig type="boolean" />
+	</setting>
+
 	<setting propertyKey="@Properties.InvertCircle"
 		title="@Strings.InvertCircle">
 		<settingConfig type="boolean" />

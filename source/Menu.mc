@@ -12,6 +12,7 @@ class GeneralMenu extends WatchUi.Menu2{
 		Menu2.initialize({:title=> Application.loadResource(Rez.Strings.MenuHeader)});
 		addItem(new Item("Theme", Rez.Strings.Theme, subMenuPatternThemes()));
 		addItem(new Item("NightTheme", Rez.Strings.NightTheme, subMenuPatternThemes()));
+		addItem(new TogleItem("DNDisNight", Rez.Strings.DNDisNight));
 		addItem(new TogleItem("InvertCircle", Rez.Strings.InvertCircle));
 		addItem(new Item("ShowBluetooth", Rez.Strings.ShowBluetooth, subMenuPatternBluetooth()));		
 		addItem(new TogleItem("ShowAlarm", Rez.Strings.ShowAlarm));		
@@ -22,7 +23,6 @@ class GeneralMenu extends WatchUi.Menu2{
 		addItem(new Item("Data1", Rez.Strings.Data1, subMenuPatternDataFields()));
 		addItem(new Item("Data2", Rez.Strings.Data2, subMenuPatternDataFields()));
 		addItem(new Item("WindSpeeddUnit", Rez.Strings.WindSpeeddUnit, subMenuPatternWindSpeeddUnit()));
-		
 	}
 	
  	private function subMenuPatternWindSpeeddUnit(){

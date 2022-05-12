@@ -11,6 +11,7 @@ class WWF4App extends Application.AppBase {
 	
     function initialize() {
         AppBase.initialize();
+        loadGlobalValues();
     }
 
     // onStart() is called on application start up
@@ -21,8 +22,13 @@ class WWF4App extends Application.AppBase {
     function onStop(state as Dictionary?) {
     }
 
+	function loadGlobalValues(){
+		DNDisNight = Application.Properties.getValue("DNDisNight");
+	}
+	
 	// triggered by settings change in GCM
-	function onSettingsChanged() { 
+	function onSettingsChanged() {
+		loadGlobalValues();	 
 	    mView.onSettingsChanged();
 	    registerEvents();
 	    WatchUi.requestUpdate();   // update the view to reflect changes

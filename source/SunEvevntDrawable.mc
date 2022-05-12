@@ -71,14 +71,19 @@ class SunEventsDrawable extends BasicDrawable{
 			sunset = momentToString(sunsetMoment);
 		}
 	
+		//To day or not to day
 		nowIsDay = true;
-		if (sunriseMoment != null && sunsetMoment != null){
-			var now = Time.now();
-			if ( !(now.greaterThan(sunriseMoment) && now.lessThan(sunsetMoment))){
-				nowIsDay = false;
-			}
-		} 
-
+		
+		if (DNDisNight && System.getDeviceSettings().doNotDisturb){
+			nowIsDay = false;
+		}else{
+			if (sunriseMoment != null && sunsetMoment != null){
+				var now = Time.now();
+				if ( !(now.greaterThan(sunriseMoment) && now.lessThan(sunsetMoment))){
+					nowIsDay = false;
+				}
+			} 
+		}
 		dc.drawText(sunriseX, center[1], fontMed, sunrise, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);				
 		dc.drawText(sunsetX, center[1], fontMed, sunset, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);				
 			
