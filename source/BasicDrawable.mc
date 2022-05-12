@@ -87,5 +87,4 @@ class BasicDrawable extends WatchUi.Drawable{
 	function accentColor(){
 		return theme[4];
 	}
-	
 }

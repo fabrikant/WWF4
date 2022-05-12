@@ -30,22 +30,38 @@ class DataDrawable extends BasicDrawable{
 		dc.fillRoundedRectangle(locX, locY, width, height, RADIUS_CORNER);
 		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 			
-		//image
+		var value = getValue(dataType);
+		if (value == null){
+			value = "N/A";
+		}
+		
+		loadImage();
+		//draw field
+		var offset = 5;
+		if (image != null){
+			dc.drawBitmap(locX+offset, locY, image);
+			offset += image.getDc().getWidth();
+		}
+		var center = getCenterForFont(fontMed);
+		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+		
+		drawBorder(dc);
+	}
+	
+	function loadImage(){
 		if (image == null){
 			var res = findRes(dataType);
 			if (res != null){
 				image = createImage(res);
 			}
 		}
-		
-		//data
-		var offset = 5;
-		if (image != null){
-			dc.drawBitmap(locX+offset, locY, image);
-			offset += image.getDc().getWidth();
-		}
-		
-		var value="";
+	}
+	
+	//*************************************************************************
+	//GET DATA
+	
+	function getValue(dataType){
+		var value=null;
 		if (dataType == CALORIES){
 			value = getCalories();
 		}else if (dataType == DISTANCE){
@@ -59,11 +75,7 @@ class DataDrawable extends BasicDrawable{
 		}else if (dataType == ELEVATION){
 			value = getElevation();
 		}
-		
-		var center = getCenterForFont(fontMed);
-		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
-		
-		drawBorder(dc);
+		return value;
 	}
 	
 	function getElevation(){
@@ -77,9 +89,6 @@ class DataDrawable extends BasicDrawable{
 					value = Global.elevationToString(info.altitude);
 				}
 			}
-		}
-		if (value == null){
-			value = "N/A";
 		}
 		return value;
 	}
@@ -97,16 +106,18 @@ class DataDrawable extends BasicDrawable{
 			}
 		}
 		
-		if (value == null){
-			value = "N/A";
-		}else if (value < 100){
-			postfix = "%";
+		if (value != null){
+			if (value < 100){
+				postfix = "%";
+			}
+			return "O2 " + value + postfix;
 		}
-		return "O2 " + value + postfix;
+		return value;
+		
 	}	
 	
 	function getFloor(){
-		var value = "";
+		var value = null;
 		var info = ActivityMonitor.getInfo();
 		if (info has :floorsClimbed){
 			value = info.floorsClimbed.toString()
@@ -116,7 +127,7 @@ class DataDrawable extends BasicDrawable{
 	}
 		
 	function getSteps(){
-		var value = "";
+		var value = null;
 		var info = ActivityMonitor.getInfo();
 		if (info has :steps){
 			value = info.steps;
@@ -130,7 +141,7 @@ class DataDrawable extends BasicDrawable{
 	}
 
 	function getCalories(){
-		var value = "";
+		var value = null;
 		var info = ActivityMonitor.getInfo();
 		if (info has :calories){
 			value = info.calories;
@@ -139,7 +150,7 @@ class DataDrawable extends BasicDrawable{
 	}
 
 	function getDistance(){
-		var value = "";
+		var value = null;
 		var info = ActivityMonitor.getInfo();
 		if (info has :distance){
 			value = Global.distanceToString(info.distance);
@@ -148,13 +159,14 @@ class DataDrawable extends BasicDrawable{
 	}
 	
 	
-	private function findRes(dataType){
+	function findRes(dataType){
 		var ref = {
 			CALORIES => Rez.Drawables.Callory,
 			DISTANCE => Rez.Drawables.Distance,
 			STEPS => Rez.Drawables.Steps,
 			FLOOR => Rez.Drawables.Floor,
 			ELEVATION => Rez.Drawables.Elevation,
+			O2 => Rez.Drawables.O2,
 		};
 		return ref[dataType];
 	}

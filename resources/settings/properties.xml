@@ -16,11 +16,11 @@
 	
 	<property id="CircleType" type="number">1</property>
 
-	<property id="TopType" type="number">1</property>
-	<property id="BottomType" type="number">2</property>
+	<property id="Top" type="number">1</property>
+	<property id="Bottom" type="number">2</property>
 	
-	<property id="Data1" type="number">1</property>
-	<property id="Data2" type="number">2</property>
+	<property id="Data1" type="number">5</property>
+	<property id="Data2" type="number">6</property>
 
 	<property id="WindSpeeddUnit" type="number">0</property>
 

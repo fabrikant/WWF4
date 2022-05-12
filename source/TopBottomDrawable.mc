@@ -4,11 +4,11 @@ using Toybox.System;
 using Toybox.Lang;
 using Toybox.Math;
 
-class TopBottomDrawable extends BasicDrawable{
+class TopBottomDrawable extends DataDrawable{
 
 	var isTop;
 	var methodForDraw;
-	var lastWeatherRead, lastValue, keyProp;
+	var lastWeatherRead, lastValue;
 	
 	function initialize(params as Lang.Dictonary) {
 		isTop = params[:isTop];
@@ -18,24 +18,22 @@ class TopBottomDrawable extends BasicDrawable{
 	}
 	
 	public function onSettingsChanged(){
-	
+
+		DataDrawable.onSettingsChanged();
 		lastWeatherRead = null;
 		lastValue = null;		
 		methodForDraw = null;
-		keyProp = null;
-		var fieldTypeString = isTop ? "TopType" : "BottomType";
-		var fieldType = Application.Properties.getValue(fieldTypeString);
 		
-		if (fieldType == TOP_BOTTOM_TYPE_BATTERY) {
+		if (dataType == TOP_BOTTOM_TYPE_BATTERY) {
 			methodForDraw = self.method(:drawBattery);
-		}else if(fieldType == TOP_BOTTOM_TYPE_DATE){
+		}else if(dataType == TOP_BOTTOM_TYPE_DATE){
 			methodForDraw = self.method(:drawDate);
-		}else if(fieldType == TOP_BOTTOM_TYPE_WEATHER_CONDITION){
+		}else if(dataType == TOP_BOTTOM_TYPE_WEATHER_CONDITION){
 			methodForDraw = self.method(:drawWeatherInfo);
-			keyProp = STORAGE_KEY_WEATHER_MAIN;
-		}else if(fieldType == TOP_BOTTOM_TYPE_CITY){
+		}else if(dataType == TOP_BOTTOM_TYPE_CITY){
 			methodForDraw = self.method(:drawWeatherInfo);
-			keyProp = STORAGE_KEY_WEATHER_CITY;
+		}else{
+			methodForDraw = self.method(:drawDataField);
 		}
 	}
 	
@@ -48,7 +46,35 @@ class TopBottomDrawable extends BasicDrawable{
 		}
 		drawBorder(dc);
 	}
+
+	function drawDataField(dc){
 	
+		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
+		
+		var value = getValue(dataType);
+		if (value == null){
+			return;
+		}
+		loadImage();
+		
+		//draw field
+		var widthData = 0;
+		if (image != null){
+			widthData += image.getDc().getWidth();
+		}
+		
+		widthData += dc.getTextWidthInPixels(value.toString(),fontMed);
+		var offset = ((width-widthData)/2).toNumber(); 
+		
+		if (image != null){
+			dc.drawBitmap(locX+offset, locY, image);
+			offset += image.getDc().getWidth();
+		}
+		var center = getCenterForFont(fontMed);
+		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+
+	}	
+
 	function updateLastValue(){
 		
 		if (lastWeatherUpdate == null){
@@ -59,9 +85,10 @@ class TopBottomDrawable extends BasicDrawable{
 			}
 		}
 		lastWeatherRead = lastWeatherUpdate;
-		lastValue = Application.Storage.getValue(keyProp);
+		lastValue = Application.Storage.getValue(dataType);
 		
 	}
+
 	
 	function drawWeatherInfo(dc){
 		updateLastValue();

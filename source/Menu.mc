@@ -18,8 +18,8 @@ class GeneralMenu extends WatchUi.Menu2{
 		addItem(new TogleItem("ShowAlarm", Rez.Strings.ShowAlarm));		
 		addItem(new TogleItem("ShowDND", Rez.Strings.ShowDND));		
 		addItem(new Item("CircleType", Rez.Strings.CircleType, subMenuPatternCircleTypes()));
-		addItem(new Item("TopType", Rez.Strings.TopType, subMenuPatternTopBottomTypes()));
-		addItem(new Item("BottomType", Rez.Strings.BottomType, subMenuPatternTopBottomTypes()));
+		addItem(new Item("Top", Rez.Strings.Top, subMenuPatternTopBottomTypes()));
+		addItem(new Item("Bottom", Rez.Strings.Bottom, subMenuPatternTopBottomTypes()));
 		addItem(new Item("Data1", Rez.Strings.Data1, subMenuPatternDataFields()));
 		addItem(new Item("Data2", Rez.Strings.Data2, subMenuPatternDataFields()));
 		addItem(new Item("WindSpeeddUnit", Rez.Strings.WindSpeeddUnit, subMenuPatternWindSpeeddUnit()));
@@ -34,6 +34,8 @@ class GeneralMenu extends WatchUi.Menu2{
 			UNIT_SPEED_BOF => Rez.Strings.SpeedUnitBof,
 			UNIT_SPEED_KNOTS => Rez.Strings.SpeedUnitKnots,
 		};
+		
+		
 	}
 
 	private function subMenuPatternDataFields(){
@@ -49,13 +51,20 @@ class GeneralMenu extends WatchUi.Menu2{
 	}
 
 	private function subMenuPatternTopBottomTypes(){
-		return {
+		var dict =  {
 			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
 			TOP_BOTTOM_TYPE_BATTERY => Rez.Strings.FIELD_TYPE_BATTERY,
 			TOP_BOTTOM_TYPE_DATE => Rez.Strings.FIELD_TYPE_DATE,
 			TOP_BOTTOM_TYPE_WEATHER_CONDITION => Rez.Strings.FIELD_TYPE_WEATHER_CONDITION,
 			TOP_BOTTOM_TYPE_CITY => Rez.Strings.FIELD_TYPE_CITY,
 		};
+		//add data fields types
+		var dictDataFields = subMenuPatternDataFields();
+		var keys = dictDataFields.keys();
+		for (var i = 0; i < keys.size(); i++){
+			dict.put(keys[i], dictDataFields[keys[i]]);
+		} 
+		return dict;
 	}
 	
 	private function subMenuPatternThemes(){

@@ -49,4 +49,10 @@
 		</palette>
 	</bitmap>	
 
+	<bitmap id="O2" filename="png-25/o2.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>	
+
 </drawables>

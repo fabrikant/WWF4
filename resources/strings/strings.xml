@@ -36,10 +36,10 @@
     <string id="Data1">Left field data type</string>
     <string id="Data2">Right field data type</string>
     
-     <string id="CircleType" scope="foreground">Circle data type</string>
+    <string id="CircleType" scope="foreground">Circle data type</string>
 
-    <string id="TopType" scope="foreground">Header data type</string>
-    <string id="BottomType" scope="foreground">Footer data type</string>
+    <string id="Top" scope="foreground">Header data type</string>
+    <string id="Bottom" scope="foreground">Footer data type</string>
      
 	<!--FIELD TYPES -->
 	<string id="FIELD_TYPE_EMPTY" scope="foreground">Empty</string>
