@@ -24,6 +24,7 @@ class GeneralMenu extends WatchUi.Menu2{
 		addItem(new Item("Bottom", Rez.Strings.Bottom, subMenuPatternTopBottomTypes()));
 		addItem(new Item("Data1", Rez.Strings.Data1, subMenuPatternDataFields()));
 		addItem(new Item("Data2", Rez.Strings.Data2, subMenuPatternDataFields()));
+		addItem(new PickerItem("T1TZ", Rez.Strings.T1TZ));
 		addItem(new Item("WindSpeeddUnit", Rez.Strings.WindSpeeddUnit, subMenuPatternWindSpeeddUnit()));
 	}
 	
@@ -136,6 +137,26 @@ class TogleItem extends WatchUi.ToggleMenuItem{
 	function onSelectItem(){
 		Application.Properties.setValue(getId(), isEnabled());
 	}	
+}
+
+//*****************************************************************************
+class PickerItem extends WatchUi.MenuItem{
+	
+	function initialize(propName, resLabel) {
+		var label = Application.loadResource(resLabel);
+		var sublabel = Application.Properties.getValue(propName);
+		MenuItem.initialize(label, sublabel.toString(), propName, {});
+	}
+
+	function onSelectItem(){
+		var picker = new StringPicker(self.weak(), "0123456789-");
+		WatchUi.pushView(picker, new StringPickerDelegate(picker), WatchUi.SLIDE_IMMEDIATE);
+	}	
+	
+	function onSetText(value){
+		setSubLabel(value);
+		Application.Properties.setValue(getId(), value.toNumber());
+	}
 }
 
 //*****************************************************************************
