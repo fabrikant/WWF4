@@ -60,15 +60,32 @@ class LeftDrawable extends BasicDrawable{
 			dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
 		}
 		dc.setPenWidth(1);
+		//цветной индикатор
 		dc.fillRectangle(0, yFull, width, fullHeight);
+		
+		//Деления
 		dc.setColor(fColor, fColor);
-		dc.drawRectangle(0, yFull, width, fullHeight);
+		//dc.setColor(accentColor(), Graphics.COLOR_TRANSPARENT);
+		var div = batHeight/10;
+		for (var i = 1; i<10; i++){
+			var divY = locY+y+batHeight-i*div;
+			if (divY < yFull){break;}
+			dc.drawLine(locX, divY, locX+width, divY);
+		}
+		
+		//Рамка индикатора
+		dc.setColor(fColor, fColor);
+		//dc.drawRectangle(0, yFull, width, fullHeight);
 		dc.drawRectangle(locX, locY+y-1, width, batHeight+1);
+		//Обрезка шкалы справа
 		dc.setColor(bkColor, bkColor);
 		dc.fillCircle(r, r, r-scaleWidth);
+		//Правый контур шкалы
 		dc.setColor(fColor, fColor);
 		dc.drawCircle(r, r, r-scaleWidth);
+		//Левый контур
 		dc.drawCircle(r, r, r);
+		//Убираем артефакты выше и ниже
 		dc.setColor(bkColor, bkColor);
 		dc.fillRectangle(locX, locY, width, y-1);		
 		dc.fillRectangle(locX, locY+y+batHeight, width, height);

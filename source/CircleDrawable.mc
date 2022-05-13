@@ -61,12 +61,13 @@ class CircleDrawable extends BasicDrawable{
 		if (Graphics.Dc has :setAntiAlias){
 			dc.setAntiAlias(true);
 		}
-		dc.setPenWidth(7);
+		var penWidth = 7;
+		dc.setPenWidth(penWidth);
 		
 		dc.setColor(bkColor, Graphics.COLOR_TRANSPARENT);
 		
 		var center = getCenter();
-		var r = width/2.toNumber()-4;
+		var r = width/2.toNumber()-(penWidth/2).toNumber();
 		dc.fillCircle(center[0], center[1], r);
 		
 		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
