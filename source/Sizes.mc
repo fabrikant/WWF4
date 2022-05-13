@@ -37,10 +37,9 @@ module Sizes{
 	}
 	 
 	function calculateCircle(){
-		var circleOffset = 2;
-		circle = [0, 0, Math.round(2.5*fieldH).toNumber()];
-		circle[1] = centralSquare[1]+2*fieldH-circle[2]+circleOffset;
-		circle[0] = centralSquare[0]+centralSquare[2]-circle[2]+circleOffset;
+		circle = [0, 0, Math.round(2.6*fieldH).toNumber()];
+		circle[1] = centralSquare[1]+2*fieldH-circle[2]+4;
+		circle[0] = centralSquare[0]+centralSquare[2]-circle[2]+2;
 	}
 	
 	function calculate(){
