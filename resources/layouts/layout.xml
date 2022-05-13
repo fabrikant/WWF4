@@ -3,95 +3,98 @@
 	 <drawable id="Ground" class="GroundDrawable">
 		<param name="locX">0</param>
 		<param name="locY">0</param>
-		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
-		<param name="height">Toybox.System.getDeviceSettings().screenHeight</param>
+		<param name="width">Sizes.screenW</param>
+		<param name="height">Sizes.screenH</param>
 		<param name="centerPosition">true</param>
 	</drawable>
  	    
 	 <drawable id="Time" class="TimeDrawable">
-		<param name="locX">33</param>
-		<param name="locY">83</param>
-		<param name="width">174</param>
-		<param name="height">74</param>
+		<param name="locX">Sizes.centralSquare[0]</param>
+		<param name="locY">Sizes.centralSquare[1]+2*Sizes.fieldH</param>
+		<param name="width">Sizes.centralSquare[2]</param>
+		<param name="height">Sizes.timeFieldH</param>
 		<param name="autocenter">false</param>
 		<param name="centerPosition">true</param>
 	</drawable>
 	 
 	 <drawable id="SunEvents" class="SunEventsDrawable">
-		<param name="locX">33</param>
-		<param name="locY">157</param>
-		<param name="width">174</param>
-		<param name="height">25</param>
+		<param name="locX">Sizes.centralSquare[0]</param>
+		<param name="locY">Sizes.centralSquare[1]+2*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="width">Sizes.centralSquare[2]</param>
+		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
 	</drawable>
 	
 	 <drawable id="Weather" class="WeatherDrawable">
-		<param name="locX">33</param>
-		<param name="locY">33</param>
-		<param name="width">118</param>
-		<param name="height">50</param>
+		<param name="locX">Sizes.centralSquare[0]</param>
+		<param name="locY">Sizes.centralSquare[1]</param>
+		<param name="width">Sizes.centralSquare[2]-Sizes.circle[2]</param>
+		<param name="height">2*Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
 	</drawable>
 	 
 	 <drawable id="Data1" class="DataDrawable">
-		<param name="locX">33</param>
-		<param name="locY">182</param>
-		<param name="width">87</param>
-		<param name="height">25</param>
+		<param name="locX">Sizes.centralSquare[0]</param>
+		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="width">Sizes.centralSquare[2]/2</param>
+		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
 	</drawable>
 	 
 	 <drawable id="Data2" class="DataDrawable">
-		<param name="locX">120</param>
-		<param name="locY">182</param>
-		<param name="width">87</param>
-		<param name="height">25</param>
+		<param name="locX">Sizes.centralSquare[0]+Sizes.centralSquare[2]/2</param>
+		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="width">Sizes.centralSquare[2]/2</param>
+		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
 	</drawable>
 
 	 <drawable id="Top" class="TopBottomDrawable">
 		<param name="locX">0</param>
 		<param name="locY">0</param>
-		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
-		<param name="height">32</param>
+		<param name="width">Sizes.screenW</param>
+		<param name="height">Sizes.centralSquare[1]</param>
 		<param name="centerPosition">false</param>
 		<param name="isTop">true</param>
 	</drawable>
 
 	 <drawable id="Right" class="RightDrawable">
-		<param name="locX">207</param>
+		<param name="locX">Sizes.centralSquare[0]+Sizes.centralSquare[2]</param>
 		<param name="locY">0</param>
-		<param name="width">33</param>
-		<param name="height">Toybox.System.getDeviceSettings().screenHeight</param>
+		<param name="width">Sizes.centralSquare[0]</param>
+		<param name="height">Sizes.screenH</param>
 		<param name="centerPosition">false</param>
 	</drawable>
 	
 	 <drawable id="Bottom" class="TopBottomDrawable">
 		<param name="locX">0</param>
-		<param name="locY">207</param>
-		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
-		<param name="height">33</param>
+		<param name="locY">Sizes.centralSquare[1]+4*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="width">Sizes.screenW</param>
+		<param name="height">Sizes.centralSquare[1]</param>
 		<param name="centerPosition">false</param>
 		<param name="isTop">false</param>
 	</drawable>
 
 	 <drawable id="Left" class="LeftDrawable">
 		<param name="locX">0</param>
-		<param name="locY">33</param>
-		<param name="width">33</param>
-		<param name="height">Toybox.System.getDeviceSettings().screenHeight-66</param>
+		<param name="locY">Sizes.centralSquare[1]</param>
+		<param name="width">Sizes.centralSquare[0]</param>
+		<param name="height">Toybox.System.getDeviceSettings().screenHeight-2*Sizes.centralSquare[1]</param>
 		<param name="centerPosition">false</param>
 	</drawable>
 
 	<drawable id="Decoration" class="DecorationDrawable">
 		<param name="locX">0</param>
 		<param name="locY">0</param>
-		<param name="width">Toybox.System.getDeviceSettings().screenWidth</param>
-		<param name="height">Toybox.System.getDeviceSettings().screenHeight</param>
-		
+		<param name="width">Sizes.screenW</param>
+		<param name="height">Sizes.screenH</param>
 		<param name="decoration">[
 			{:method=>:setPenWidth, :params => [2]},
-			{:method=>:drawLine, :params => [40,182,200,182]},
+			{:method=>:drawLine, :params => [
+				Sizes.centralSquare[0] + Sizes.fieldH/4, 
+				Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH, 
+				Sizes.centralSquare[0] + Sizes.centralSquare[2] - Sizes.fieldH/4, 
+				Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH]},
 			<!-- 
 			{:method=>:drawLine, :params => [Toybox.System.getDeviceSettings().screenWidth/2,182,Toybox.System.getDeviceSettings().screenWidth/2,197]},
 			 -->
@@ -99,10 +102,10 @@
 	</drawable>
 
 	 <drawable id="Circle" class="CircleDrawable">
-		<param name="locX">148</param>
-		<param name="locY">23</param>
-		<param name="width">62</param>
-		<param name="height">62</param>
+		<param name="locX">Sizes.circle[0]</param>
+		<param name="locY">Sizes.circle[1]</param>
+		<param name="width">Sizes.circle[2]</param>
+		<param name="height">Sizes.circle[2]</param>
 		<param name="centerPosition">true</param>
 	</drawable>
 

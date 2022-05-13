@@ -5,7 +5,6 @@ using Toybox.Application;
 using Toybox.Time;
 using Toybox.Lang;
 
-const RADIUS_CORNER = 15;
 
 var fontBig as WatchUi.FontResource; 
 var fontMed as WatchUi.FontResource;

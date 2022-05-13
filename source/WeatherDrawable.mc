@@ -53,7 +53,7 @@ class WeatherDrawable extends BasicDrawable{
 		
 		var bkColor = backgroundColor();
 		dc.setColor(bkColor, bkColor);
-		dc.fillRoundedRectangle(locX, locY, width, height, RADIUS_CORNER);
+		dc.fillRoundedRectangle(locX, locY, width, height, Sizes.radiusCorner());
 		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 		var center = getCenterForFont(fontSmall);
 		dc.drawText(center[0], center[1], fontSmall, reason, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -106,7 +106,7 @@ class WeatherDrawable extends BasicDrawable{
 		dc.setColor(sizeColor, sizeColor);
 		dc.fillRectangle(0, 0, width, height);
 		dc.setColor(bkColor, bkColor);
-		dc.fillRoundedRectangle(0, 0, width+RADIUS_CORNER+1, height+RADIUS_CORNER+1, RADIUS_CORNER);
+		dc.fillRoundedRectangle(0, 0, width+Sizes.radiusCorner()+1, height+Sizes.radiusCorner()+1, Sizes.radiusCorner());
 		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		
 		//image

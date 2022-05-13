@@ -23,7 +23,7 @@ class GroundDrawable extends BasicDrawable{
 		dc.fillRectangle(locX, locY, width, height);
 		bkColor = backgroundColor();
 		dc.setColor(bkColor, bkColor);
-		dc.fillRoundedRectangle(xy, xy, wh, wh, RADIUS_CORNER);
+		dc.fillRoundedRectangle(xy, xy, wh, wh, Sizes.radiusCorner());
 				
 	}
 
