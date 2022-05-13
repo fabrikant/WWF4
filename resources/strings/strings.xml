@@ -58,7 +58,7 @@
 	<string id="FIELD_TYPE_O2" scope="foreground">Oxygen saturation</string>
 	<string id="FIELD_TYPE_ELEVATION" scope="foreground">Elevation above sea level</string>
 	<string id="FIELD_TYPE_TIME1" scope="foreground">Second time</string>
-
+	<string id="FIELD_TYPE_MOON" scope="foreground">Moon phase</string>
 	
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>
 	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>

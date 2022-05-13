@@ -38,8 +38,6 @@ class DataDrawable extends BasicDrawable{
 			dc.fillRectangle(locX-rCorn, locY, width, height);
 		}
 		
-		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
-			
 		var value = getValue(dataType);
 		if (value == null){
 			value = "N/A";
@@ -55,6 +53,8 @@ class DataDrawable extends BasicDrawable{
 			offset += image.getDc().getWidth();
 		}
 		var center = getCenterForFont(fontMed);
+		
+		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
 		
 		drawBorder(dc);
@@ -88,10 +88,26 @@ class DataDrawable extends BasicDrawable{
 			value = getElevation();
 		}else if (dataType == TIME_ZONE){
 			value = getSecondTime();
+		}else if (dataType == MOON){
+			value = getMoon();
 		}
 		return value;
 	}
-	
+
+	function getMoon(){
+		var today = Lang.Time.today();
+		if (additionalValue == null){
+			additionalValue = {:day => today, :phase => null};
+		}
+		if (today != additionalValue[:day] || additionalValue[:phase] == null){
+			additionalValue[:day] = today;
+			additionalValue[:phase] = Moon.moonPhase(today);
+			image = Moon.drawMoon(additionalValue[:phase][:IP1], height, foregroundColor(), backgroundColor());
+		}
+		
+		return additionalValue[:phase][:AG1];
+	}
+		
 	function getElevation(){
 
 		var value = null;

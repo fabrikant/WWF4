@@ -83,6 +83,7 @@
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
            	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+           	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
        	</settingConfig>	
 	</setting>
 
@@ -100,6 +101,7 @@
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
            	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+          	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
       	</settingConfig>	
 	</setting>
 
@@ -114,6 +116,7 @@
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
            	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+          	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
         </settingConfig>	
 	</setting>
 
@@ -127,6 +130,7 @@
             <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
            	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
            	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+          	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
         </settingConfig>	
 	</setting>
 	

@@ -50,8 +50,6 @@ class TopBottomDrawable extends DataDrawable{
 
 	function drawDataField(dc){
 	
-		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
-		
 		var value = getValue(dataType);
 		if (value == null){
 			return;
@@ -74,6 +72,7 @@ class TopBottomDrawable extends DataDrawable{
 			offset += image.getDc().getWidth();
 		}
 		var center = getCenterForFont(fontMed);
+		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
 
 	}	
