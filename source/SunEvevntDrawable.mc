@@ -35,7 +35,10 @@ class SunEventsDrawable extends BasicDrawable{
 
 		var center = getCenterForFont(fontMed);
 		dc.setColor(foregroundColor() , Graphics.COLOR_TRANSPARENT);
-		dc.drawBitmap(imageX, locY, image);
+		var imageHeight = image.getDc().getHeight();
+		var yOffset = imageHeight >= height ? 0 : ((height - imageHeight)/2).toNumber();
+		
+		dc.drawBitmap(imageX, locY+yOffset, image);
 		
 		
 		var sunrise = "GPS";
