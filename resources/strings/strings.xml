@@ -11,7 +11,7 @@
     <string id="ThemeInstinctLike2">Instinct like 2</string>
 
     
-    <string id="DNDisNight">Set night theme in DND mode</string>
+    <string id="DNDisNight">Set night theme if DND enable</string>
     <string id="InvertCircle">invert circle colors</string>
     <string id="ShowBatteryScale">Show the battery scale</string>
     <string id="ShowAmPm">Show AM/PM for 12 hour mode</string>
