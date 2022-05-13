@@ -10,7 +10,7 @@
  	    
 	 <drawable id="Time" class="TimeDrawable">
 		<param name="locX">Sizes.centralSquare[0]+1</param>
-		<param name="locY">Sizes.centralSquare[1]+2*Sizes.fieldH</param>
+		<param name="locY">Sizes.centralSquare[1]+2*Sizes.fieldH+1</param>
 		<param name="width">Sizes.centralSquare[2]</param>
 		<param name="height">Sizes.timeFieldH</param>
 		<param name="autocenter">false</param>
@@ -19,7 +19,7 @@
 	 
 	 <drawable id="SunEvents" class="SunEventsDrawable">
 		<param name="locX">Sizes.centralSquare[0]+1</param>
-		<param name="locY">Sizes.centralSquare[1]+2*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="locY">Sizes.centralSquare[1]+2*Sizes.fieldH+Sizes.timeFieldH+1</param>
 		<param name="width">Sizes.centralSquare[2]</param>
 		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
@@ -27,7 +27,7 @@
 	
 	 <drawable id="Weather" class="WeatherDrawable">
 		<param name="locX">Sizes.centralSquare[0]+1</param>
-		<param name="locY">Sizes.centralSquare[1]</param>
+		<param name="locY">Sizes.centralSquare[1]+1</param>
 		<param name="width">Sizes.centralSquare[2]-Sizes.circle[2]</param>
 		<param name="height">2*Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
@@ -35,7 +35,7 @@
 	 
 	 <drawable id="Data1" class="DataDrawable">
 		<param name="locX">Sizes.centralSquare[0]+1</param>
-		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH+1</param>
 		<param name="width">Sizes.centralSquare[2]/2</param>
 		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
@@ -43,7 +43,7 @@
 	 
 	 <drawable id="Data2" class="DataDrawable">
 		<param name="locX">Sizes.centralSquare[0]+Sizes.centralSquare[2]/2+1</param>
-		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH+1</param>
 		<param name="width">Sizes.centralSquare[2]/2</param>
 		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
@@ -68,7 +68,7 @@
 	
 	 <drawable id="Bottom" class="TopBottomDrawable">
 		<param name="locX">0</param>
-		<param name="locY">Sizes.centralSquare[1]+4*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="locY">Sizes.centralSquare[1]+4*Sizes.fieldH+Sizes.timeFieldH+1</param>
 		<param name="width">Sizes.screenW</param>
 		<param name="height">Sizes.centralSquare[1]</param>
 		<param name="centerPosition">false</param>
