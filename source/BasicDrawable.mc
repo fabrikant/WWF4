@@ -29,7 +29,7 @@ class BasicDrawable extends WatchUi.Drawable{
 	}
 	
 	public function drawBorder(dc as Graphics.Dc){
-		return;
+		//return;
 		dc.setPenWidth(1);
 		dc.setColor(accentColor() , accentColor());
 		dc.drawRectangle(locX, locY, width, height);
@@ -47,13 +47,24 @@ class BasicDrawable extends WatchUi.Drawable{
 	
 	function createImage(resorse){
 		var _bitmap = Application.loadResource(resorse);
-		var _bufferedBitmap = new Graphics.BufferedBitmap({
-			:bitmapResource => _bitmap,
-			:width => _bitmap.getWidth(),
-			:height => _bitmap.getHeight()
-		});
-		_bufferedBitmap.setPalette([foregroundColor(), Graphics.COLOR_TRANSPARENT]);
-		return _bufferedBitmap;
+		if ( Graphics has :createBufferedBitmap){
+			var _bufferedBitmapRef = Graphics.createBufferedBitmap({
+				:bitmapResource => _bitmap,
+				:width => _bitmap.getWidth(),
+				:height => _bitmap.getHeight()
+			});
+			var _bufferedBitmap = _bufferedBitmapRef.get(); 
+			_bufferedBitmap.setPalette([foregroundColor(), Graphics.COLOR_TRANSPARENT]);
+			return _bufferedBitmap;
+		}else{
+			var _bufferedBitmap = new Graphics.BufferedBitmap({
+				:bitmapResource => _bitmap,
+				:width => _bitmap.getWidth(),
+				:height => _bitmap.getHeight()
+			});
+			_bufferedBitmap.setPalette([foregroundColor(), Graphics.COLOR_TRANSPARENT]);
+			return _bufferedBitmap;
+		}
 	}
 	
 	function backgroundColor(){
