@@ -94,8 +94,6 @@ class WeatherDrawable extends BasicDrawable{
 		var direction = Application.Storage.getValue(STORAGE_KEY_WIND_DEG);
 		var speed = Global.speedToString(Application.Storage.getValue(STORAGE_KEY_WIND_SPEED));
 		
-		var offset = 5;
-		
 		//create buffBitmap
 		if ( Graphics has :createBufferedBitmap){
 			buffBitmap = Graphics.createBufferedBitmap({ 
@@ -116,10 +114,11 @@ class WeatherDrawable extends BasicDrawable{
 		
 		//image
 		var y = ((dc.getHeight() - image.getDc().getHeight())/2).toNumber();
+		var offset = 5;
 		dc.drawBitmap(offset, y, image);
 		
 		//temperature
-		offset += image.getDc().getWidth()+8;
+		offset += image.getDc().getWidth()+offset;
 		var center = getCenterForFont(fontMed);
 		dc.drawText(offset, center[1]-locY, fontMed, temp, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
 		
@@ -127,10 +126,29 @@ class WeatherDrawable extends BasicDrawable{
 		offset += dc.getTextWidthInPixels(temp, fontMed);
 		var windArrowSize = (height*2/3).toNumber();
 		var windDirection = windDirection((height*0.4).toNumber(), direction.toNumber(), [offset, 0], [windArrowSize, windArrowSize]);
+		//Убедимся, что стрелка влезет в поле
+		var xWindOffset = 0;
+		for (var i = 0; i < windDirection.size(); i++){
+			var diff = windDirection[i][0] - width;
+			if (diff > xWindOffset){
+				xWindOffset = diff;
+			}
+		}
+		if (xWindOffset > 0){
+			for (var i = 0; i < windDirection.size(); i++){
+				windDirection[i][0] -= xWindOffset+1;
+			}
+		}
+		
 		dc.fillPolygon(windDirection);
 		
 		//wind speed
-		dc.drawText(offset+(width-offset)/2, height*2/3+2, fontSmall, speed, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+		var speedWidth = dc.getTextWidthInPixels(speed, fontSmall);
+		if (offset+speedWidth > width){
+			dc.drawText(width-1, height*2/3+2, fontSmall, speed, Graphics.TEXT_JUSTIFY_RIGHT| Graphics.TEXT_JUSTIFY_VCENTER);
+		}else{
+			dc.drawText(offset+(width-offset)/2, height*2/3+2, fontSmall, speed, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+		}
 		
 	}
 	
