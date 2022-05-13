@@ -29,7 +29,15 @@ class DataDrawable extends BasicDrawable{
 		
 		dc.setClip(locX, locY, width, height);
 		dc.setColor(bkColor, bkColor);
-		dc.fillRoundedRectangle(locX, locY, width, height, Sizes.radiusCorner());
+		
+		var rCorn = Sizes.radiusCorner();
+		dc.fillRoundedRectangle(locX, locY, width, height, rCorn);
+		if (locX + width/2 < dc.getWidth()/2){
+			dc.fillRectangle(locX+rCorn, locY, width, height);
+		}else{
+			dc.fillRectangle(locX-rCorn, locY, width, height);
+		}
+		
 		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 			
 		var value = getValue(dataType);

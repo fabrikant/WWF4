@@ -3,6 +3,7 @@ using Toybox.Lang;
 using Toybox.System;
 using Toybox.WatchUi;
 using Toybox.Activity;
+using Toybox.Math;
 
 class WWF4View extends WatchUi.WatchFace {
 

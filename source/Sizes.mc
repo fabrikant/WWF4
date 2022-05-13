@@ -14,18 +14,19 @@ module Sizes{
 		return 15;
 	}
 	
-	function calculateScreenH(){
+	function calculateScreen(){
 		screenH = Toybox.System.getDeviceSettings().screenHeight;
-	}
-	
-	function calculateScreenW(){
 		screenW = Toybox.System.getDeviceSettings().screenWidth;
 	}
 	
 	function calculateCentralSquare(){
 
 		var r = (screenW < screenH ? screenW : screenH)/2;
-		var w = Math.round(Math.sqrt(r*r/2)).toNumber()*2+Math.round(radiusCorner()/3).toNumber();
+		//var w = Math.round(Math.sqrt(r*r/2)).toNumber()*2+Math.round(radiusCorner()/3).toNumber();
+		
+		var rCorn = radiusCorner();
+		var cornOffset = rCorn - Math.round(Math.sqrt(rCorn*rCorn/2)).toNumber();
+		var w = Math.round(Math.sqrt(r*r/2)).toNumber()*2+cornOffset;
 		//[x,y,w,h]
 		centralSquare = [Math.round((screenW-w)/2).toNumber(), Math.round((screenH-w)/2).toNumber(), w, w];
 	}
@@ -43,8 +44,7 @@ module Sizes{
 	}
 	
 	function calculate(){
-		calculateScreenH();
-		calculateScreenW();
+		calculateScreen();
 		calculateCentralSquare();
 		calculateFieldsSizes();
 		calculateCircle();
