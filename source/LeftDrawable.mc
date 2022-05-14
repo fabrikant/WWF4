@@ -48,7 +48,7 @@ class LeftDrawable extends BasicDrawable{
 		var fColor = foregroundColor();
 		var scaleWidth = width/4;
 		var r = (dc.getWidth()/2).toNumber();
-		var batHeight  = (height*3/4).toNumber();
+		var batHeight  = (height*3/4/5).toNumber()*5;
 		var fullHeight = (batHeight*value/100).toNumber();
 		var y = ((height-batHeight)/2).toNumber();
 		var yFull = locY+y+batHeight-fullHeight;
