@@ -1,0 +1,27 @@
+<drawables>
+
+	<bitmap id="Message" filename="../../resources/drawables/png-22/message.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+	<bitmap id="Alarm" filename="../../resources/drawables/png-22/alarm.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+	<bitmap id="DND" filename="../../resources/drawables/png-22/dnd.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+	<bitmap id="Bluetooth" filename="../../resources/drawables/png-22/bluetooth.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+</drawables>
