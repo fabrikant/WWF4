@@ -23,7 +23,7 @@ class WWF4App extends Application.AppBase {
     }
 
 	function loadGlobalValues(){
-		DNDisNight = Application.Properties.getValue("DNDisNight");
+		DNDisN = Application.Properties.getValue("DNDisN");
 	}
 	
 	// triggered by settings change in GCM
@@ -76,11 +76,11 @@ class WWF4App extends Application.AppBase {
 		//////////////////////////////////////////////////////////
 		//DEBUG
 		//System.println("registerEvents");
-		//System.println("geoLocation "+[Application.Storage.getValue("Lat"), Application.Storage.getValue("Lon")]);
+		//System.println("geoLocation "+[Application.Storage.getValue(STORAGE_KEY_LAT), Application.Storage.getValue(STORAGE_KEY_LON)]);
 		//System.println("apiKey "+Application.Properties.getValue("keyOW"));
 		//////////////////////////////////////////////////////////
 
-		var geoLatLong = [Application.Storage.getValue("Lat"), Application.Storage.getValue("Lon")];
+		var geoLatLong = [Application.Storage.getValue(STORAGE_KEY_LAT), Application.Storage.getValue(STORAGE_KEY_LON)];
 		if (geoLatLong[0] == null || geoLatLong[1] == null){
 			return;
 		}

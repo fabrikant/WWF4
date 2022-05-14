@@ -46,7 +46,7 @@ class SunEventsDrawable extends BasicDrawable{
 		var sunriseMoment = null;
 		var sunsetMoment = null;
 		
-		var geoLatLong = [Application.Storage.getValue("Lat"), Application.Storage.getValue("Lon")];
+		var geoLatLong = [Application.Storage.getValue(STORAGE_KEY_LAT), Application.Storage.getValue(STORAGE_KEY_LON)];
 		if (geoLatLong != null){
 			if (geoLatLong[0] != null && geoLatLong[1] != null){
 				var myLocation = new Position.Location(
@@ -77,7 +77,7 @@ class SunEventsDrawable extends BasicDrawable{
 		//To day or not to day
 		nowIsDay = true;
 		
-		if (DNDisNight && System.getDeviceSettings().doNotDisturb){
+		if (DNDisN && System.getDeviceSettings().doNotDisturb){
 			nowIsDay = false;
 		}else{
 			if (sunriseMoment != null && sunsetMoment != null){

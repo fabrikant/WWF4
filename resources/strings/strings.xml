@@ -2,8 +2,8 @@
     <string id="AppName">WWF4</string>
 
     <string id="keyOW">API key openweathermap.org</string>
-    <string id="Theme">Day theme</string>
-   	<string id="NightTheme">Night theme</string>
+    <string id="ThemeD">Day theme</string>
+   	<string id="ThemeN">Night theme</string>
     
     <string id="ThemeDark">Dark</string>
     <string id="ThemeLight">Light</string>
@@ -11,12 +11,12 @@
     <string id="ThemeInstinctLike2">Instinct like 2</string>
 
     
-    <string id="DNDisNight">Set night theme if DND enable</string>
+    <string id="DNDisN">Set night theme if DND enable</string>
     <string id="InvertCircle">invert circle colors</string>
-    <string id="ShowBatteryScale">Show the battery scale</string>
+    <string id="SBat">Show the battery scale</string>
     <string id="ShowAmPm">Show AM/PM</string>
     
-    <string id="WindSpeeddUnit">Wind speed unit</string>
+    <string id="WndU">Wind speed unit</string>
  	<!--WIND UNITS -->
 	<!--USE VERY!!!! SHOT STRING. its displayed on screen-->
 	<string id="SpeedUnitMSec" scope="foreground">m/s</string>
@@ -26,23 +26,23 @@
 	<string id="SpeedUnitBof" scope="foreground">bouf</string>
 	<string id="SpeedUnitKnots" scope="foreground">knots</string>
     
-    <string id="ShowBluetooth">Show bluetooth</string>
+    <string id="SBt">Show bluetooth</string>
     <string id="ShowBluetoothIfConnect">if connected</string>
     <string id="ShowBluetoothIfDisconnect">if not connected</string>
     <string id="ShowBluetoothHide">hide</string>
     
     
-    <string id="ShowAlarm">Show alarm indicator</string>
+    <string id="SAl">Show alarm indicator</string>
     <string id="ShowDND">Show DND indicator</string>
     <string id="ShowDate">Show date</string>
 
-    <string id="Data1">Left field data type</string>
-    <string id="Data2">Right field data type</string>
+    <string id="Dt1">Left field data type</string>
+    <string id="Dt2">Right field data type</string>
     
-    <string id="CircleType" scope="foreground">Circle data type</string>
+    <string id="Circle" scope="foreground">Circle data type</string>
 
     <string id="Top" scope="foreground">Header data type</string>
-    <string id="Bottom" scope="foreground">Footer data type</string>
+    <string id="Bot" scope="foreground">Footer data type</string>
      
 	<!--SECOND TIME -->
 	<string id="T1TZ" scope="foreground">Time zone ±UTC (minutes)</string>
@@ -67,6 +67,13 @@
     
 	<!-- Menu -->
  	<string id="MenuHeader" scope="foreground">Settings</string>
+
+	<!-- Screen messge -->
  	<string id="NA" scope="foreground">n/a</string>
+ 	<string id="NoLocation" scope="foreground">location\nundefined</string>
+ 	<string id="NoApiKey" scope="foreground">API key\nnot set</string>
+ 	<string id="Error" scope="foreground">error</string>
+ 	<string id="WaitingData" scope="foreground">waiting\nfor data</string>
+ 	<string id="OldData" scope="foreground">"To old\ndata"</string>
 
 </strings>

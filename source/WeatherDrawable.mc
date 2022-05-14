@@ -26,22 +26,22 @@ class WeatherDrawable extends BasicDrawable{
 
 		if (lastWeatherUpdate == null){
 
-			var geoLatLong = [Application.Storage.getValue("Lat"), Application.Storage.getValue("Lon")];
-			var responseCode = Application.Storage.getValue("STORAGE_KEY_RESPONCE_CODE");
+			var geoLatLong = [Application.Storage.getValue(STORAGE_KEY_LAT), Application.Storage.getValue(STORAGE_KEY_LON)];
+			var responseCode = Application.Storage.getValue(STORAGE_KEY_RESPONCE_CODE);
 			
 			if (geoLatLong[0] == null || geoLatLong[1] == null){
-				drawNoData(dc, "location\nundefined");
+				drawNoData(dc, Application.loadResource(Rez.Strings.NoLocation));
 			}else if (Application.Properties.getValue("keyOW").equals("")){
-				drawNoData(dc, "API key\nnot set");
+				drawNoData(dc, Application.loadResource(Rez.Strings.NoApiKey));
 			}else if (responseCode != null && responseCode != 200){
-				drawNoData(dc, "error: "+responseCode);
+				drawNoData(dc, Lang.format("$1$: $2$", [Application.loadResource(Rez.Strings.Error), responseCode]));
 			}else{
-				drawNoData(dc, "waiting\nfor data");
+				drawNoData(dc, Application.loadResource(Rez.Strings.WaitingData));
 			}
 		}else{
 			
 			if (Time.now().value() - lastWeatherUpdate > 10800){
-				drawNoData(dc, "To old\ndata");
+				drawNoData(dc, Application.loadResource(Rez.Strings.OldData));
 			}else{
 				drawWeather(dc);
 			}			

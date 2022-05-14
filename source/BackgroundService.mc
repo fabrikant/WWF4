@@ -77,8 +77,8 @@ class BackgroundService extends System.ServiceDelegate {
 
 		var url = "https://api.openweathermap.org/data/2.5/weather";
 
-		var lat = Application.Storage.getValue("Lat");
-		var lon = Application.Storage.getValue("Lon");
+		var lat = Application.Storage.getValue(STORAGE_KEY_LAT);
+		var lon = Application.Storage.getValue(STORAGE_KEY_LON);
 		var appid = Application.Properties.getValue("keyOW");
 
 		//////////////////////////////////////////////////////////

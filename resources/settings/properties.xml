@@ -2,29 +2,29 @@
 
 	<property id="keyOW" type="string">69bcb8de48220cd2b2fb7a8400c68d1e</property>
 	
-	<property id="Theme" type="number">0</property>
-	<property id="NightTheme" type="number">1</property>
-	<property id="DNDisNight" type="boolean">true</property>
+	<property id="ThemeD" type="number">0</property>
+	<property id="ThemeN" type="number">1</property>
+	<property id="DNDisN" type="boolean">true</property>
 	
 
 	<property id="InvertCircle" type="boolean">true</property>
 	
-	<property id="ShowBluetooth" type="number">1</property>
-	<property id="ShowAlarm" type="boolean">false</property>
+	<property id="SBt" type="number">1</property>
+	<property id="SAl" type="boolean">false</property>
 	<property id="ShowDND" type="boolean">false</property>
 	<property id="ShowAmPm" type="boolean">true</property>
 	
-	<property id="ShowBatteryScale" type="boolean">false</property>
+	<property id="SBat" type="boolean">false</property>
 	
-	<property id="CircleType" type="number">1</property>
+	<property id="Circle" type="number">1</property>
 
 	<property id="Top" type="number">1</property>
-	<property id="Bottom" type="number">2</property>
+	<property id="Bot" type="number">2</property>
 	
-	<property id="Data1" type="number">5</property>
-	<property id="Data2" type="number">6</property>
+	<property id="Dt1" type="number">5</property>
+	<property id="Dt2" type="number">6</property>
 
-	<property id="WindSpeeddUnit" type="number">0</property>
+	<property id="WndU" type="number">0</property>
 	<property id="T1TZ" type="number">0</property>
 
 </properties>

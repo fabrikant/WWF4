@@ -42,8 +42,8 @@ class WWF4View extends WatchUi.WatchFace {
        	var location = Activity.getActivityInfo().currentLocation;
     	if (location != null) {
 			location = location.toDegrees();
-			Application.Storage.setValue("Lat", location[0].toFloat());
-			Application.Storage.setValue("Lon", location[1].toFloat());
+			Application.Storage.setValue(STORAGE_KEY_LAT, location[0].toFloat());
+			Application.Storage.setValue(STORAGE_KEY_LON, location[1].toFloat());
 		} else {
 			if (Toybox has :Weather){
 				location = Toybox.Weather.getCurrentConditions();
@@ -51,8 +51,8 @@ class WWF4View extends WatchUi.WatchFace {
 					location = location.observationLocationPosition;
 			    	if (location != null) {
 						location = location.toDegrees();
-						Application.Storage.setValue("Lat", location[0].toFloat());
-						Application.Storage.setValue("Lon", location[1].toFloat());
+						Application.Storage.setValue(STORAGE_KEY_LAT, location[0].toFloat());
+						Application.Storage.setValue(STORAGE_KEY_LON, location[1].toFloat());
 					}
 				}
 			}
@@ -93,11 +93,11 @@ class WWF4View extends WatchUi.WatchFace {
 	
 	function setTheme(){
 
-		var themeKey = "Theme";
+		var themeKey = "ThemeD";
 		dayThemeIsSet = true;
 		
 		if(!nowIsDay){
-			themeKey = "NightTheme";
+			themeKey = "ThemeN";
 			dayThemeIsSet = false;
 		}
 		

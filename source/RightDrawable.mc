@@ -35,7 +35,7 @@ class RightDrawable extends BasicDrawable{
 		var notifications = System.getDeviceSettings().notificationCount;
 		var center = getCenter();
 		
-		var showBtProperty = Application.Properties.getValue("ShowBluetooth");
+		var showBtProperty = Application.Properties.getValue("SBt");
 		var connected = System.getDeviceSettings().connectionAvailable;
 		
 		if ((showBtProperty == BLUETOOTH_SHOW_IF_CONNECT && connected) ||(showBtProperty == BLUETOOTH_SHOW_IF_DISCONNECT && !connected)){
@@ -46,7 +46,7 @@ class RightDrawable extends BasicDrawable{
 		}
 		
 		if (System.getDeviceSettings().alarmCount > 0){
-			if (Application.Properties.getValue("ShowAlarm")){
+			if (Application.Properties.getValue("SAl")){
 				if (imageAlarm == null){
 					imageAlarm = createImage(Rez.Drawables.Alarm);
 				}

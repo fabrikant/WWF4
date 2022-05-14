@@ -15,7 +15,7 @@ var lastWeatherUpdate as Toybox.Time.Moment = null;
 var theme as Toybox.Lang.Array<Number>;
 var nowIsDay;
 var dayThemeIsSet;
-var DNDisNight;
+var DNDisN;
 
 enum{
 
@@ -28,6 +28,8 @@ enum{
 	STORAGE_KEY_WEATHER_ID,
 	STORAGE_KEY_WEATHER_CITY,
 	STORAGE_KEY_WEATHER_MAIN,
+	STORAGE_KEY_LAT,
+	STORAGE_KEY_LON,
 //	STORAGE_KEY_WEATHER_DESCRIPTION,
 //	STORAGE_KEY_HUMIDITY,
 //	STORAGE_KEY_PRESSURE,
@@ -66,8 +68,8 @@ enum{
 	UNIT_SPEED_FTS,
 	UNIT_SPEED_BOF,
 	UNIT_SPEED_KNOTS,
-
 }
+
 module Global{
 
 	function elevationToString(rawData){
@@ -101,7 +103,7 @@ module Global{
 
 	function speedToString(rawData){
 		var value = rawData;//meters/sec
-		var unit =  Application.Properties.getValue("WindSpeeddUnit");
+		var unit =  Application.Properties.getValue("WndU");
 		if (unit == UNIT_SPEED_KMH){ /*km/h*/
 			value = rawData*3.6;
 		}else if (unit == UNIT_SPEED_MLH){ /*mile/h*/

@@ -10,26 +10,26 @@ class GeneralMenu extends WatchUi.Menu2{
 	
 	function initialize() {
 		Menu2.initialize({:title=> Application.loadResource(Rez.Strings.MenuHeader)});
-		addItem(new Item("Theme", Rez.Strings.Theme, subMenuPatternThemes()));
-		addItem(new Item("NightTheme", Rez.Strings.NightTheme, subMenuPatternThemes()));
-		addItem(new TogleItem("DNDisNight", Rez.Strings.DNDisNight));
+		addItem(new Item("ThemeD", Rez.Strings.ThemeD, subMenuPatternThemes()));
+		addItem(new Item("ThemeN", Rez.Strings.ThemeN, subMenuPatternThemes()));
+		addItem(new TogleItem("DNDisN", Rez.Strings.DNDisN));
 		addItem(new TogleItem("InvertCircle", Rez.Strings.InvertCircle));
-		addItem(new TogleItem("ShowBatteryScale", Rez.Strings.ShowBatteryScale));
-		addItem(new Item("ShowBluetooth", Rez.Strings.ShowBluetooth, subMenuPatternBluetooth()));		
-		addItem(new TogleItem("ShowAlarm", Rez.Strings.ShowAlarm));		
+		addItem(new TogleItem("SBat", Rez.Strings.SBat));
+		addItem(new Item("SBt", Rez.Strings.SBt, subMenuPatternBluetooth()));		
+		addItem(new TogleItem("SAl", Rez.Strings.SAl));		
 		addItem(new TogleItem("ShowDND", Rez.Strings.ShowDND));
 		
 		if (!System.getDeviceSettings().is24Hour){
 			addItem(new TogleItem("ShowAmPm", Rez.Strings.ShowAmPm));
 		}
 		
-		addItem(new Item("CircleType", Rez.Strings.CircleType, subMenuPatternCircleTypes()));
+		addItem(new Item("Circle", Rez.Strings.Circle, subMenuPatternCircleTypes()));
 		addItem(new Item("Top", Rez.Strings.Top, subMenuPatternTopBottomTypes()));
-		addItem(new Item("Bottom", Rez.Strings.Bottom, subMenuPatternTopBottomTypes()));
-		addItem(new Item("Data1", Rez.Strings.Data1, subMenuPatternDataFields()));
-		addItem(new Item("Data2", Rez.Strings.Data2, subMenuPatternDataFields()));
+		addItem(new Item("Bot", Rez.Strings.Bot, subMenuPatternTopBottomTypes()));
+		addItem(new Item("Dt1", Rez.Strings.Dt1, subMenuPatternDataFields()));
+		addItem(new Item("Dt2", Rez.Strings.Dt2, subMenuPatternDataFields()));
 		addItem(new PickerItem("T1TZ", Rez.Strings.T1TZ));
-		addItem(new Item("WindSpeeddUnit", Rez.Strings.WindSpeeddUnit, subMenuPatternWindSpeeddUnit()));
+		addItem(new Item("WndU", Rez.Strings.WndU, subMenuPatternWindSpeeddUnit()));
 	}
 	
  	private function subMenuPatternWindSpeeddUnit(){

@@ -5,7 +5,7 @@
 	</setting>
 
 
-  	<setting propertyKey="@Properties.Theme" title="@Strings.Theme">
+  	<setting propertyKey="@Properties.ThemeD" title="@Strings.ThemeD">
         <settingConfig type="list">
             <listEntry value="0">@Strings.ThemeDark</listEntry>
             <listEntry value="1">@Strings.ThemeLight</listEntry>
@@ -14,7 +14,7 @@
         </settingConfig>
 	</setting>
   	
-  	<setting propertyKey="@Properties.NightTheme" title="@Strings.NightTheme">
+  	<setting propertyKey="@Properties.ThemeN" title="@Strings.ThemeN">
         <settingConfig type="list">
             <listEntry value="0">@Strings.ThemeDark</listEntry>
             <listEntry value="1">@Strings.ThemeLight</listEntry>
@@ -23,8 +23,8 @@
         </settingConfig>
 	</setting>
 
-	<setting propertyKey="@Properties.DNDisNight"
-		title="@Strings.DNDisNight">
+	<setting propertyKey="@Properties.DNDisN"
+		title="@Strings.DNDisN">
 		<settingConfig type="boolean" />
 	</setting>
 
@@ -33,12 +33,12 @@
 		<settingConfig type="boolean" />
 	</setting>
 	
-	<setting propertyKey="@Properties.ShowBatteryScale"
-		title="@Strings.ShowBatteryScale">
+	<setting propertyKey="@Properties.SBat"
+		title="@Strings.SBat">
 		<settingConfig type="boolean" />
 	</setting>
 
- 	<setting propertyKey="@Properties.ShowBluetooth" title="@Strings.ShowBluetooth">
+ 	<setting propertyKey="@Properties.SBt" title="@Strings.SBt">
 		<settingConfig type="list">
             <listEntry value="0">@Strings.ShowBluetoothIfConnect</listEntry>
             <listEntry value="1">@Strings.ShowBluetoothIfDisconnect</listEntry>
@@ -46,8 +46,8 @@
         </settingConfig>	
 	</setting>
 
-	<setting propertyKey="@Properties.ShowAlarm"
-		title="@Strings.ShowAlarm">
+	<setting propertyKey="@Properties.SAl"
+		title="@Strings.SAl">
 		<settingConfig type="boolean" />
 	</setting>
 	
@@ -61,7 +61,7 @@
 		<settingConfig type="boolean" />
 	</setting>
 
- 	<setting propertyKey="@Properties.CircleType" title="@Strings.CircleType">
+ 	<setting propertyKey="@Properties.Circle" title="@Strings.Circle">
 		<settingConfig type="list">
             <listEntry value="1">@Strings.FIELD_TYPE_HR</listEntry>
             <listEntry value="2">@Strings.FIELD_TYPE_SECONDS</listEntry>
@@ -87,7 +87,7 @@
        	</settingConfig>	
 	</setting>
 
- 	<setting propertyKey="@Properties.Bottom" title="@Strings.Bottom">
+ 	<setting propertyKey="@Properties.Bot" title="@Strings.Bot">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
             <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
@@ -106,7 +106,7 @@
 	</setting>
 
 
- 	<setting propertyKey="@Properties.Data1" title="@Strings.Data1">
+ 	<setting propertyKey="@Properties.Dt1" title="@Strings.Dt1">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
             <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
@@ -120,7 +120,7 @@
         </settingConfig>	
 	</setting>
 
- 	<setting propertyKey="@Properties.Data2" title="@Strings.Data2">
+ 	<setting propertyKey="@Properties.Dt2" title="@Strings.Dt2">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
             <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
@@ -138,7 +138,7 @@
 		<settingConfig type="numeric" min="-720" max="840"/>
 	</setting>
 
-  	<setting propertyKey="@Properties.WindSpeeddUnit" title="@Strings.WindSpeeddUnit">
+  	<setting propertyKey="@Properties.WndU" title="@Strings.WndU">
 		<settingConfig type="list">
             <listEntry value="0">@Strings.SpeedUnitMSec</listEntry>
             <listEntry value="1">@Strings.SpeedUnitKmH</listEntry>

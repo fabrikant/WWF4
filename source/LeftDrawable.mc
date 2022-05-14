@@ -14,7 +14,7 @@ class LeftDrawable extends BasicDrawable{
 	}
 	
 	public function onSettingsChanged(){
-		drawScale = Application.Properties.getValue("ShowBatteryScale");
+		drawScale = Application.Properties.getValue("SBat");
 		showAmPm = Application.Properties.getValue("ShowAmPm");
 	}	
 	

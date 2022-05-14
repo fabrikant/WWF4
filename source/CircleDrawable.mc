@@ -18,7 +18,7 @@ class CircleDrawable extends BasicDrawable{
 
 	public function onSettingsChanged(){
 		
-		fieldType = Application.Properties.getValue("CircleType");
+		fieldType = Application.Properties.getValue("Circle");
 		invertColor = Application.Properties.getValue("InvertCircle");
 		
 		bkColor = backgroundColor();
