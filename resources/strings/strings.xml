@@ -1,19 +1,19 @@
 <strings>
     <string id="AppName">WWF4</string>
 
-    <string id="keyOW">API key openweathermap.org</string>
+    <string id="keyOW">API key</string>
     <string id="ThemeD">Day theme</string>
    	<string id="ThemeN">Night theme</string>
     
     <string id="ThemeDark">Dark</string>
     <string id="ThemeLight">Light</string>
-    <string id="ThemeInstinctLike1">Instinct like</string>
-    <string id="ThemeInstinctLike2">Instinct like 2</string>
+    <string id="ThemeInstinctLike1">Instinct</string>
+    <string id="ThemeInstinctLike2">Instinct gray</string>
 
     
     <string id="DNDisN">Set night theme if DND enable</string>
     <string id="InvertCircle">invert circle colors</string>
-    <string id="SBat">Show the battery scale</string>
+    <string id="SBat">Show battery scale</string>
     <string id="ShowAmPm">Show AM/PM</string>
     
     <string id="WndU">Wind speed unit</string>
@@ -32,17 +32,16 @@
     <string id="ShowBluetoothHide">hide</string>
     
     
-    <string id="SAl">Show alarm indicator</string>
-    <string id="ShowDND">Show DND indicator</string>
-    <string id="ShowDate">Show date</string>
-
-    <string id="Dt1">Left field data type</string>
-    <string id="Dt2">Right field data type</string>
+    <string id="SAl">Show alarm</string>
+    <string id="ShowDND">Show DND</string>
+ 
+    <string id="Circle" scope="foreground">Circle data</string>
+    <string id="Top" scope="foreground">Header data</string>
+    <string id="Bot" scope="foreground">Footer data</string>
+    <string id="Dt1">Left data</string>
+    <string id="Dt2">Right data</string>
     
-    <string id="Circle" scope="foreground">Circle data type</string>
 
-    <string id="Top" scope="foreground">Header data type</string>
-    <string id="Bot" scope="foreground">Footer data type</string>
      
 	<!--SECOND TIME -->
 	<string id="T1TZ" scope="foreground">Time zone ±UTC (minutes)</string>
