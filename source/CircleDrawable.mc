@@ -115,7 +115,7 @@ class CircleDrawable extends BasicDrawable{
 			dc.drawText(textX, textY, fontMed, value, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		}else{
 			dc.drawBitmap(imageX, imageY, image);
-			dc.drawText(textX, textY, fontMed, "n/a", Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(textX, textY, fontMed, Application.loadResource(Rez.Strings.NA), Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		}
 	}
 	

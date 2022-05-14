@@ -64,12 +64,12 @@ class SunEventsDrawable extends BasicDrawable{
 		}
 		
 		if (sunriseMoment == null){
-			sunrise = "N/A";
+			sunrise = Application.loadResource(Rez.Strings.NA);
 		}else{
 			sunrise = momentToString(sunriseMoment);
 		}
 		if (sunsetMoment == null){
-			sunset = "N/A";
+			sunset = Application.loadResource(Rez.Strings.NA);
 		}else{
 			sunset = momentToString(sunsetMoment);
 		}

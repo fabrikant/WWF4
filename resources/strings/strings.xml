@@ -67,5 +67,7 @@
     
 	<!-- Menu -->
  	<string id="MenuHeader" scope="foreground">Settings</string>
+ 	
+ 	<string id="NA" scope="foreground">n/a</string>
 
 </strings>

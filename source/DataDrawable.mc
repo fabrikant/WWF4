@@ -40,7 +40,7 @@ class DataDrawable extends BasicDrawable{
 		
 		var value = getValue(dataType);
 		if (value == null){
-			value = "N/A";
+			value = Application.loadResource(Rez.Strings.NA);
 		}
 		
 		loadImage();

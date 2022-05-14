@@ -7,12 +7,12 @@
 	<property id="DNDisNight" type="boolean">true</property>
 	
 
-	<property id="InvertCircle" type="boolean">false</property>
+	<property id="InvertCircle" type="boolean">true</property>
 	
 	<property id="ShowBluetooth" type="number">1</property>
 	<property id="ShowAlarm" type="boolean">false</property>
 	<property id="ShowDND" type="boolean">false</property>
-	<property id="ShowAmPm" type="boolean">false</property>
+	<property id="ShowAmPm" type="boolean">true</property>
 	
 	<property id="ShowBatteryScale" type="boolean">false</property>
 	
