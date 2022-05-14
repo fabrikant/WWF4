@@ -18,7 +18,11 @@ class GeneralMenu extends WatchUi.Menu2{
 		addItem(new Item("ShowBluetooth", Rez.Strings.ShowBluetooth, subMenuPatternBluetooth()));		
 		addItem(new TogleItem("ShowAlarm", Rez.Strings.ShowAlarm));		
 		addItem(new TogleItem("ShowDND", Rez.Strings.ShowDND));
-		addItem(new TogleItem("ShowAmPm", Rez.Strings.ShowAmPm));
+		
+		if (!System.getDeviceSettings().is24Hour){
+			addItem(new TogleItem("ShowAmPm", Rez.Strings.ShowAmPm));
+		}
+		
 		addItem(new Item("CircleType", Rez.Strings.CircleType, subMenuPatternCircleTypes()));
 		addItem(new Item("Top", Rez.Strings.Top, subMenuPatternTopBottomTypes()));
 		addItem(new Item("Bottom", Rez.Strings.Bottom, subMenuPatternTopBottomTypes()));

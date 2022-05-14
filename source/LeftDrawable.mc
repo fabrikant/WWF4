@@ -30,7 +30,7 @@ class LeftDrawable extends BasicDrawable{
 	}
 	
 	function drawAmPm(dc){
-		if (!System.getDeviceSettings().is24Hour) {
+		if (!System.getDeviceSettings().is24Hour && showAmPm) {
 			var center = getCenterForFont(fontSmall);
 			var now = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         	var value = now.hour > 11 ? "P" : "A";
@@ -39,7 +39,6 @@ class LeftDrawable extends BasicDrawable{
 			dc.drawText(locX+width-xOfset, center[1]- Graphics.getFontAscent(fontSmall), fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 			dc.drawText(locX+width-xOfset, center[1], fontSmall, "M", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 		}
-		
 	}
 	
 	function drawBattery(dc){

@@ -116,16 +116,16 @@ class BackgroundService extends System.ServiceDelegate {
 				STORAGE_KEY_RESPONCE_CODE => responseCode,
 				STORAGE_KEY_UPDATE_MOMENT => Time.now().value(),
 				STORAGE_KEY_TEMP => data["main"]["temp"],
-				STORAGE_KEY_HUMIDITY => data["main"]["humidity"],
-				STORAGE_KEY_PRESSURE => data["main"]["pressure"],
 				STORAGE_KEY_ICON => data["weather"][0]["icon"],
 				STORAGE_KEY_WEATHER_ID => data["weather"][0]["id"],
 				STORAGE_KEY_WIND_SPEED => data["wind"]["speed"],
 				STORAGE_KEY_WIND_DEG => data["wind"]["deg"],
-				STORAGE_KEY_VISIBILITY => data["visibility"],
 				STORAGE_KEY_WEATHER_MAIN => data["weather"][0]["main"],
-				STORAGE_KEY_WEATHER_DESCRIPTION => data["weather"][0]["description"],
 				STORAGE_KEY_WEATHER_CITY => data["name"],
+				//STORAGE_KEY_HUMIDITY => data["main"]["humidity"],
+				//STORAGE_KEY_PRESSURE => data["main"]["pressure"],
+				//STORAGE_KEY_VISIBILITY => data["visibility"],
+				//STORAGE_KEY_WEATHER_DESCRIPTION => data["weather"][0]["description"],
 			};
 		} else {
 			backgroundData = {
