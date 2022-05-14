@@ -95,17 +95,17 @@ class DataDrawable extends BasicDrawable{
 	}
 
 	function getMoon(){
-		var today = Lang.Time.today();
+		var today = Time.now();
 		if (additionalValue == null){
-			additionalValue = {:day => today, :phase => null};
+			additionalValue = [today,  null];
 		}
-		if (today != additionalValue[:day] || additionalValue[:phase] == null){
-			additionalValue[:day] = today;
-			additionalValue[:phase] = Moon.moonPhase(today);
-			image = Moon.drawMoon(additionalValue[:phase][:IP1], height, foregroundColor(), backgroundColor());
+		if (additionalValue[0].add(new Time.Duration(43200)).lessThan(today) || additionalValue[1] == null){
+			additionalValue[0] = today;
+			additionalValue[1] = Moon.moonPhase(today);
+			image = Moon.drawMoon(additionalValue[1][:IP1], height, foregroundColor(), backgroundColor());
 		}
 		
-		return additionalValue[:phase][:AG1];
+		return additionalValue[1][:AG1];
 	}
 		
 	function getElevation(){

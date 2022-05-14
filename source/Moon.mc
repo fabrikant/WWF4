@@ -76,7 +76,7 @@ module Moon{
 	
 		var buffImage = null;
 		var imageOptions ={:width => size, :height => size,
-			:palette => [color, backgroundColor, Graphics.COLOR_TRANSPARENT]};
+			:palette => [color, backgroundColor]};
 		if ( Graphics has :createBufferedBitmap){
 			var bufferedBitmapRef = Graphics.createBufferedBitmap(imageOptions);
 			buffImage = bufferedBitmapRef.get(); 

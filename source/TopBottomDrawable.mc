@@ -7,15 +7,12 @@ using Toybox.Math;
 class TopBottomDrawable extends DataDrawable{
 
 	var isTop;
-	var methodForDraw;
 	var lastWeatherRead, lastValue;
 	
 	function initialize(params as Lang.Dictonary) {
-		BasicDrawable.initialize(params);
 		DataDrawable.initialize(params);
 		isTop = params[:isTop];
 		onSettingsChanged();
-		//Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
 	}
 	
 	public function onSettingsChanged(){
@@ -23,29 +20,23 @@ class TopBottomDrawable extends DataDrawable{
 		DataDrawable.onSettingsChanged();
 		lastWeatherRead = null;
 		lastValue = null;		
-		methodForDraw = null;
-		
-		if (dataType == TOP_BOTTOM_TYPE_BATTERY) {
-			methodForDraw = self.method(:drawBattery);
-		}else if(dataType == TOP_BOTTOM_TYPE_DATE){
-			methodForDraw = self.method(:drawDate);
-		}else if(dataType == TOP_BOTTOM_TYPE_WEATHER_CONDITION){
-			methodForDraw = self.method(:drawWeatherInfo);
-		}else if(dataType == TOP_BOTTOM_TYPE_CITY){
-			methodForDraw = self.method(:drawWeatherInfo);
-		}else{
-			methodForDraw = self.method(:drawDataField);
-		}
 	}
 	
 		
 	public function draw(dc as Graphics.Dc){
 
 		beforeDraw(dc);
-		if (methodForDraw != null){
-			methodForDraw.invoke(dc);
+		if (dataType == TOP_BOTTOM_TYPE_BATTERY) {
+			drawBattery(dc);
+		}else if(dataType == TOP_BOTTOM_TYPE_DATE){
+			drawDate(dc);
+		}else if(dataType == TOP_BOTTOM_TYPE_WEATHER_CONDITION){
+			drawWeatherInfo(dc);
+		}else if(dataType == TOP_BOTTOM_TYPE_CITY){
+			drawWeatherInfo(dc);
+		}else{
+			drawDataField(dc);
 		}
-		drawBorder(dc);
 	}
 
 	function drawDataField(dc){
