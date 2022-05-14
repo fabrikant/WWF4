@@ -4,18 +4,19 @@ using Toybox.System;
 using Toybox.Graphics;
 using Toybox.Activity;
 using Toybox.ActivityMonitor;
+using Toybox.Lang;
 
 //*****************************************************************************
 class GeneralMenu extends WatchUi.Menu2{
 	
 	function initialize() {
 		Menu2.initialize({:title=> Application.loadResource(Rez.Strings.MenuHeader)});
-		addItem(new Item("ThemeD", Rez.Strings.ThemeD, subMenuPatternThemes()));
-		addItem(new Item("ThemeN", Rez.Strings.ThemeN, subMenuPatternThemes()));
+		addItem(new Item("ThemeD", Rez.Strings.ThemeD, :subMenuPatternThemes));
+		addItem(new Item("ThemeN", Rez.Strings.ThemeN, :subMenuPatternThemes));
 		addItem(new TogleItem("DNDisN", Rez.Strings.DNDisN));
 		addItem(new TogleItem("InvertCircle", Rez.Strings.InvertCircle));
 		addItem(new TogleItem("SBat", Rez.Strings.SBat));
-		addItem(new Item("SBt", Rez.Strings.SBt, subMenuPatternBluetooth()));		
+		addItem(new Item("SBt", Rez.Strings.SBt, :subMenuPatternBluetooth));		
 		addItem(new TogleItem("SAl", Rez.Strings.SAl));		
 		addItem(new TogleItem("ShowDND", Rez.Strings.ShowDND));
 		
@@ -23,83 +24,15 @@ class GeneralMenu extends WatchUi.Menu2{
 			addItem(new TogleItem("ShowAmPm", Rez.Strings.ShowAmPm));
 		}
 		
-		addItem(new Item("Circle", Rez.Strings.Circle, subMenuPatternCircleTypes()));
-		addItem(new Item("Top", Rez.Strings.Top, subMenuPatternTopBottomTypes()));
-		addItem(new Item("Bot", Rez.Strings.Bot, subMenuPatternTopBottomTypes()));
-		addItem(new Item("Dt1", Rez.Strings.Dt1, subMenuPatternDataFields()));
-		addItem(new Item("Dt2", Rez.Strings.Dt2, subMenuPatternDataFields()));
+		addItem(new Item("Circle", Rez.Strings.Circle, :subMenuPatternCircleTypes));
+		addItem(new Item("Top", Rez.Strings.Top, :subMenuPatternTopBottomTypes));
+		addItem(new Item("Bot", Rez.Strings.Bot, :subMenuPatternTopBottomTypes));
+		addItem(new Item("Dt1", Rez.Strings.Dt1, :subMenuPatternDataFields));
+		addItem(new Item("Dt2", Rez.Strings.Dt2, :subMenuPatternDataFields));
 		addItem(new PickerItem("T1TZ", Rez.Strings.T1TZ));
-		addItem(new Item("WndU", Rez.Strings.WndU, subMenuPatternWindSpeeddUnit()));
+		addItem(new Item("WndU", Rez.Strings.WndU, :subMenuPatternWindSpeeddUnit));
 	}
 	
- 	private function subMenuPatternWindSpeeddUnit(){
-		return {
-			UNIT_SPEED_MS => Rez.Strings.SpeedUnitMSec,
-			UNIT_SPEED_KMH => Rez.Strings.SpeedUnitKmH,
-			UNIT_SPEED_MLH => Rez.Strings.SpeedUnitMileH,
-			UNIT_SPEED_FTS => Rez.Strings.SpeedUnitFtSec,
-			UNIT_SPEED_BOF => Rez.Strings.SpeedUnitBof,
-			UNIT_SPEED_KNOTS => Rez.Strings.SpeedUnitKnots,
-		};
-		
-		
-	}
-
-	private function subMenuPatternDataFields(){
-		return {
-			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
-			CALORIES => Rez.Strings.FIELD_TYPE_CALORIES,
-			DISTANCE => Rez.Strings.FIELD_TYPE_DISTANCE,
-			STEPS => Rez.Strings.FIELD_TYPE_STEPS,
-			FLOOR => Rez.Strings.FIELD_TYPE_FLOOR,
-			O2 => Rez.Strings.FIELD_TYPE_O2,
-			ELEVATION => Rez.Strings.FIELD_TYPE_ELEVATION,
-			TIME_ZONE => Rez.Strings.FIELD_TYPE_TIME1,
-			MOON => Rez.Strings.FIELD_TYPE_MOON,
-		};
-	}
-
-	private function subMenuPatternTopBottomTypes(){
-		var dict =  {
-			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
-			TOP_BOTTOM_TYPE_BATTERY => Rez.Strings.FIELD_TYPE_BATTERY,
-			TOP_BOTTOM_TYPE_DATE => Rez.Strings.FIELD_TYPE_DATE,
-			TOP_BOTTOM_TYPE_WEATHER_CONDITION => Rez.Strings.FIELD_TYPE_WEATHER_CONDITION,
-			TOP_BOTTOM_TYPE_CITY => Rez.Strings.FIELD_TYPE_CITY,
-		};
-		//add data fields types
-		var dictDataFields = subMenuPatternDataFields();
-		var keys = dictDataFields.keys();
-		for (var i = 0; i < keys.size(); i++){
-			dict.put(keys[i], dictDataFields[keys[i]]);
-		} 
-		return dict;
-	}
-	
-	private function subMenuPatternThemes(){
-		return {
-			THEME_DARK => Rez.Strings.ThemeDark,
-			THEME_LIGHT => Rez.Strings.ThemeLight,
-			THEME_INSTINCT_LIKE_1 => Rez.Strings.ThemeInstinctLike1,
-			THEME_INSTINCT_LIKE_2 => Rez.Strings.ThemeInstinctLike2,
-		};
-	}
-
-	private function subMenuPatternBluetooth(){
-		return {
-			BLUETOOTH_SHOW_IF_CONNECT => Rez.Strings.ShowBluetoothIfConnect,
-			BLUETOOTH_SHOW_IF_DISCONNECT => Rez.Strings.ShowBluetoothIfDisconnect,
-			BLUETOOTH_HIDE => Rez.Strings.ShowBluetoothHide,
-		};
-	}
-	
-	private function subMenuPatternCircleTypes(){
-		return {
-			CIRCLE_TYPE_HR => Rez.Strings.FIELD_TYPE_HR,
-			CIRCLE_TYPE_SECONDS => Rez.Strings.FIELD_TYPE_SECONDS,
-		};
-	}
-
 	function onHide(){
 		Application.getApp().onSettingsChanged();
 	}
@@ -109,25 +42,27 @@ class GeneralMenu extends WatchUi.Menu2{
 //*****************************************************************************
 class Item extends WatchUi.MenuItem{
 
-	var submenuPattern;
+	var patternMethodSymbol;
 	
-	function initialize(propName, resLabel, submenuPattern) {
-		self.submenuPattern = submenuPattern;
+	function initialize(propName, resLabel, patternMethodSymbol) {
+		self.patternMethodSymbol = patternMethodSymbol;
 		var label = Application.loadResource(resLabel);
 		var value = Application.Properties.getValue(propName);
-		var sublabel = submenuPattern[value]; 
+		//var sublabel = patternMethodSymbol[value]; 
+		var sublabel = Patterns.getSublabel(patternMethodSymbol, value);
 		MenuItem.initialize(label, sublabel, propName, {});
 	}
 
 	function onSelectItem(){
 		var weak = self.weak();
-		var submenu = new SelectMenu(getLabel(), submenuPattern, getId(), weak);
+		var submenu = new SelectMenu(getLabel(), patternMethodSymbol, getId(), weak);
 		WatchUi.pushView(submenu, new SimpleMenuDelegate(), WatchUi.SLIDE_IMMEDIATE);
 	}	
 
 	function onSelectSubmenuItem(newValue){
 		Application.Properties.setValue(getId(),newValue);
-		setSubLabel(submenuPattern[newValue]);
+		//setSubLabel(patternMethodSymbol[newValue]);
+		setSubLabel(Patterns.getSublabel(patternMethodSymbol, newValue));
 	}	
 }
 
@@ -170,10 +105,12 @@ class PickerItem extends WatchUi.MenuItem{
 class SelectMenu extends WatchUi.Menu2{
 
 	
-	function initialize(title, pattern, propName, callbackWeak){
+	function initialize(title, patternMethodSymbol, propName, callbackWeak){
 		
 		Menu2.initialize({:title=> title});
 		var propValue = Application.Properties.getValue(propName);
+		var method = new Lang.Method(Patterns, patternMethodSymbol);
+		var pattern = method.invoke();
 		var keys = pattern.keys();
 		for (var i=0; i<keys.size(); i++){
 			addItem(new SelectItem(keys[i], pattern[keys[i]], callbackWeak));
@@ -217,4 +154,80 @@ class SimpleMenuDelegate extends WatchUi.Menu2InputDelegate{
 	function onSelect(item){
 		item.onSelectItem();
 	}
+}
+
+module Patterns{
+ 	
+ 	function subMenuPatternWindSpeeddUnit(){
+		return {
+			UNIT_SPEED_MS => Rez.Strings.SpeedUnitMSec,
+			UNIT_SPEED_KMH => Rez.Strings.SpeedUnitKmH,
+			UNIT_SPEED_MLH => Rez.Strings.SpeedUnitMileH,
+			UNIT_SPEED_FTS => Rez.Strings.SpeedUnitFtSec,
+			UNIT_SPEED_BOF => Rez.Strings.SpeedUnitBof,
+			UNIT_SPEED_KNOTS => Rez.Strings.SpeedUnitKnots,
+		};
+	}
+
+	function subMenuPatternDataFields(){
+		return {
+			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
+			CALORIES => Rez.Strings.FIELD_TYPE_CALORIES,
+			DISTANCE => Rez.Strings.FIELD_TYPE_DISTANCE,
+			STEPS => Rez.Strings.FIELD_TYPE_STEPS,
+			FLOOR => Rez.Strings.FIELD_TYPE_FLOOR,
+			O2 => Rez.Strings.FIELD_TYPE_O2,
+			ELEVATION => Rez.Strings.FIELD_TYPE_ELEVATION,
+			TIME_ZONE => Rez.Strings.FIELD_TYPE_TIME1,
+			MOON => Rez.Strings.FIELD_TYPE_MOON,
+		};
+	}
+
+	function subMenuPatternTopBottomTypes(){
+		var dict =  {
+			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
+			TOP_BOTTOM_TYPE_BATTERY => Rez.Strings.FIELD_TYPE_BATTERY,
+			TOP_BOTTOM_TYPE_DATE => Rez.Strings.FIELD_TYPE_DATE,
+			TOP_BOTTOM_TYPE_WEATHER_CONDITION => Rez.Strings.FIELD_TYPE_WEATHER_CONDITION,
+			TOP_BOTTOM_TYPE_CITY => Rez.Strings.FIELD_TYPE_CITY,
+		};
+		//add data fields types
+		var dictDataFields = subMenuPatternDataFields();
+		var keys = dictDataFields.keys();
+		for (var i = 0; i < keys.size(); i++){
+			dict.put(keys[i], dictDataFields[keys[i]]);
+		} 
+		return dict;
+	}
+	
+	function subMenuPatternThemes(){
+		return {
+			THEME_DARK => Rez.Strings.ThemeDark,
+			THEME_LIGHT => Rez.Strings.ThemeLight,
+			THEME_INSTINCT_LIKE_1 => Rez.Strings.ThemeInstinctLike1,
+			THEME_INSTINCT_LIKE_2 => Rez.Strings.ThemeInstinctLike2,
+		};
+	}
+
+	function subMenuPatternBluetooth(){
+		return {
+			BLUETOOTH_SHOW_IF_CONNECT => Rez.Strings.ShowBluetoothIfConnect,
+			BLUETOOTH_SHOW_IF_DISCONNECT => Rez.Strings.ShowBluetoothIfDisconnect,
+			BLUETOOTH_HIDE => Rez.Strings.ShowBluetoothHide,
+		};
+	}
+	
+	function subMenuPatternCircleTypes(){
+		return {
+			CIRCLE_TYPE_HR => Rez.Strings.FIELD_TYPE_HR,
+			CIRCLE_TYPE_SECONDS => Rez.Strings.FIELD_TYPE_SECONDS,
+		};
+	}
+	
+	function getSublabel(methodSymbol, value){
+		var method = new Lang.Method(Patterns, methodSymbol);
+		var pattern = method.invoke();
+		return pattern[value];
+	}
+
 }
