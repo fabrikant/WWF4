@@ -60,5 +60,17 @@
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
+	
+	<bitmap id="Stress" filename="../../resources/drawables/png-20/1042.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>	
+
+	<bitmap id="BodyBattery" filename="../../resources/drawables/png-20/1014.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>	
 
 </drawables>

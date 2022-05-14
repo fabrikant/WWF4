@@ -58,6 +58,8 @@
 	<string id="FIELD_TYPE_ELEVATION" scope="foreground">Elevation</string>
 	<string id="FIELD_TYPE_TIME1" scope="foreground">Second time</string>
 	<string id="FIELD_TYPE_MOON" scope="foreground">Moon phase</string>
+	<string id="FIELD_TYPE_STRESS" scope="foreground">Stress</string>
+	<string id="FIELD_TYPE_BODY_BATTERY" scope="foreground">Body bat</string>
 	
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>
 	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>

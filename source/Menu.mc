@@ -4,6 +4,7 @@ using Toybox.System;
 using Toybox.Graphics;
 using Toybox.Activity;
 using Toybox.ActivityMonitor;
+using Toybox.SensorHistory;
 using Toybox.Lang;
 
 //*****************************************************************************
@@ -11,6 +12,12 @@ class GeneralMenu extends WatchUi.Menu2{
 	
 	function initialize() {
 		Menu2.initialize({:title=> Application.loadResource(Rez.Strings.MenuHeader)});
+		addItem(new Item("Circle", Rez.Strings.Circle, :subMenuPatternCircleTypes));
+		addItem(new Item("Top", Rez.Strings.Top, :subMenuPatternTopBottomTypes));
+		addItem(new Item("Bot", Rez.Strings.Bot, :subMenuPatternTopBottomTypes));
+		addItem(new Item("Dt1", Rez.Strings.Dt1, :subMenuPatternDataFields));
+		addItem(new Item("Dt2", Rez.Strings.Dt2, :subMenuPatternDataFields));
+
 		addItem(new Item("ThemeD", Rez.Strings.ThemeD, :subMenuPatternThemes));
 		addItem(new Item("ThemeN", Rez.Strings.ThemeN, :subMenuPatternThemes));
 		addItem(new TogleItem("DNDisN", Rez.Strings.DNDisN));
@@ -24,11 +31,6 @@ class GeneralMenu extends WatchUi.Menu2{
 			addItem(new TogleItem("ShowAmPm", Rez.Strings.ShowAmPm));
 		}
 		
-		addItem(new Item("Circle", Rez.Strings.Circle, :subMenuPatternCircleTypes));
-		addItem(new Item("Top", Rez.Strings.Top, :subMenuPatternTopBottomTypes));
-		addItem(new Item("Bot", Rez.Strings.Bot, :subMenuPatternTopBottomTypes));
-		addItem(new Item("Dt1", Rez.Strings.Dt1, :subMenuPatternDataFields));
-		addItem(new Item("Dt2", Rez.Strings.Dt2, :subMenuPatternDataFields));
 		addItem(new PickerItem("T1TZ", Rez.Strings.T1TZ));
 		addItem(new Item("WndU", Rez.Strings.WndU, :subMenuPatternWindSpeeddUnit));
 	}
@@ -61,7 +63,6 @@ class Item extends WatchUi.MenuItem{
 
 	function onSelectSubmenuItem(newValue){
 		Application.Properties.setValue(getId(),newValue);
-		//setSubLabel(patternMethodSymbol[newValue]);
 		setSubLabel(Patterns.getSublabel(patternMethodSymbol, newValue));
 	}	
 }
@@ -170,17 +171,32 @@ module Patterns{
 	}
 
 	function subMenuPatternDataFields(){
-		return {
+		 var pattern = {
 			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
 			CALORIES => Rez.Strings.FIELD_TYPE_CALORIES,
 			DISTANCE => Rez.Strings.FIELD_TYPE_DISTANCE,
 			STEPS => Rez.Strings.FIELD_TYPE_STEPS,
-			FLOOR => Rez.Strings.FIELD_TYPE_FLOOR,
-			O2 => Rez.Strings.FIELD_TYPE_O2,
-			ELEVATION => Rez.Strings.FIELD_TYPE_ELEVATION,
 			TIME_ZONE => Rez.Strings.FIELD_TYPE_TIME1,
 			MOON => Rez.Strings.FIELD_TYPE_MOON,
 		};
+		
+		if (Activity.Info has :currentOxygenSaturation){
+			pattern[O2] = Rez.Strings.FIELD_TYPE_O2;
+		}
+		if (Activity.Info has :altitude){
+			pattern[ELEVATION] = Rez.Strings.FIELD_TYPE_ELEVATION;
+		}
+		if (ActivityMonitor.Info has :floorsClimbed){
+			pattern[FLOOR] = Rez.Strings.FIELD_TYPE_FLOOR;
+		}
+		if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getStressHistory)){
+			pattern[STRESS] = Rez.Strings.FIELD_TYPE_STRESS;
+		}
+		if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getBodyBatteryHistory)){
+			pattern[BODY_BATTERY] = Rez.Strings.FIELD_TYPE_BODY_BATTERY;
+		}
+		
+		return pattern;
 	}
 
 	function subMenuPatternTopBottomTypes(){

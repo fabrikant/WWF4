@@ -1,7 +1,7 @@
 <fonts>
 	<font id="big" scope="foreground" antialias="true"
 		filename="bebas-number/bebas-number-bold-90.fnt" />
-	<font id="medium" scope="foreground" antialias="false" filter="-10123456789:k°,.|n/a"
+	<font id="medium" scope="foreground" antialias="false" filter="-10123456789:k°,.|n/a%"
 		filename="roboto/roboto-25.fnt" />
 	<font id="small" scope="foreground" antialias="false"
 		filename="roboto/roboto-20.fnt" />

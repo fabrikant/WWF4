@@ -90,10 +90,38 @@ class DataDrawable extends BasicDrawable{
 			value = getSecondTime();
 		}else if (dataType == MOON){
 			value = getMoon();
+		}else if (dataType == STRESS){
+			value = getLasValueSensorHistory(:getStressHistory);	
+			if (value != null){
+				value = value.format("%d");
+			}	
+		}else if (dataType == BODY_BATTERY){
+			value = getLasValueSensorHistory(:getBodyBatteryHistory);
+			if (value != null){
+				value = value.format("%d")+"%";
+			}	
 		}
 		return value;
 	}
 
+	function getLasValueSensorHistory(methodSymbol){
+		var value = null;
+		if (Toybox has :SensorHistory){
+			if (Toybox.SensorHistory has methodSymbol){
+				var iter = new Lang.Method(Toybox.SensorHistory, methodSymbol).invoke({:period =>1, :order => SensorHistory.ORDER_NEWEST_FIRST});
+				if (iter != null){
+					var sample = iter.next();
+					if (sample != null){
+						if (sample.data != null){
+							value = sample.data;
+						}
+					}
+				}
+			}
+		}
+		return value;
+	}
+	
 	function getMoon(){
 		var today = Time.now();
 		if (additionalValue == null){
@@ -202,6 +230,8 @@ class DataDrawable extends BasicDrawable{
 			ELEVATION => Rez.Drawables.Elevation,
 			O2 => Rez.Drawables.O2,
 			TIME_ZONE => Rez.Drawables.TimeZone,
+			STRESS => Rez.Drawables.Stress,
+			BODY_BATTERY => Rez.Drawables.BodyBattery,
 		};
 		return ref[dataType];
 	}
