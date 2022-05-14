@@ -45,7 +45,7 @@ class LeftDrawable extends BasicDrawable{
 	function drawBattery(dc){
 		
 		var value = Math.round(System.getSystemStats().battery);
-		var bkColor = backgroundColor();
+		var bColor = backgroundColor();
 		var fColor = foregroundColor();
 		var scaleWidth = width/4;
 		var r = (dc.getWidth()/2).toNumber();
@@ -54,39 +54,50 @@ class LeftDrawable extends BasicDrawable{
 		var y = ((height-batHeight)/2).toNumber();
 		var yFull = locY+y+batHeight-fullHeight;
 
+		//Рисуем прямоугольник с цветом батареи
 		if (value > 20){
 			dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
 		}else{
 			dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
 		}
 		dc.setPenWidth(1);
-		//цветной индикатор
 		dc.fillRectangle(0, yFull, width, fullHeight);
 		
-		//Деления
+		//Разрезаем всю батарею толстыми линиями делениями
+		var div = batHeight/5;
 		dc.setColor(fColor, fColor);
-		//dc.setColor(accentColor(), Graphics.COLOR_TRANSPARENT);
-		var div = batHeight/10;
-		for (var i = 1; i<10; i++){
+		dc.setPenWidth(5);
+		dc.setColor(fColor, fColor);
+		for (var i = 1; i<div-1; i++){
 			var divY = locY+y+batHeight-i*div;
-			if (divY < yFull){break;}
 			dc.drawLine(locX, divY, locX+width, divY);
 		}
 		
-		//Рамка индикатора
+		//Обводим рамкой всю батарею сверху и снизу		
+		dc.setPenWidth(1);
 		dc.setColor(fColor, fColor);
-		//dc.drawRectangle(0, yFull, width, fullHeight);
 		dc.drawRectangle(locX, locY+y-1, width, batHeight+1);
-		//Обрезка шкалы справа
-		dc.setColor(bkColor, bkColor);
+		
+		//Обрезаем прямоугольник до дуги
+		dc.setColor(bColor, bColor);
 		dc.fillCircle(r, r, r-scaleWidth);
-		//Правый контур шкалы
+		//И рисуем правый контур
 		dc.setColor(fColor, fColor);
 		dc.drawCircle(r, r, r-scaleWidth);
 		//Левый контур
 		dc.drawCircle(r, r, r);
+		
+		//Добавляем в разделители пробелы цвета фона 
+		dc.setPenWidth(3);
+		dc.setColor(bColor, bColor);
+		for (var i = 1; i<div-1; i++){
+			var divY = locY+y+batHeight-i*div;
+			dc.drawLine(locX, divY, locX+width, divY);
+		}
+		
 		//Убираем артефакты выше и ниже
-		dc.setColor(bkColor, bkColor);
+		dc.setPenWidth(1);
+		dc.setColor(bColor, bColor);
 		dc.fillRectangle(locX, locY, width, y-1);		
 		dc.fillRectangle(locX, locY+y+batHeight, width, height);
 		
