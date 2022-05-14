@@ -75,7 +75,11 @@ class RightDrawable extends BasicDrawable{
 			
 			top -= imageMessage.getDc().getHeight();
 			dc.drawBitmap(x, top, imageMessage);
-			dc.drawText(x, bottom, fontSmall, notifications, Graphics.TEXT_JUSTIFY_LEFT);
+			if (notifications > 9){
+				dc.drawText(x, bottom, fontSmall, notifications, Graphics.TEXT_JUSTIFY_LEFT);
+			}else{
+				dc.drawText(x+(imageMessage.getDc().getWidth()/2).toNumber(), bottom, fontSmall, notifications, Graphics.TEXT_JUSTIFY_CENTER);
+			}
 			bottom += dc.getFontHeight(fontSmall);	
 		}
 		
