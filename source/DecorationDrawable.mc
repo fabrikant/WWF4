@@ -16,7 +16,7 @@ class DecorationDrawable extends BasicDrawable{
 	
 	public function draw(dc as Graphics.Dc){
 		dc.setClip(locX, locY, width, height);
-		dc.setColor(accentColor(), Graphics.COLOR_TRANSPARENT);
+		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
 		
 		for (var i=0; i<decorations.size(); i++){
 			

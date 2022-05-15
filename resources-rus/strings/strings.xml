@@ -71,7 +71,7 @@
 
 	<!-- Screen messge -->
  	<string id="NA" scope="foreground">n/a</string>
- 	<string id="NoLocation" scope="foreground">позицияn\nнеопред.</string>
+ 	<string id="NoLocation" scope="foreground">местополож.\nнеопред.</string>
  	<string id="NoApiKey" scope="foreground">API ключ\nне указ.</string>
  	<string id="Error" scope="foreground">ошибка</string>
  	<string id="WaitingData" scope="foreground">ожидание\nданных</string>

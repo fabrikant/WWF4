@@ -88,6 +88,7 @@
 		<param name="locY">0</param>
 		<param name="width">Sizes.screenW</param>
 		<param name="height">Sizes.screenH</param>
+		<param name="centerPosition">true</param>
 		<param name="decoration">[
 			{:method=>:setPenWidth, :params => [2]},
 			{:method=>:drawLine, :params => [

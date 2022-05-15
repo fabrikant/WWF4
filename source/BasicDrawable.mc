@@ -31,7 +31,7 @@ class BasicDrawable extends WatchUi.Drawable{
 	public function drawBorder(dc as Graphics.Dc){
 		return;
 		dc.setPenWidth(1);
-		dc.setColor(accentColor() , accentColor());
+		dc.setColor(Graphics.COLOR_PINK , Graphics.COLOR_PINK);
 		dc.drawRectangle(locX, locY, width, height);
 	}
 	
@@ -95,8 +95,5 @@ class BasicDrawable extends WatchUi.Drawable{
 	function backgroundColorSize(){
 		return theme[0];
 	}
-	
-	function accentColor(){
-		return theme[4];
-	}
+
 }

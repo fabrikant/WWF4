@@ -101,18 +101,18 @@ class WWF4View extends WatchUi.WatchFace {
 			dayThemeIsSet = false;
 		}
 		
-		//[backcgroundColorSize, foregroundColorSize, backcgroundColorCenter, foregroundColorCenter, АccentColor]
+		//[backcgroundColorSize, foregroundColorSize, backcgroundColorCenter, foregroundColorCenter]
 		var themeNumber = Application.Properties.getValue(themeKey);
 		if (themeNumber == THEME_DARK){
-			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_DK_GRAY];
+			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE];
 		}else if (themeNumber == THEME_LIGHT){
-			theme = [Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+			theme = [Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK];
 		}else if (themeNumber == THEME_INSTINCT_LIKE_1){
-			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK];
 		}else if (themeNumber == THEME_INSTINCT_LIKE_2){
-			theme = [Graphics.COLOR_DK_GRAY, Graphics.COLOR_WHITE, Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK, Graphics.COLOR_BLACK];
+			theme = [Graphics.COLOR_DK_GRAY, Graphics.COLOR_WHITE, Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK];
 		}else{
-			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_DK_GRAY];
+			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK];
 		}
 	} 
 	

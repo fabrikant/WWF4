@@ -128,16 +128,21 @@ class WeatherDrawable extends BasicDrawable{
 		var windDirection = windDirection((height*0.4).toNumber(), direction.toNumber(), [offset, 0], [windArrowSize, windArrowSize]);
 		//Убедимся, что стрелка влезет в поле
 		var xWindOffset = 0;
+		var yWindOffset = 9999;
 		for (var i = 0; i < windDirection.size(); i++){
 			var diff = windDirection[i][0] - width;
 			if (diff > xWindOffset){
 				xWindOffset = diff;
 			}
+			if (windDirection[i][1]< yWindOffset){
+				yWindOffset = windDirection[i][1];
+			}
 		}
-		if (xWindOffset > 0){
-			for (var i = 0; i < windDirection.size(); i++){
+		for (var i = 0; i < windDirection.size(); i++){
+			if (xWindOffset > 0){
 				windDirection[i][0] -= xWindOffset+1;
 			}
+			windDirection[i][1] -= yWindOffset-2;
 		}
 		
 		dc.fillPolygon(windDirection);
