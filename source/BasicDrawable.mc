@@ -29,7 +29,7 @@ class BasicDrawable extends WatchUi.Drawable{
 	}
 	
 	public function drawBorder(dc as Graphics.Dc){
-		return;
+		//return;
 		dc.setPenWidth(1);
 		dc.setColor(Graphics.COLOR_PINK , Graphics.COLOR_PINK);
 		dc.drawRectangle(locX, locY, width, height);

@@ -126,23 +126,38 @@ class WeatherDrawable extends BasicDrawable{
 		offset += dc.getTextWidthInPixels(temp, fontMed);
 		var windArrowSize = (height*2/3).toNumber();
 		var windDirection = windDirection((height*0.4).toNumber(), direction.toNumber(), [offset, 0], [windArrowSize, windArrowSize]);
+		
 		//Убедимся, что стрелка влезет в поле
+		//Если стрелка вылезает за поле справа, пригласим её назад
+		//Если высота стрелки больше windArrowSize (неудачно развернулась), прижмем её вверх
+		//Если меньше разместим примерно в центе отведенного ей поля 
 		var xWindOffset = 0;
-		var yWindOffset = 9999;
+		var yWindMin = 99999;
+		var yWindMax = 0;
 		for (var i = 0; i < windDirection.size(); i++){
 			var diff = windDirection[i][0] - width;
 			if (diff > xWindOffset){
 				xWindOffset = diff;
 			}
-			if (windDirection[i][1]< yWindOffset){
-				yWindOffset = windDirection[i][1];
+			if (windDirection[i][1]< yWindMin){
+				yWindMin = windDirection[i][1];
+			}
+			if (windDirection[i][1]> yWindMax){
+				yWindMax = windDirection[i][1];
 			}
 		}
+		
+		var windH = yWindMax - yWindMin;
+		var yWindOffset = yWindMin;
+		if (windH < windArrowSize){
+			yWindOffset -= (windArrowSize-windH)/2+1;
+		}
+		
 		for (var i = 0; i < windDirection.size(); i++){
 			if (xWindOffset > 0){
 				windDirection[i][0] -= xWindOffset+1;
 			}
-			windDirection[i][1] -= yWindOffset-2;
+			windDirection[i][1] -= yWindOffset;
 		}
 		
 		dc.fillPolygon(windDirection);

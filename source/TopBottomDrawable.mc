@@ -55,17 +55,16 @@ class TopBottomDrawable extends DataDrawable{
 		
 		widthData += dc.getTextWidthInPixels(value.toString(),fontMed);
 		var offset = ((width-widthData)/2).toNumber(); 
-		
+		var topBottomCorrection = topBottomCorrection();
 		if (image != null){
 			var imageHeight = image.getDc().getHeight();
 			var yOffset = imageHeight >= height ? 0 : ((height - imageHeight)/2).toNumber();
-			dc.drawBitmap(locX+offset, locY+yOffset, image);
+			dc.drawBitmap(locX+offset, locY+yOffset+topBottomCorrection, image);
 			offset += image.getDc().getWidth();
 		}
 		var center = getCenterForFont(fontMed);
 		dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
-		dc.drawText(locX+offset, center[1], fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
-
+		dc.drawText(locX+offset, center[1]+topBottomCorrection, fontMed, value, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
 	}	
 
 	function updateLastValue(){
@@ -93,7 +92,7 @@ class TopBottomDrawable extends DataDrawable{
 			var fColor = foregroundColor();
 			var center = getCenterForFont(fontSmall);
 			dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
-			dc.drawText(center[0], center[1], fontSmall, lastValue, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(center[0], center[1]+topBottomCorrection(), fontSmall, lastValue, Graphics.TEXT_JUSTIFY_CENTER| Graphics.TEXT_JUSTIFY_VCENTER);
 		}	
 	}
 
@@ -102,7 +101,7 @@ class TopBottomDrawable extends DataDrawable{
 		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
 		var center = getCenterForFont(fontSmall);
 		var value = Lang.format("$1$, $2$ $3$", [now.day_of_week, now.day, now.month]);
-		dc.drawText(center[0], center[1], fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+		dc.drawText(center[0], center[1]+topBottomCorrection(), fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
 	}
 	
 	function drawBattery(dc){
@@ -119,9 +118,10 @@ class TopBottomDrawable extends DataDrawable{
 		var value = Math.round(System.getSystemStats().battery);
 		var k = 0.45;
 		
+		var topBottomCorrection = topBottomCorrection();
 		var hBattery = height*k;
 		var wBattery = width/4*k;
-		var yOffset = 3;
+		var yOffset = 3+topBottomCorrection;
 		var xOffset = -wBattery;
 		
 		//Внешний контур
@@ -145,8 +145,15 @@ class TopBottomDrawable extends DataDrawable{
 
 		var center = getCenterForFont(fontSmall);
 		dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
-		dc.drawText(locX+ width/2, center[1], fontSmall, value.format("%d")+"%", Graphics.TEXT_JUSTIFY_LEFT |Graphics.TEXT_JUSTIFY_VCENTER);
+		dc.drawText(locX+ width/2, center[1]+topBottomCorrection, fontSmall, value.format("%d")+"%", Graphics.TEXT_JUSTIFY_LEFT |Graphics.TEXT_JUSTIFY_VCENTER);
 	}
 	
+	function topBottomCorrection(){
+		if (dataType == MOON){
+			return 0;
+		}else{
+			return isTop ? +4 : -4;
+		}
+	}
 	
 }
