@@ -33,6 +33,7 @@ class GeneralMenu extends WatchUi.Menu2{
 		
 		addItem(new PickerItem("T1TZ", Rez.Strings.T1TZ));
 		addItem(new Item("WndU", Rez.Strings.WndU, :subMenuPatternWindSpeeddUnit));
+		addItem(new PickerItem("keyOW", Rez.Strings.keyOW));
 	}
 	
 	function onHide(){
@@ -91,13 +92,21 @@ class PickerItem extends WatchUi.MenuItem{
 	}
 
 	function onSelectItem(){
-		var picker = new StringPicker(self.weak(), "0123456789-");
+		var charSet = "0123456789-";
+		if (getId().equals("keyOW")){
+			charSet = "0123456789abcdef";
+		} 
+		var picker = new StringPicker(self.weak(), charSet);
 		WatchUi.pushView(picker, new StringPickerDelegate(picker), WatchUi.SLIDE_IMMEDIATE);
 	}	
 	
 	function onSetText(value){
 		setSubLabel(value);
-		Application.Properties.setValue(getId(), value.toNumber());
+		if (getId().equals("keyOW")){
+			Application.Properties.setValue(getId(), value);
+		}else{
+			Application.Properties.setValue(getId(), value.toNumber());
+		}
 	}
 }
 
