@@ -511,23 +511,23 @@
 	</bitmap>
 	
 	<!-- Atmosphere -->
-  	<bitmap id="Code701d" filename="../../resources/drawables/png-38/500-fill.png" >
+  	<bitmap id="Code701d" filename="../../resources/drawables/png-38/501-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code701n" filename="../../resources/drawables/png-38/500-fill.png" >
+	<bitmap id="Code701n" filename="../../resources/drawables/png-38/501-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code711d" filename="../../resources/drawables/png-38/1025.png" >
+  	<bitmap id="Code711d" filename="../../resources/drawables/png-38/smoke.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code711n" filename="../../resources/drawables/png-38/1025.png" >
+	<bitmap id="Code711n" filename="../../resources/drawables/png-38/smoke.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
