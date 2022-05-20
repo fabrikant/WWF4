@@ -41,6 +41,7 @@ class WeatherDrawable extends BasicDrawable{
 		}else{
 			
 			if (Time.now().value() - lastWeatherUpdate > 10800){
+				Application.getApp().registerEvents();
 				drawNoData(dc, Application.loadResource(Rez.Strings.OldData));
 			}else{
 				drawWeather(dc);
