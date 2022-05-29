@@ -75,6 +75,6 @@
  	<string id="NoApiKey" scope="foreground">API key\nnot set</string>
  	<string id="Error" scope="foreground">error</string>
  	<string id="WaitingData" scope="foreground">waiting\nfor data</string>
- 	<string id="OldData" scope="foreground">"To old\ndata"</string>
+ 	<string id="OldData" scope="foreground">To old\ndata</string>
 
 </strings>
