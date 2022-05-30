@@ -4,6 +4,7 @@ using Toybox.Time;
 using Toybox.System;
 using Toybox.ActivityMonitor;
 using Toybox.Activity;
+using Toybox.Lang;
 
 class DataDrawable extends BasicDrawable{
 
