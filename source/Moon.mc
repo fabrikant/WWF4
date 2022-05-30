@@ -48,8 +48,11 @@ module Moon{
 	    IP1 = normalize( ( JD1 - 2451550.1 ) / 29.530588853 );
 	    var AG1 = IP1*29.53;
 
+		if (AG1 < 1){
+			AG1 +=1;
+		}
 		//return AG1.toNumber();
-		return {:IP1 => IP1, :AG1 => AG1.toNumber().toString()};
+		return {:IP1 => IP1, :AG1 => Math.round(AG1).format("%d")};
 
     }
     
