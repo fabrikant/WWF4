@@ -231,6 +231,7 @@ module Patterns{
 			THEME_LIGHT => Rez.Strings.ThemeLight,
 			THEME_INSTINCT_LIKE_1 => Rez.Strings.ThemeInstinctLike1,
 			THEME_INSTINCT_LIKE_2 => Rez.Strings.ThemeInstinctLike2,
+			THEME_BLUE_YELLOW => Rez.Strings.ThemeBlueYellow,			
 		};
 	}
 
