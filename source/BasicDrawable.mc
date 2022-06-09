@@ -92,7 +92,7 @@ class BasicDrawable extends WatchUi.Drawable{
 		}
 	}
 	
-	function backgroundColorSize(){
+	function backgroundColorSide(){
 		return theme[0];
 	}
 

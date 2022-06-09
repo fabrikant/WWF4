@@ -26,16 +26,16 @@
 	</drawable>
 	
 	 <drawable id="Weather" class="WeatherDrawable">
-		<param name="locX">Sizes.centralSquare[0]+1</param>
-		<param name="locY">Sizes.centralSquare[1]+1</param>
+		<param name="locX">Sizes.centralSquare[0]</param>
+		<param name="locY">Sizes.centralSquare[1]</param>
 		<param name="width">Sizes.centralSquare[2]-Sizes.circle[2]</param>
 		<param name="height">2*Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
 	</drawable>
 	 
 	 <drawable id="Dt1" class="DataDrawable">
-		<param name="locX">Sizes.centralSquare[0]+1</param>
-		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH+1</param>
+		<param name="locX">Sizes.centralSquare[0]</param>
+		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH</param>
 		<param name="width">Toybox.Math.round(Sizes.centralSquare[2]/2).toNumber()</param>
 		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
@@ -43,8 +43,8 @@
 	 
 	 <drawable id="Dt2" class="DataDrawable">
 		<param name="locX">Sizes.centralSquare[0]+Sizes.centralSquare[2]/2</param>
- 		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH+1</param>
-		<param name="width">Sizes.centralSquare[2]-Toybox.Math.round(Sizes.centralSquare[2]/2).toNumber()</param>
+ 		<param name="locY">Sizes.centralSquare[1]+3*Sizes.fieldH+Sizes.timeFieldH</param>
+		<param name="width">Sizes.centralSquare[2]-Toybox.Math.round(Sizes.centralSquare[2]/2).toNumber()+0.5</param>
 		<param name="height">Sizes.fieldH</param>
 		<param name="centerPosition">true</param>
 	</drawable>

@@ -17,7 +17,7 @@ class GroundDrawable extends BasicDrawable{
 	
 	public function draw(dc as Graphics.Dc){
 		
-		var bkColor = backgroundColorSize();
+		var bkColor = backgroundColorSide();
 		dc.setClip(locX, locY, width, height);
 		dc.setColor(bkColor, bkColor);
 		dc.fillRectangle(locX, locY, width, height);

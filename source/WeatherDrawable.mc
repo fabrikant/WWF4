@@ -96,17 +96,21 @@ class WeatherDrawable extends BasicDrawable{
 		var speed = Global.speedToString(Application.Storage.getValue(STORAGE_KEY_WIND_SPEED));
 		
 		//create buffBitmap
+		var palette = [foregroundColor(), backgroundColor(), backgroundColorSide(), Graphics.COLOR_TRANSPARENT];
 		if ( Graphics has :createBufferedBitmap){
 			buffBitmap = Graphics.createBufferedBitmap({ 
 				:width => width, 
-				:height => height}).get();
+				:height => height,
+				:palette => palette}).get();
 		}else{
 			buffBitmap = new Graphics.BufferedBitmap({ 
 				:width => width, 
-				:height => height});
+				:height => height,
+				:palette => palette});
+			
 		}
 		var dc = buffBitmap.getDc();
-		var sizeColor = backgroundColorSize();
+		var sizeColor = backgroundColorSide();
 		dc.setColor(sizeColor, sizeColor);
 		dc.fillRectangle(0, 0, width, height);
 		dc.setColor(bkColor, bkColor);

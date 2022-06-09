@@ -11,7 +11,11 @@ module Sizes{
 	var circle;
 	
 	function radiusCorner(){
-		return 15;
+		if (screenH == 208){
+			return 8;
+		}else{
+			return 15;
+		}
 	}
 	
 	function calculateScreen(){
