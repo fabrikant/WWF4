@@ -12,14 +12,15 @@ class GeneralMenu extends WatchUi.Menu2{
 	
 	function initialize() {
 		Menu2.initialize({:title=> Application.loadResource(Rez.Strings.MenuHeader)});
+		addItem(new Item("ThemeD", Rez.Strings.ThemeD, :subMenuPatternThemes));
+		addItem(new Item("ThemeN", Rez.Strings.ThemeN, :subMenuPatternThemes));
+
 		addItem(new Item("Circle", Rez.Strings.Circle, :subMenuPatternCircleTypes));
 		addItem(new Item("Top", Rez.Strings.Top, :subMenuPatternTopBottomTypes));
 		addItem(new Item("Bot", Rez.Strings.Bot, :subMenuPatternTopBottomTypes));
 		addItem(new Item("Dt1", Rez.Strings.Dt1, :subMenuPatternDataFields));
 		addItem(new Item("Dt2", Rez.Strings.Dt2, :subMenuPatternDataFields));
 
-		addItem(new Item("ThemeD", Rez.Strings.ThemeD, :subMenuPatternThemes));
-		addItem(new Item("ThemeN", Rez.Strings.ThemeN, :subMenuPatternThemes));
 		addItem(new TogleItem("DNDisN", Rez.Strings.DNDisN));
 		addItem(new TogleItem("InvertCircle", Rez.Strings.InvertCircle));
 		addItem(new TogleItem("SBat", Rez.Strings.SBat));
