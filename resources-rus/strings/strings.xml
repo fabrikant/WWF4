@@ -37,6 +37,7 @@
     <string id="ShowDND">Показать DND</string>
  
     <string id="Circle" scope="foreground">Данные в круге</string>
+ 	<string id="Widget" scope="foreground">Виджет</string>
     <string id="Top" scope="foreground">Верхнее поле</string>
     <string id="Bot" scope="foreground">Нижнее поле</string>
     <string id="Dt1">Левое поле</string>
@@ -66,7 +67,8 @@
 	<string id="FIELD_TYPE_DATE" scope="foreground">Дата</string>
 	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Погодные условия</string>
 	<string id="FIELD_TYPE_CITY" scope="foreground">Город</string>
-    
+ 	<string id="FIELD_TYPE_WEATHER" scope="foreground">Погода</string>
+   
 	<!-- Menu -->
  	<string id="MenuHeader" scope="foreground">Настройки</string>
 

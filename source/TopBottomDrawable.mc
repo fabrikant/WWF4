@@ -21,11 +21,21 @@ class TopBottomDrawable extends DataDrawable{
 		lastWeatherRead = null;
 		lastValue = null;		
 	}
-	
 		
 	public function draw(dc as Graphics.Dc){
 
 		beforeDraw(dc);
+
+		var bkColor = backgroundColor();
+		var sideColor = backgroundColorSide();
+		if (sideColor != bkColor){
+			var radius = Sizes.radiusCorner();
+			dc.setColor(sideColor, sideColor);
+			dc.fillRectangle(locX, locY, radius, radius);	
+			dc.setColor(bkColor, bkColor);
+			dc.fillCircle(locX + radius, locY + radius, radius);
+		}
+
 		if (dataType == TOP_BOTTOM_TYPE_BATTERY) {
 			drawBattery(dc);
 		}else if(dataType == TOP_BOTTOM_TYPE_DATE){
@@ -84,7 +94,6 @@ class TopBottomDrawable extends DataDrawable{
 		}
 	}
 
-	
 	function drawWeatherInfo(dc){
 		updateLastValue();
 		if (lastValue != null){
@@ -120,7 +129,10 @@ class TopBottomDrawable extends DataDrawable{
 		
 		var topBottomCorrection = topBottomCorrection();
 		var hBattery = height*k;
-		var wBattery = width/4*k;
+		var wBattery = hBattery*2;
+		if (wBattery>width/3.2){
+			wBattery = width/3.2;
+		}
 		var yOffset = 3+topBottomCorrection;
 		var xOffset = -wBattery;
 		
@@ -149,10 +161,14 @@ class TopBottomDrawable extends DataDrawable{
 	}
 	
 	function topBottomCorrection(){
-		if (dataType == MOON){
+		if (isTop == null){
 			return 0;
 		}else{
-			return isTop ? +4 : -4;
+			if (dataType == MOON){
+				return 0;
+			}else{
+				return isTop ? +4 : -4;
+			}
 		}
 	}
 	

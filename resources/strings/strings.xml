@@ -37,6 +37,7 @@
     <string id="ShowDND">Show DND</string>
  
     <string id="Circle" scope="foreground">Circle data</string>
+	<string id="Widget" scope="foreground">Widget</string>
     <string id="Top" scope="foreground">Header data</string>
     <string id="Bot" scope="foreground">Footer data</string>
     <string id="Dt1">Left data</string>
@@ -66,6 +67,7 @@
 	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>
 	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Weather condition</string>
 	<string id="FIELD_TYPE_CITY" scope="foreground">City</string>
+	<string id="FIELD_TYPE_WEATHER" scope="foreground">Weather</string>
     
 	<!-- Menu -->
  	<string id="MenuHeader" scope="foreground">Settings</string>

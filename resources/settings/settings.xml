@@ -29,7 +29,28 @@
 	</setting>
 	
 
- 	<setting propertyKey="@Properties.Top" title="@Strings.Top">
+  	<setting propertyKey="@Properties.Widget" title="@Strings.Widget">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
+            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+            <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
+            <listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+            <listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
+            <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
+            <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
+           	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+           	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
+           	<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
+           	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
+           	<listEntry value="15">@Strings.FIELD_TYPE_WEATHER</listEntry>
+       	</settingConfig>	
+	</setting>
+
+	<setting propertyKey="@Properties.Top" title="@Strings.Top">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
             <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>

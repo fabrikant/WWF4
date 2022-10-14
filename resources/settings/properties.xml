@@ -17,6 +17,7 @@
 	<property id="SBat" type="boolean">false</property>
 	
 	<property id="Circle" type="number">1</property>
+	<property id="Widget" type="number">15</property>
 
 	<property id="Top" type="number">1</property>
 	<property id="Bot" type="number">2</property>

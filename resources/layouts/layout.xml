@@ -25,7 +25,7 @@
 		<param name="centerPosition">true</param>
 	</drawable>
 	
-	 <drawable id="Weather" class="WeatherDrawable">
+	 <drawable id="Widget" class="WidgetDrawable">
 		<param name="locX">Sizes.centralSquare[0]</param>
 		<param name="locY">Sizes.centralSquare[1]</param>
 		<param name="width">Sizes.centralSquare[2]-Sizes.circle[2]</param>
@@ -50,9 +50,9 @@
 	</drawable>
 
 	 <drawable id="Top" class="TopBottomDrawable">
-		<param name="locX">0</param>
+		<param name="locX">Sizes.centralSquare[0]+1</param>
 		<param name="locY">0</param>
-		<param name="width">Sizes.screenW</param>
+		<param name="width">Sizes.centralSquare[2]</param>
 		<param name="height">Sizes.centralSquare[1]</param>
 		<param name="centerPosition">false</param>
 		<param name="isTop">true</param>
@@ -67,9 +67,9 @@
 	</drawable>
 	
 	 <drawable id="Bot" class="TopBottomDrawable">
-		<param name="locX">0</param>
+		<param name="locX">Sizes.centralSquare[0]+1</param>
 		<param name="locY">Sizes.centralSquare[1]+4*Sizes.fieldH+Sizes.timeFieldH+1</param>
-		<param name="width">Sizes.screenW</param>
+		<param name="width">Sizes.centralSquare[2]</param>
 		<param name="height">Sizes.centralSquare[1]</param>
 		<param name="centerPosition">false</param>
 		<param name="isTop">false</param>

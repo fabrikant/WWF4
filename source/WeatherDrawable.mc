@@ -4,49 +4,54 @@ using Toybox.Time;
 using Toybox.Application;
 using Toybox.Math;
 
-class WeatherDrawable extends BasicDrawable{
+class WidgetDrawable extends TopBottomDrawable{
 
 	var lastWeatherRead;
 	var buffBitmap;
 	
 	function initialize(params as Lang.Dictonary){
-		BasicDrawable.initialize(params);
+		TopBottomDrawable.initialize(params);
 		onSettingsChanged();
-		Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);
 	}
 	
 	public function onSettingsChanged(){
 		lastWeatherRead = null;
-		buffBitmap = null;		
+		buffBitmap = null;	
+		DataDrawable.onSettingsChanged();	
 	}
 
 	public function draw(dc as Graphics.Dc){
 		
 		dc.setClip(locX, locY, width, height);
 
-		if (lastWeatherUpdate == null){
+		if (dataType == WEATHER){
+			if (lastWeatherUpdate == null){
 
-			var geoLatLong = [Application.Storage.getValue(STORAGE_KEY_LAT), Application.Storage.getValue(STORAGE_KEY_LON)];
-			var responseCode = Application.Storage.getValue(STORAGE_KEY_RESPONCE_CODE);
-			
-			if (geoLatLong[0] == null || geoLatLong[1] == null){
-				drawNoData(dc, Application.loadResource(Rez.Strings.NoLocation));
-			}else if (Application.Properties.getValue("keyOW").equals("")){
-				drawNoData(dc, Application.loadResource(Rez.Strings.NoApiKey));
-			}else if (responseCode != null && responseCode != 200){
-				drawNoData(dc, Lang.format("$1$: $2$", [Application.loadResource(Rez.Strings.Error), responseCode]));
+				var geoLatLong = [Application.Storage.getValue(STORAGE_KEY_LAT), Application.Storage.getValue(STORAGE_KEY_LON)];
+				var responseCode = Application.Storage.getValue(STORAGE_KEY_RESPONCE_CODE);
+				
+				if (geoLatLong[0] == null || geoLatLong[1] == null){
+					drawNoData(dc, Application.loadResource(Rez.Strings.NoLocation));
+				}else if (Application.Properties.getValue("keyOW").equals("")){
+					drawNoData(dc, Application.loadResource(Rez.Strings.NoApiKey));
+				}else if (responseCode != null && responseCode != 200){
+					drawNoData(dc, Lang.format("$1$: $2$", [Application.loadResource(Rez.Strings.Error), responseCode]));
+				}else{
+					drawNoData(dc, Application.loadResource(Rez.Strings.WaitingData));
+				}
 			}else{
-				drawNoData(dc, Application.loadResource(Rez.Strings.WaitingData));
+				if (Time.now().value() - lastWeatherUpdate > 10800){
+					Application.getApp().registerEvents();
+					drawNoData(dc, Application.loadResource(Rez.Strings.OldData));
+				}else{
+					drawWeather(dc);
+				}			
 			}
 		}else{
 			
-			if (Time.now().value() - lastWeatherUpdate > 10800){
-				Application.getApp().registerEvents();
-				drawNoData(dc, Application.loadResource(Rez.Strings.OldData));
-			}else{
-				drawWeather(dc);
-			}			
+			TopBottomDrawable.draw(dc);
 		}
+
 		drawBorder(dc);
 	}
 	
@@ -96,7 +101,8 @@ class WeatherDrawable extends BasicDrawable{
 		var speed = Global.speedToString(Application.Storage.getValue(STORAGE_KEY_WIND_SPEED));
 		
 		//create buffBitmap
-		var palette = [foregroundColor(), backgroundColor(), backgroundColorSide(), Graphics.COLOR_TRANSPARENT];
+		var sideColor = backgroundColorSide();
+		var palette = [foregroundColor(), backgroundColor(), sideColor, Graphics.COLOR_TRANSPARENT];
 		if ( Graphics has :createBufferedBitmap){
 			buffBitmap = Graphics.createBufferedBitmap({ 
 				:width => width, 
@@ -110,8 +116,7 @@ class WeatherDrawable extends BasicDrawable{
 			
 		}
 		var dc = buffBitmap.getDc();
-		var sizeColor = backgroundColorSide();
-		dc.setColor(sizeColor, sizeColor);
+		dc.setColor(sideColor, sideColor);
 		dc.fillRectangle(0, 0, width, height);
 		dc.setColor(bkColor, bkColor);
 		dc.fillRoundedRectangle(0, 0, width+Sizes.radiusCorner()+1, height+Sizes.radiusCorner()+1, Sizes.radiusCorner());

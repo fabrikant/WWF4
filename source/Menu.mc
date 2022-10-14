@@ -16,6 +16,7 @@ class GeneralMenu extends WatchUi.Menu2{
 		addItem(new Item("ThemeN", Rez.Strings.ThemeN, :subMenuPatternThemes));
 
 		addItem(new Item("Circle", Rez.Strings.Circle, :subMenuPatternCircleTypes));
+		addItem(new Item("Widget", Rez.Strings.Widget, :subMenuPatternWidgetTypes));
 		addItem(new Item("Top", Rez.Strings.Top, :subMenuPatternTopBottomTypes));
 		addItem(new Item("Bot", Rez.Strings.Bot, :subMenuPatternTopBottomTypes));
 		addItem(new Item("Dt1", Rez.Strings.Dt1, :subMenuPatternDataFields));
@@ -226,6 +227,24 @@ module Patterns{
 		return dict;
 	}
 	
+	function subMenuPatternWidgetTypes(){
+		var dict =  {
+			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
+			TOP_BOTTOM_TYPE_CITY => Rez.Strings.FIELD_TYPE_CITY,
+			TOP_BOTTOM_TYPE_BATTERY => Rez.Strings.FIELD_TYPE_BATTERY,
+			TOP_BOTTOM_TYPE_DATE => Rez.Strings.FIELD_TYPE_DATE,
+			TOP_BOTTOM_TYPE_WEATHER_CONDITION => Rez.Strings.FIELD_TYPE_WEATHER_CONDITION,
+			WEATHER => Rez.Strings.FIELD_TYPE_WEATHER,
+		};
+		//add data fields types
+		var dictDataFields = subMenuPatternDataFields();
+		var keys = dictDataFields.keys();
+		for (var i = 0; i < keys.size(); i++){
+			dict.put(keys[i], dictDataFields[keys[i]]);
+		} 
+		return dict;
+	}
+
 	function subMenuPatternThemes(){
 		return {
 			THEME_DARK => Rez.Strings.ThemeDark,

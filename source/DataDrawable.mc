@@ -18,9 +18,9 @@ class DataDrawable extends BasicDrawable{
 	}
 	
 	public function onSettingsChanged(){
-		image = null;
-		dataType = Application.Properties.getValue(identifier);
-		additionalValue = null;
+		self.image = null;
+		self.dataType = Application.Properties.getValue(identifier);
+		self.additionalValue = null;
 	}
 	
 	public function draw(dc as Graphics.Dc){
@@ -33,13 +33,13 @@ class DataDrawable extends BasicDrawable{
 		
 		var rCorn = Sizes.radiusCorner();
 		dc.fillRoundedRectangle(locX, locY, width, height, rCorn);
-		if (locX + width/2 < dc.getWidth()/2){
-			dc.fillRectangle(locX+rCorn, locY, width, height);
-		}else{
+		if (locX + width/2 >= dc.getWidth()/2){
 			dc.fillRectangle(locX-rCorn, locY, width, height);
+		}else{
+			dc.fillRectangle(locX+rCorn, locY, width, height);
 		}
 		
-		var value = getValue(dataType);
+		var value = getValue(self.dataType);
 		if (value == null){
 			value = Application.loadResource(Rez.Strings.NA);
 		}
