@@ -124,10 +124,10 @@ class WidgetDrawable extends TopBottomDrawable{
 		
 		//image
 		var y = ((dc.getHeight() - image.getDc().getHeight())/2).toNumber();
-		var offset = 0;
-		dc.drawBitmap(offset, y, image);
+		dc.drawBitmap(0, y, image);
 		
 		//temperature
+		var offset = 5;
 		offset += image.getDc().getWidth()+offset;
 		var center = getCenterForFont(fontMed);
 		dc.drawText(offset, center[1]-locY, fontMed, temp, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
