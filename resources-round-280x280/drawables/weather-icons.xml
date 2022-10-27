@@ -1,62 +1,62 @@
 <drawables>
 
-	<bitmap id="NA" filename="../../resources/drawables/png-42/999-fill.png" >
+	<bitmap id="NA" filename="../../resources/drawables/png-54/999-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
 	<!-- Cloud -->
-	<bitmap id="Code800d" filename="../../resources/drawables/png-42/100-fill.png" >
+	<bitmap id="Code800d" filename="../../resources/drawables/png-54/100-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code800n" filename="../../resources/drawables/png-42/150-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
-	<bitmap id="Code801d" filename="../../resources/drawables/png-42/102-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code801n" filename="../../resources/drawables/png-42/152-fill.png" >
+	<bitmap id="Code800n" filename="../../resources/drawables/png-54/150-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Code802d" filename="../../resources/drawables/png-42/103-fill.png" >
+	<bitmap id="Code801d" filename="../../resources/drawables/png-54/102-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code802n" filename="../../resources/drawables/png-42/153-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
-	<bitmap id="Code803d" filename="../../resources/drawables/png-42/101-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code803n" filename="../../resources/drawables/png-42/151-fill.png" >
+	<bitmap id="Code801n" filename="../../resources/drawables/png-54/152-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Code804d" filename="../../resources/drawables/png-42/104-fill.png" >
+	<bitmap id="Code802d" filename="../../resources/drawables/png-54/103-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code804n" filename="../../resources/drawables/png-42/104-fill.png" >
+	<bitmap id="Code802n" filename="../../resources/drawables/png-54/153-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+	<bitmap id="Code803d" filename="../../resources/drawables/png-54/101-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code803n" filename="../../resources/drawables/png-54/151-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+	<bitmap id="Code804d" filename="../../resources/drawables/png-54/104-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code804n" filename="../../resources/drawables/png-54/104-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -64,111 +64,111 @@
 
 
 	<!-- Thunderstorm -->
-	<bitmap id="Code200d" filename="../../resources/drawables/png-42/304-fill.png" >
+	<bitmap id="Code200d" filename="../../resources/drawables/png-54/304-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code200n" filename="../../resources/drawables/png-42/304-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
-	<bitmap id="Code201d" filename="../../resources/drawables/png-42/302-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code201n" filename="../../resources/drawables/png-42/302-fill.png" >
+	<bitmap id="Code200n" filename="../../resources/drawables/png-54/304-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Code202d" filename="../../resources/drawables/png-42/303-fill.png" >
+	<bitmap id="Code201d" filename="../../resources/drawables/png-54/302-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code202n" filename="../../resources/drawables/png-42/303-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
-	<bitmap id="Code210d" filename="../../resources/drawables/png-42/1043.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code210n" filename="../../resources/drawables/png-42/1043.png" >
+	<bitmap id="Code201n" filename="../../resources/drawables/png-54/302-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Code211d" filename="../../resources/drawables/png-42/2015.png" >
+	<bitmap id="Code202d" filename="../../resources/drawables/png-54/303-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code211n" filename="../../resources/drawables/png-42/2015.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
-	<bitmap id="Code212d" filename="../../resources/drawables/png-42/1014.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code212n" filename="../../resources/drawables/png-42/1014.png" >
+	<bitmap id="Code202n" filename="../../resources/drawables/png-54/303-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Code221d" filename="../../resources/drawables/png-42/1014.png" >
+	<bitmap id="Code210d" filename="../../resources/drawables/png-54/1043.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code221n" filename="../../resources/drawables/png-42/1014.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
- 	<bitmap id="Code230d" filename="../../resources/drawables/png-42/304-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code230n" filename="../../resources/drawables/png-42/304-fill.png" >
+	<bitmap id="Code210n" filename="../../resources/drawables/png-54/1043.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
- 	<bitmap id="Code231d" filename="../../resources/drawables/png-42/2024.png" >
+	<bitmap id="Code211d" filename="../../resources/drawables/png-54/2015.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code231n" filename="../../resources/drawables/png-42/2024.png" >
+	<bitmap id="Code211n" filename="../../resources/drawables/png-54/2015.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
- 	<bitmap id="Code232d" filename="../../resources/drawables/png-42/2024.png" >
+	<bitmap id="Code212d" filename="../../resources/drawables/png-54/1014.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code232n" filename="../../resources/drawables/png-42/2024.png" >
+	<bitmap id="Code212n" filename="../../resources/drawables/png-54/1014.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+	<bitmap id="Code221d" filename="../../resources/drawables/png-54/1014.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code221n" filename="../../resources/drawables/png-54/1014.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+ 	<bitmap id="Code230d" filename="../../resources/drawables/png-54/304-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code230n" filename="../../resources/drawables/png-54/304-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+ 	<bitmap id="Code231d" filename="../../resources/drawables/png-54/2024.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code231n" filename="../../resources/drawables/png-54/2024.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+ 	<bitmap id="Code232d" filename="../../resources/drawables/png-54/2024.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code232n" filename="../../resources/drawables/png-54/2024.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -176,100 +176,100 @@
 
 
  	<!-- Drizzle -->
- 	<bitmap id="Code300d" filename="../../resources/drawables/png-42/309-fill.png" >
+ 	<bitmap id="Code300d" filename="../../resources/drawables/png-54/309-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code300n" filename="../../resources/drawables/png-42/309-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
- 	<bitmap id="Code301d" filename="../../resources/drawables/png-42/312-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code301n" filename="../../resources/drawables/png-42/312-fill.png" >
+	<bitmap id="Code300n" filename="../../resources/drawables/png-54/309-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
- 	<bitmap id="Code302d" filename="../../resources/drawables/png-42/1035.png" >
+ 	<bitmap id="Code301d" filename="../../resources/drawables/png-54/312-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code302n" filename="../../resources/drawables/png-42/1035.png" >
+	<bitmap id="Code301n" filename="../../resources/drawables/png-54/312-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
- 	<bitmap id="Code310d" filename="../../resources/drawables/png-42/314-fill.png" >
+ 	<bitmap id="Code302d" filename="../../resources/drawables/png-54/1035.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code310n" filename="../../resources/drawables/png-42/314-fill.png" >
+	<bitmap id="Code302n" filename="../../resources/drawables/png-54/1035.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+ 	<bitmap id="Code310d" filename="../../resources/drawables/png-54/314-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code310n" filename="../../resources/drawables/png-54/314-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-	<bitmap id="Code311d" filename="../../resources/drawables/png-42/315-fill.png" >
+	<bitmap id="Code311d" filename="../../resources/drawables/png-54/315-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code311n" filename="../../resources/drawables/png-42/315-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
- 	<bitmap id="Code312d" filename="../../resources/drawables/png-42/316-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code312n" filename="../../resources/drawables/png-42/316-fill.png" >
+	<bitmap id="Code311n" filename="../../resources/drawables/png-54/315-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
- 	<bitmap id="Code313d" filename="../../resources/drawables/png-42/317-fill.png" >
+ 	<bitmap id="Code312d" filename="../../resources/drawables/png-54/316-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code313n" filename="../../resources/drawables/png-42/317-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-
- 	<bitmap id="Code314d" filename="../../resources/drawables/png-42/318-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code314n" filename="../../resources/drawables/png-42/318-fill.png" >
+	<bitmap id="Code312n" filename="../../resources/drawables/png-54/316-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-  	<bitmap id="Code321d" filename="../../resources/drawables/png-42/308-fill.png" >
+ 	<bitmap id="Code313d" filename="../../resources/drawables/png-54/317-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code321n" filename="../../resources/drawables/png-42/308-fill.png" >
+	<bitmap id="Code313n" filename="../../resources/drawables/png-54/317-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+ 	<bitmap id="Code314d" filename="../../resources/drawables/png-54/318-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code314n" filename="../../resources/drawables/png-54/318-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
+  	<bitmap id="Code321d" filename="../../resources/drawables/png-54/308-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code321n" filename="../../resources/drawables/png-54/308-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -277,111 +277,111 @@
 
 
 	<!-- Rain -->
-   	<bitmap id="Code500d" filename="../../resources/drawables/png-42/300-fill.png" >
+   	<bitmap id="Code500d" filename="../../resources/drawables/png-54/300-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code500n" filename="../../resources/drawables/png-42/350-fill.png" >
+	<bitmap id="Code500n" filename="../../resources/drawables/png-54/350-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
  
-  	<bitmap id="Code501d" filename="../../resources/drawables/png-42/300-fill.png" >
+  	<bitmap id="Code501d" filename="../../resources/drawables/png-54/300-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code501n" filename="../../resources/drawables/png-42/350-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code502d" filename="../../resources/drawables/png-42/301-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code502n" filename="../../resources/drawables/png-42/351-fill.png" >
+	<bitmap id="Code501n" filename="../../resources/drawables/png-54/350-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code503d" filename="../../resources/drawables/png-42/301-fill.png" >
+  	<bitmap id="Code502d" filename="../../resources/drawables/png-54/301-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code503n" filename="../../resources/drawables/png-42/351-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code504d" filename="../../resources/drawables/png-42/301-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code504n" filename="../../resources/drawables/png-42/351-fill.png" >
+	<bitmap id="Code502n" filename="../../resources/drawables/png-54/351-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code511d" filename="../../resources/drawables/png-42/1015.png" >
+  	<bitmap id="Code503d" filename="../../resources/drawables/png-54/301-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code511n" filename="../../resources/drawables/png-42/1015.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code520d" filename="../../resources/drawables/png-42/305.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code520n" filename="../../resources/drawables/png-42/305.png" >
+	<bitmap id="Code503n" filename="../../resources/drawables/png-54/351-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code521d" filename="../../resources/drawables/png-42/306.png" >
+  	<bitmap id="Code504d" filename="../../resources/drawables/png-54/301-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code521n" filename="../../resources/drawables/png-42/306.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code522d" filename="../../resources/drawables/png-42/307.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code522n" filename="../../resources/drawables/png-42/307.png" >
+	<bitmap id="Code504n" filename="../../resources/drawables/png-54/351-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code531d" filename="../../resources/drawables/png-42/301-fill.png" >
+  	<bitmap id="Code511d" filename="../../resources/drawables/png-54/1015.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code531n" filename="../../resources/drawables/png-42/351-fill.png" >
+	<bitmap id="Code511n" filename="../../resources/drawables/png-54/1015.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code520d" filename="../../resources/drawables/png-54/305.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code520n" filename="../../resources/drawables/png-54/305.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code521d" filename="../../resources/drawables/png-54/306.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code521n" filename="../../resources/drawables/png-54/306.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code522d" filename="../../resources/drawables/png-54/307.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code522n" filename="../../resources/drawables/png-54/307.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code531d" filename="../../resources/drawables/png-54/301-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code531n" filename="../../resources/drawables/png-54/351-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -389,233 +389,233 @@
 	
 	
 	<!-- Snow -->
-   	<bitmap id="Code600d" filename="../../resources/drawables/png-42/407-fill.png" >
+   	<bitmap id="Code600d" filename="../../resources/drawables/png-54/407-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code600n" filename="../../resources/drawables/png-42/457-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-   	<bitmap id="Code601d" filename="../../resources/drawables/png-42/400-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code601n" filename="../../resources/drawables/png-42/400-fill.png" >
+	<bitmap id="Code600n" filename="../../resources/drawables/png-54/457-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-   	<bitmap id="Code602d" filename="../../resources/drawables/png-42/401-fill.png" >
+   	<bitmap id="Code601d" filename="../../resources/drawables/png-54/400-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code602n" filename="../../resources/drawables/png-42/401-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-   	<bitmap id="Code611d" filename="../../resources/drawables/png-42/408-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code611n" filename="../../resources/drawables/png-42/408-fill.png" >
+	<bitmap id="Code601n" filename="../../resources/drawables/png-54/400-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-   	<bitmap id="Code612d" filename="../../resources/drawables/png-42/409-fill.png" >
+   	<bitmap id="Code602d" filename="../../resources/drawables/png-54/401-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code612n" filename="../../resources/drawables/png-42/409-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-   	<bitmap id="Code613d" filename="../../resources/drawables/png-42/410-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code613n" filename="../../resources/drawables/png-42/410-fill.png" >
+	<bitmap id="Code602n" filename="../../resources/drawables/png-54/401-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-   	<bitmap id="Code615d" filename="../../resources/drawables/png-42/406-fill.png" >
+   	<bitmap id="Code611d" filename="../../resources/drawables/png-54/408-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code615n" filename="../../resources/drawables/png-42/456-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-   	<bitmap id="Code616d" filename="../../resources/drawables/png-42/404-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code616n" filename="../../resources/drawables/png-42/404-fill.png" >
+	<bitmap id="Code611n" filename="../../resources/drawables/png-54/408-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-   	<bitmap id="Code620d" filename="../../resources/drawables/png-42/1033.png" >
+   	<bitmap id="Code612d" filename="../../resources/drawables/png-54/409-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code620n" filename="../../resources/drawables/png-42/1033.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-   	<bitmap id="Code621d" filename="../../resources/drawables/png-42/1004.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code621n" filename="../../resources/drawables/png-42/1004.png" >
+	<bitmap id="Code612n" filename="../../resources/drawables/png-54/409-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-   	<bitmap id="Code622d" filename="../../resources/drawables/png-42/499-fill.png" >
+   	<bitmap id="Code613d" filename="../../resources/drawables/png-54/410-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code622n" filename="../../resources/drawables/png-42/499-fill.png" >
+	<bitmap id="Code613n" filename="../../resources/drawables/png-54/410-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+   	<bitmap id="Code615d" filename="../../resources/drawables/png-54/406-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code615n" filename="../../resources/drawables/png-54/456-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+   	<bitmap id="Code616d" filename="../../resources/drawables/png-54/404-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code616n" filename="../../resources/drawables/png-54/404-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+   	<bitmap id="Code620d" filename="../../resources/drawables/png-54/1033.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code620n" filename="../../resources/drawables/png-54/1033.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+   	<bitmap id="Code621d" filename="../../resources/drawables/png-54/1004.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code621n" filename="../../resources/drawables/png-54/1004.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+   	<bitmap id="Code622d" filename="../../resources/drawables/png-54/499-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code622n" filename="../../resources/drawables/png-54/499-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
 	<!-- Atmosphere -->
-  	<bitmap id="Code701d" filename="../../resources/drawables/png-42/501-fill.png" >
+  	<bitmap id="Code701d" filename="../../resources/drawables/png-54/501-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code701n" filename="../../resources/drawables/png-42/501-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code711d" filename="../../resources/drawables/png-42/smoke.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code711n" filename="../../resources/drawables/png-42/smoke.png" >
+	<bitmap id="Code701n" filename="../../resources/drawables/png-54/501-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code721d" filename="../../resources/drawables/png-42/502-fill.png" >
+  	<bitmap id="Code711d" filename="../../resources/drawables/png-54/smoke.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code721n" filename="../../resources/drawables/png-42/502-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code731d" filename="../../resources/drawables/png-42/2010.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code731n" filename="../../resources/drawables/png-42/2010.png" >
+	<bitmap id="Code711n" filename="../../resources/drawables/png-54/smoke.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code741d" filename="../../resources/drawables/png-42/1017.png" >
+  	<bitmap id="Code721d" filename="../../resources/drawables/png-54/502-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code741n" filename="../../resources/drawables/png-42/1017.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code751d" filename="../../resources/drawables/png-42/1051.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code751n" filename="../../resources/drawables/png-42/1051.png" >
+	<bitmap id="Code721n" filename="../../resources/drawables/png-54/502-fill.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code761d" filename="../../resources/drawables/png-42/504-fill.png" >
+  	<bitmap id="Code731d" filename="../../resources/drawables/png-54/2010.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code761n" filename="../../resources/drawables/png-42/504-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	
-  	<bitmap id="Code762d" filename="../../resources/drawables/png-42/504-fill.png" >
-		<palette disableTransparency="false">
-		     <color>555555</color>
-		</palette>
-	</bitmap>
-	<bitmap id="Code762n" filename="../../resources/drawables/png-42/504-fill.png" >
+	<bitmap id="Code731n" filename="../../resources/drawables/png-54/2010.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code771d" filename="../../resources/drawables/png-42/1602.png" >
+  	<bitmap id="Code741d" filename="../../resources/drawables/png-54/1017.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code771n" filename="../../resources/drawables/png-42/1602.png" >
+	<bitmap id="Code741n" filename="../../resources/drawables/png-54/1017.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-  	<bitmap id="Code781d" filename="../../resources/drawables/png-42/1002.png" >
+  	<bitmap id="Code751d" filename="../../resources/drawables/png-54/1051.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
-	<bitmap id="Code781n" filename="../../resources/drawables/png-42/1002.png" >
+	<bitmap id="Code751n" filename="../../resources/drawables/png-54/1051.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code761d" filename="../../resources/drawables/png-54/504-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code761n" filename="../../resources/drawables/png-54/504-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code762d" filename="../../resources/drawables/png-54/504-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code762n" filename="../../resources/drawables/png-54/504-fill.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code771d" filename="../../resources/drawables/png-54/1602.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code771n" filename="../../resources/drawables/png-54/1602.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	
+  	<bitmap id="Code781d" filename="../../resources/drawables/png-54/1002.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+	<bitmap id="Code781n" filename="../../resources/drawables/png-54/1002.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>

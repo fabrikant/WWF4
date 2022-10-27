@@ -10,4 +10,9 @@
 ./converter.sh 35
 ./converter.sh 36
 ./converter.sh 38
+./converter.sh 40
 ./converter.sh 42
+./converter.sh 44
+./converter.sh 46
+./converter.sh 50
+./converter.sh 54

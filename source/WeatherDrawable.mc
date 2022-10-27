@@ -124,7 +124,7 @@ class WidgetDrawable extends TopBottomDrawable{
 		
 		//image
 		var y = ((dc.getHeight() - image.getDc().getHeight())/2).toNumber();
-		var offset = 5;
+		var offset = 0;
 		dc.drawBitmap(offset, y, image);
 		
 		//temperature
