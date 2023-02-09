@@ -74,4 +74,16 @@
 		</palette>
 	</bitmap>	
 
+	<bitmap id="Temperature" filename="../../resources/drawables/png-30/termometer.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>	
+
+	<bitmap id="Pressure" filename="../../resources/drawables/png-30/barometer.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>	
+
 </drawables>

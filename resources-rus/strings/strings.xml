@@ -43,8 +43,6 @@
     <string id="Dt1">Левое поле</string>
     <string id="Dt2">Правое поле</string>
     
-
-     
 	<!--SECOND TIME -->
 	<string id="T1TZ" scope="foreground">Сдвиг доп. времени ±UTC (в минутах)</string>
 
@@ -68,6 +66,18 @@
 	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Погодные условия</string>
 	<string id="FIELD_TYPE_CITY" scope="foreground">Город</string>
  	<string id="FIELD_TYPE_WEATHER" scope="foreground">Погода</string>
+	<string id="FIELD_TYPE_TEMPERATURE" scope="foreground">Температура</string>
+	<string id="FIELD_TYPE_PRESSURE" scope="foreground">Атм. давление</string>
+
+	<!--PRESSURE UNITS -->
+	<string id="PrU" scope="foreground">Единицы давления</string>
+	<string id="PrUMmHg" scope="foreground">мм рт. ст.</string>
+	<string id="PrUPsi" scope="foreground">фунт/дюйм2</string>
+	<string id="PrUInchHg" scope="foreground">дюйм рт. ст.</string>
+	<string id="PrUBar" scope="foreground">мБар</string>
+	<string id="PrUKPa" scope="foreground">кПА</string>
+
+	
    
 	<!-- Menu -->
  	<string id="MenuHeader" scope="foreground">Настройки</string>

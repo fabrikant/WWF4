@@ -101,8 +101,44 @@ class DataDrawable extends BasicDrawable{
 			if (value != null){
 				value = value.format("%d")+"%";
 			}	
+		}else if (dataType == TEMPERATURE){
+			value = getLasValueSensorHistory(:getTemperatureHistory);
+			if (value != null){
+				value = convertTemperature(value);
+			}	
+		}else if (dataType == PRESSURE){
+			value = getLasValueSensorHistory(:getPressureHistory);
+			if (value != null){
+				value = convertPressure(value);
+			}	
 		}
 		return value;
+	}
+
+	function convertPressure(value){
+		var rawData = value;
+		var unit  =  Application.Properties.getValue("PrU");
+		if (unit == UNIT_PRESSURE_MM_HG){ /*MmHg*/
+			value = Math.round(rawData/133.322).format("%d");
+		}else if (unit == UNIT_PRESSURE_PSI){ /*Psi*/
+			value = (rawData.toFloat()/6894.757).format("%.2f");
+		}else if (unit == UNIT_PRESSURE_INCH_HG){ /*InchHg*/
+			value = (rawData.toFloat()/3386.389).format("%.2f");
+		}else if (unit == UNIT_PRESSURE_BAR){ /*miliBar*/
+			value = (rawData/100).format("%d");
+		}else if (unit == UNIT_PRESSURE_KPA){ /*kPa*/
+			value = (rawData/1000).format("%d");
+		}
+		return value;
+	}
+
+	function convertTemperature(temperature){
+
+		if (System.getDeviceSettings().temperatureUnits == System.UNIT_STATUTE){
+			temperature = temperature * 1.8 + 32;
+		}
+		return temperature.format("%d")+"°";
+
 	}
 
 	function getLasValueSensorHistory(methodSymbol){
@@ -233,6 +269,8 @@ class DataDrawable extends BasicDrawable{
 			TIME_ZONE => Rez.Drawables.TimeZone,
 			STRESS => Rez.Drawables.Stress,
 			BODY_BATTERY => Rez.Drawables.BodyBattery,
+			TEMPERATURE => Rez.Drawables.Temperature,
+			PRESSURE => Rez.Drawables.Pressure,
 		};
 		return ref[dataType];
 	}

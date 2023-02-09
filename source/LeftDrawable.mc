@@ -2,6 +2,7 @@ using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.System;
 using Toybox.Application;
+using Toybox.Lang;
 
 class LeftDrawable extends BasicDrawable{
 

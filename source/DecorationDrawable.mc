@@ -4,6 +4,7 @@ using Toybox.System;
 using Toybox.Application;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
+using Toybox.Lang;
 
 class DecorationDrawable extends BasicDrawable{
 

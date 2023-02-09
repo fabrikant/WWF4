@@ -18,7 +18,7 @@ class WWF4View extends WatchUi.WatchFace {
     }
 
     // Load your resources here
-    function onLayout(dc as Dc) {
+    function onLayout(dc) {
     	
     	fontBig = Application.loadResource(Rez.Fonts.big);
     	fontMed = Application.loadResource(Rez.Fonts.medium);
@@ -61,7 +61,7 @@ class WWF4View extends WatchUi.WatchFace {
     }
 
     // Update the view
-    function onUpdate(dc as Dc) {
+    function onUpdate(dc) {
 		
 		if (dayThemeIsSet != nowIsDay){
 			onSettingsChanged();
@@ -70,7 +70,7 @@ class WWF4View extends WatchUi.WatchFace {
         View.onUpdate(dc);
     }
 
-	function onPartialUpdate(dc as Dc){
+	function onPartialUpdate(dc){
 		circle.draw(dc);
 	}
 	

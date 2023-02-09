@@ -3,6 +3,7 @@ using Toybox.System;
 using Toybox.Time;
 using Toybox.Application;
 using Toybox.Math;
+using Toybox.Lang;
 
 class WidgetDrawable extends TopBottomDrawable{
 

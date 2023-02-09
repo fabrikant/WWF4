@@ -69,6 +69,18 @@
 	<string id="FIELD_TYPE_CITY" scope="foreground">City</string>
 	<string id="FIELD_TYPE_WEATHER" scope="foreground">Weather</string>
     
+	<string id="FIELD_TYPE_TEMPERATURE" scope="foreground">Temperature</string>
+	<string id="FIELD_TYPE_PRESSURE" scope="foreground">Air pressure</string>
+
+	<!--PRESSURE UNITS -->
+	<string id="PrU" scope="foreground">Pressure Unit</string>
+	<string id="PrUMmHg" scope="foreground">mmHg</string>
+	<string id="PrUPsi" scope="foreground">Psi</string>
+	<string id="PrUInchHg" scope="foreground">inchHg</string>
+	<string id="PrUBar" scope="foreground">milibar</string>
+	<string id="PrUKPa" scope="foreground">kPa</string>
+
+	
 	<!-- Menu -->
  	<string id="MenuHeader" scope="foreground">Settings</string>
 

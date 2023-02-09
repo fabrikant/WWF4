@@ -14,14 +14,6 @@ class WWF4App extends Application.AppBase {
         loadGlobalValues();
     }
 
-    // onStart() is called on application start up
-    function onStart(state as Dictionary?) {
-    }
-
-    // onStop() is called when your application is exiting
-    function onStop(state as Dictionary?) {
-    }
-
 	function loadGlobalValues(){
 		DNDisN = Application.Properties.getValue("DNDisN");
 	}
@@ -35,9 +27,9 @@ class WWF4App extends Application.AppBase {
 	}
  
     // Return the initial view of your application here
-    function getInitialView() as Array<Views or InputDelegates>? {
+    function getInitialView(){
     	mView = new WWF4View();
-        return [ mView ] as Array<Views or InputDelegates>;
+        return [ mView ];
     }
 	
 	function getSettingsView(){

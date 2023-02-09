@@ -12,7 +12,7 @@ var fontSmall as WatchUi.FontResource;
 
 
 var lastWeatherUpdate as Toybox.Time.Moment = null;
-var theme as Toybox.Lang.Array<Number>;
+var theme as Toybox.Lang.Array;
 var nowIsDay;
 var dayThemeIsSet;
 var DNDisN;
@@ -64,6 +64,9 @@ enum{
 	STRESS,
 	BODY_BATTERY,
 	WEATHER,
+	TEMPERATURE,
+	PRESSURE,
+
 
 	UNIT_SPEED_MS = 0,
 	UNIT_SPEED_KMH,
@@ -71,6 +74,12 @@ enum{
 	UNIT_SPEED_FTS,
 	UNIT_SPEED_BOF,
 	UNIT_SPEED_KNOTS,
+
+	UNIT_PRESSURE_MM_HG = 0,
+	UNIT_PRESSURE_PSI,
+	UNIT_PRESSURE_INCH_HG,
+	UNIT_PRESSURE_BAR,
+	UNIT_PRESSURE_KPA,
 }
 
 module Global{

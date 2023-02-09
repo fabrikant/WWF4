@@ -28,4 +28,6 @@
 	<property id="WndU" type="number">0</property>
 	<property id="T1TZ" type="number">0</property>
 
+	<property id="PrU" type="number">0</property>
+
 </properties>

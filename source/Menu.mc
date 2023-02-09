@@ -35,6 +35,7 @@ class GeneralMenu extends WatchUi.Menu2{
 		
 		addItem(new PickerItem("T1TZ", Rez.Strings.T1TZ));
 		addItem(new Item("WndU", Rez.Strings.WndU, :subMenuPatternWindSpeeddUnit));
+		addItem(new Item("PrU", Rez.Strings.PrU, :subMenuPatternPressureUnit));
 		addItem(new PickerItem("keyOW", Rez.Strings.keyOW));
 	}
 	
@@ -181,6 +182,16 @@ module Patterns{
 		};
 	}
 
+	function subMenuPatternPressureUnit(){
+		return {
+			UNIT_PRESSURE_MM_HG => Rez.Strings.PrUMmHg,
+			UNIT_PRESSURE_PSI => Rez.Strings.PrUPsi,
+			UNIT_PRESSURE_INCH_HG => Rez.Strings.PrUInchHg,
+			UNIT_PRESSURE_BAR => Rez.Strings.PrUBar,
+			UNIT_PRESSURE_KPA => Rez.Strings.PrUKPa,
+		};
+	}
+
 	function subMenuPatternDataFields(){
 		 var pattern = {
 			EMPTY => Rez.Strings.FIELD_TYPE_EMPTY,
@@ -205,6 +216,12 @@ module Patterns{
 		}
 		if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getBodyBatteryHistory)){
 			pattern[BODY_BATTERY] = Rez.Strings.FIELD_TYPE_BODY_BATTERY;
+		}
+		if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getTemperatureHistory)){
+			pattern[TEMPERATURE] = Rez.Strings.FIELD_TYPE_TEMPERATURE;
+		}
+		if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getPressureHistory)){
+			pattern[PRESSURE] = Rez.Strings.FIELD_TYPE_PRESSURE;
 		}
 		
 		return pattern;

@@ -10,4 +10,10 @@
 ./converter-one-file.sh 35 $1
 ./converter-one-file.sh 36 $1
 ./converter-one-file.sh 38 $1
+./converter-one-file.sh 40 $1
 ./converter-one-file.sh 42 $1
+./converter-one-file.sh 44 $1
+./converter-one-file.sh 46 $1
+./converter-one-file.sh 50 $1
+./converter-one-file.sh 54 $1
+-
