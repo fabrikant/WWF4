@@ -37,70 +37,58 @@ class LeftDrawable extends BasicDrawable{
         	var value = now.hour > 11 ? "P" : "A";
         	var xOfset = dc.getTextWidthInPixels("M", fontSmall)-2;
         	dc.setColor(foregroundColor(), Graphics.COLOR_TRANSPARENT);
-			dc.drawText(locX+width-xOfset, center[1]- Graphics.getFontAscent(fontSmall), fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-			dc.drawText(locX+width-xOfset, center[1], fontSmall, "M", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(locX+width-xOfset, center[1] - Graphics.getFontAscent(fontSmall)/2, fontSmall, value, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(locX+width-xOfset, center[1] + Graphics.getFontAscent(fontSmall)/2, fontSmall, "M", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 		}
 	}
 	
 	function drawBattery(dc){
 		
 		var value = Math.round(System.getSystemStats().battery);
+		var penWidth = 9;
+		var interval = 30;
 		var bColor = backgroundColor();
 		var fColor = foregroundColor();
-		var scaleWidth = width/4;
-		var r = (dc.getWidth()/2).toNumber();
-		var batHeight  = (height*3/4/5).toNumber()*5;
-		var fullHeight = (batHeight*value/100).toNumber();
-		var y = ((height-batHeight)/2).toNumber();
-		var yFull = locY+y+batHeight-fullHeight;
+		var degreeHighLevel = 180-interval;
+		var degreeLowLevel = 180+interval;
+		var xCenter = dc.getWidth()/2;
+		var yCenter = dc.getHeight()/2;
+		var r = (dc.getWidth()/2).toNumber() - (penWidth/2).toNumber();
 
-		//Рисуем прямоугольник с цветом батареи
+		dc.setColor(fColor, fColor);
+		dc.setPenWidth(penWidth);
+		dc.drawArc(xCenter, yCenter, 
+			r, Graphics.ARC_COUNTER_CLOCKWISE, degreeHighLevel-1, degreeLowLevel+1);
+		penWidth -= 2;
+
+		dc.setColor(bColor, bColor);
+		dc.setPenWidth(penWidth);
+		dc.drawArc(xCenter, yCenter, 
+			r, Graphics.ARC_COUNTER_CLOCKWISE, degreeHighLevel, degreeLowLevel);
+
 		if (value > 20){
 			dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
 		}else{
 			dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
 		}
-		dc.setPenWidth(1);
-		dc.fillRectangle(0, yFull, width, fullHeight);
-		
-		//Разрезаем всю батарею толстыми линиями делениями
-		var div = batHeight/5;
-		dc.setColor(fColor, fColor);
-		dc.setPenWidth(5);
-		dc.setColor(fColor, fColor);
-		for (var i = 1; i<div-1; i++){
-			var divY = locY+y+batHeight-i*div;
-			dc.drawLine(locX, divY, locX+width, divY);
+		dc.setPenWidth(penWidth);
+
+		var degreeCurrentLevel = degreeLowLevel + (degreeHighLevel-degreeLowLevel)*value/100;
+		dc.drawArc(xCenter, yCenter, 
+			r, Graphics.ARC_CLOCKWISE, degreeLowLevel, degreeCurrentLevel);
+
+
+		if (System.getDeviceSettings().is24Hour || !showAmPm) {
+			dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
+			var fontHight = Graphics.getFontAscent(fontSmall);
+			var charArray = (value.format("%d")+"%").toCharArray();
+			var yCurrent = yCenter 
+				- fontHight * (charArray.size() / 2).toNumber();
+			var xCurrent = locX+width-dc.getTextWidthInPixels("%", fontSmall)+2;
+			for (var i = 0; i < charArray.size(); i++){
+				dc.drawText(xCurrent, yCurrent, fontSmall, charArray[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+				yCurrent += fontHight;
+			}
 		}
-		
-		//Обводим рамкой всю батарею сверху и снизу		
-		dc.setPenWidth(1);
-		dc.setColor(fColor, fColor);
-		dc.drawRectangle(locX, locY+y-1, width, batHeight+1);
-		
-		//Обрезаем прямоугольник до дуги
-		dc.setColor(bColor, bColor);
-		dc.fillCircle(r, r, r-scaleWidth);
-		//И рисуем правый контур
-		dc.setColor(fColor, fColor);
-		dc.drawCircle(r, r, r-scaleWidth);
-		//Левый контур
-		dc.drawCircle(r, r, r);
-		
-		//Добавляем в разделители пробелы цвета фона 
-		dc.setPenWidth(3);
-		dc.setColor(bColor, bColor);
-		for (var i = 1; i<div-1; i++){
-			var divY = locY+y+batHeight-i*div;
-			dc.drawLine(locX, divY, locX+width, divY);
-		}
-		
-		//Убираем артефакты выше и ниже
-		dc.setPenWidth(1);
-		dc.setColor(bColor, bColor);
-		dc.fillRectangle(locX, locY, width, y-1);		
-		dc.fillRectangle(locX, locY+y+batHeight, width, height);
-		
 	}
-	
 }
