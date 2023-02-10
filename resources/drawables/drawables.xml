@@ -61,25 +61,25 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Stress" filename="png-25/1042.png" >
+	<bitmap id="Stress" filename="../../resources/drawables/png-25/1042.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="BodyBattery" filename="png-25/1014.png" >
+	<bitmap id="BodyBattery" filename="../../resources/drawables/png-25/1014.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Temperature" filename="png-25/termometer.png" >
+	<bitmap id="Temperature" filename="../../resources/drawables/png-20/termometer.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Pressure" filename="png-25/barometer.png" >
+	<bitmap id="Pressure" filename="../../resources/drawables/png-20/barometer.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>

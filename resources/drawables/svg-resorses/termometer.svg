@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.2" width="2.24mm" height="3.82mm" viewBox="186 31 224 382" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+<svg version="1.2" width="98.8mm" height="197.57mm" viewBox="7420 12 9880 19757" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
  <defs class="EmbeddedBulletChars">
   <g id="bullet-char-template-57356" transform="scale(0.00048828125,-0.00048828125)">
    <path d="M 580,1141 L 1163,571 580,0 -4,571 580,1141 Z"/>
@@ -36,8 +36,8 @@
  <g class="Page">
   <g class="com.sun.star.drawing.ClosedBezierShape">
    <g id="id3">
-    <rect class="BoundingBox" stroke="none" fill="none" x="186" y="31" width="224" height="382"/>
-    <path fill="rgb(0,0,0)" stroke="none" d="M 375,110 C 375,67 340,32 297,32 254,32 220,67 220,110 L 220,223 C 213,229 206,236 202,245 192,262 187,281 187,300 187,361 236,411 297,411 358,411 408,361 408,300 408,281 403,262 393,245 388,236 382,229 375,223 L 375,110 Z M 297,374 C 284,374 272,370 260,364 249,357 240,348 233,337 227,326 224,313 224,300 224,287 227,275 233,264 238,256 243,249 250,244 251,242 253,241 254,239 256,236 256,233 256,230 L 256,110 C 256,87 275,69 297,69 320,69 338,87 338,110 L 338,230 C 338,233 339,236 341,239 342,241 343,242 345,244 351,249 357,257 361,264 368,276 371,287 371,300 371,341 338,374 297,374 Z M 309,258 L 309,203 C 309,200 309,198 307,196 306,194 305,192 303,191 301,190 298,190 296,190 294,190 291,190 289,191 287,192 287,194 285,196 284,198 283,200 283,203 L 283,258 C 280,259 276,261 273,262 266,266 260,272 256,279 252,286 250,295 250,303 250,312 252,319 256,326 260,333 266,339 273,343 280,347 288,349 297,349 L 297,349 297,349 C 305,349 313,347 320,343 327,339 333,333 337,326 341,319 343,312 343,303 343,295 341,286 337,279 333,272 327,266 320,262 317,260 313,259 309,258 Z"/>
+    <rect class="BoundingBox" stroke="none" fill="none" x="7420" y="12" width="9880" height="19757"/>
+    <path fill="rgb(0,0,0)" stroke="none" d="M 9273,3100 C 9273,1395 10655,13 12360,13 14064,13 15446,1395 15446,3100 L 15446,10974 C 16574,11878 17298,13268 17298,14828 17298,17556 15087,19767 12360,19767 9632,19767 7421,17556 7421,14828 7421,13268 8145,11878 9273,10974 L 9273,3100 Z M 12360,3717 C 12700,3717 12976,3994 12976,4335 L 12976,12976 C 12976,13011 12973,13045 12968,13079 13692,13331 14211,14019 14211,14828 14211,15851 13382,16680 12360,16680 11337,16680 10508,15851 10508,14828 10508,14019 11027,13331 11751,13079 11746,13045 11743,13011 11743,12976 L 11743,4335 C 11743,3994 12019,3717 12360,3717 Z"/>
    </g>
   </g>
  </g>
