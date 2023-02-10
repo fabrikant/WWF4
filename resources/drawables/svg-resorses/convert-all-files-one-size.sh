@@ -1,14 +1,12 @@
 #! /bin/bash
-
-
 if [[  -z $1  ]]; then
-	echo "Первый параметр размер, второй имя файла без расширения"
+	echo "Скрипт работает в рабочем каталоге. В параметре передается желаемый размер в пикселях "
 	return 0
 else
 	EXPORT_PATH="$(dirname "$PWD")"/png-$1;
 	mkdir -p $EXPORT_PATH;
 	echo $EXPORT_PATH
-	for file in ${PWD}/${2}.svg 
+	for file in ${PWD}/*.svg 
 	do
 		echo 'Конвертация: '$filename
 		filename=$(basename $file) 
