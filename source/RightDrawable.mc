@@ -33,17 +33,20 @@ class RightDrawable extends BasicDrawable{
 		var showBt = false;
 		var showAlarm = false;
 		var showDND = false;
+		var showMessages = false;
 		var notifications = System.getDeviceSettings().notificationCount;
 		var center = getCenter();
 		
 		var showBtProperty = Application.Properties.getValue("SBt");
 		var connected = System.getDeviceSettings().connectionAvailable;
-		
+		var heightSum = 0;
+
 		if ((showBtProperty == BLUETOOTH_SHOW_IF_CONNECT && connected) ||(showBtProperty == BLUETOOTH_SHOW_IF_DISCONNECT && !connected)){
 			if (imageBluetooth == null){
 				imageBluetooth = createImage(Rez.Drawables.Bluetooth);
 			}
 			showBt = true;
+			heightSum += imageBluetooth.getDc().getHeight();
 		}
 		
 		if (System.getDeviceSettings().alarmCount > 0){
@@ -52,6 +55,7 @@ class RightDrawable extends BasicDrawable{
 					imageAlarm = createImage(Rez.Drawables.Alarm);
 				}
 				showAlarm = true;
+				heightSum += imageAlarm.getDc().getHeight();
 			}
 		}
 
@@ -61,39 +65,46 @@ class RightDrawable extends BasicDrawable{
 					imageDND = createImage(Rez.Drawables.DND);
 				}
 				showDND = true;
+				heightSum += imageDND.getDc().getHeight();
 			}
 		}
 		
-		center[1] -= 8;
-		var top = center[1];
-		var bottom = center[1];
 		var x = locX + 5;
 		
 		if (notifications > 0){
 			if (imageMessage == null){
 				imageMessage = createImage(Rez.Drawables.Message);
 			}
-			
-			top -= imageMessage.getDc().getHeight();
-			dc.drawBitmap(x, top, imageMessage);
-			if (notifications > 9){
-				dc.drawText(x, bottom, fontSmall, notifications, Graphics.TEXT_JUSTIFY_LEFT);
-			}else{
-				dc.drawText(x+(imageMessage.getDc().getWidth()/2).toNumber(), bottom, fontSmall, notifications, Graphics.TEXT_JUSTIFY_CENTER);
-			}
-			bottom += dc.getFontHeight(fontSmall);	
+			showMessages = true;
+			heightSum += imageMessage.getDc().getHeight();
+			heightSum += dc.getFontHeight(fontSmall);
 		}
 		
+		var top = center[1] - heightSum / 2;
+
 		if (showBt){
-			top -= imageBluetooth.getDc().getHeight();
 			dc.drawBitmap(x, top, imageBluetooth);
+			top += imageBluetooth.getDc().getHeight();
 		}
+
+		if (showMessages){
+			dc.drawBitmap(x, top, imageMessage);
+			top += imageMessage.getDc().getHeight();
+			var localY = top - (dc.getFontHeight(fontSmall) - dc.getFontAscent(fontSmall))/2;
+			if (notifications > 9){
+				dc.drawText(x, localY, fontSmall, notifications, Graphics.TEXT_JUSTIFY_LEFT);
+			}else{
+				dc.drawText(x+(imageMessage.getDc().getWidth()/2).toNumber(), localY, fontSmall, notifications, Graphics.TEXT_JUSTIFY_CENTER);
+			}
+			top += dc.getFontHeight(fontSmall);	
+		}
+
 		if(showDND){
-			dc.drawBitmap(x, bottom, imageDND);
-			bottom += imageDND.getDc().getHeight();
+			dc.drawBitmap(x, top, imageDND);
+			top += imageDND.getDc().getHeight();
 		}
 		if(showAlarm){
-			dc.drawBitmap(x, bottom, imageAlarm);
+			dc.drawBitmap(x, top, imageAlarm);
 		}
 		drawBorder(dc);
 	}

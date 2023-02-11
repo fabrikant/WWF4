@@ -82,8 +82,7 @@ class LeftDrawable extends BasicDrawable{
 			dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);
 			var fontHight = Graphics.getFontAscent(fontSmall);
 			var charArray = (value.format("%d")+"%").toCharArray();
-			var yCurrent = yCenter 
-				- fontHight * (charArray.size() / 2).toNumber();
+			var yCurrent = yCenter - fontHight * (charArray.size() / 2).toNumber() + 5;
 			var xCurrent = locX+width-dc.getTextWidthInPixels("%", fontSmall)+2;
 			for (var i = 0; i < charArray.size(); i++){
 				dc.drawText(xCurrent, yCurrent, fontSmall, charArray[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
