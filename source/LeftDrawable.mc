@@ -53,7 +53,7 @@ class LeftDrawable extends BasicDrawable{
 		var degreeLowLevel = 180+interval;
 		var xCenter = dc.getWidth()/2;
 		var yCenter = dc.getHeight()/2;
-		var r = (dc.getWidth()/2).toNumber() - (penWidth/2).toNumber();
+		var r = (xCenter).toNumber() - (penWidth/2).toNumber();
 
 		dc.setColor(fColor, fColor);
 		dc.setPenWidth(penWidth);
