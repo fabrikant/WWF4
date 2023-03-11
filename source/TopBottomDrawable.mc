@@ -97,7 +97,6 @@ class TopBottomDrawable extends DataDrawable{
 	function drawWeatherInfo(dc){
 		updateLastValue();
 		if (lastValue != null){
-			var bkColor = backgroundColor();
 			var fColor = foregroundColor();
 			var center = getCenterForFont(fontSmall);
 			dc.setColor(fColor, Graphics.COLOR_TRANSPARENT);

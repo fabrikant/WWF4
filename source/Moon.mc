@@ -13,7 +13,6 @@ module Moon{
 
 		var n0 = 0;
 		var f0 = 0.0;
-		var AG = f0;
 
 		//current date
 	    var Y1 = date.year;
@@ -27,7 +26,6 @@ module Moon{
 	    var K31 = n0;
 	    var JD1 = n0;
 	    var IP1 = f0;
-	    var DP1 = f0;
 
 	    // calculate the Julian date at 12h UT
 	    YY1 = Y1 - ( ( 12 - M1 ) / 10 ).toNumber();

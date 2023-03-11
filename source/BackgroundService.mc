@@ -101,7 +101,6 @@ class BackgroundService extends System.ServiceDelegate {
 
 	function responseCallback(responseCode, data) {
 		var backgroundData;
-		var app = Application.getApp();
 		//////////////////////////////////////////////////////////
 		//DEBUG
 //		System.println("responseCallback: "+Time.now().value());

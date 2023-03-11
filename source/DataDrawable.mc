@@ -192,7 +192,6 @@ class DataDrawable extends BasicDrawable{
 	
 		var value = null;
 		var info = Activity.getActivityInfo();
-		var postfix = "";
 		if (info != null){
 			if (info has :currentOxygenSaturation){
 				if (info.currentOxygenSaturation != null){

@@ -47,7 +47,6 @@ class CircleDrawable extends BasicDrawable{
 			
 			var center = getCenter();
 			
-			var offsetY = fontCenter[1] - center[1];
 			textY = fontCenter[1] + (height/4).toNumber()-9;
 			
 		}else if (fieldType == CIRCLE_TYPE_SECONDS){
