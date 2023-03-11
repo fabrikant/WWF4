@@ -171,6 +171,11 @@
 		<settingConfig type="boolean" />
 	</setting>
 
+	<setting propertyKey="@Properties.GWLocation"
+		title="@Strings.GWLocation">
+		<settingConfig type="boolean" />
+	</setting>
+
  	<setting propertyKey="@Properties.T1TZ" title="@Strings.T1TZ">
 		<settingConfig type="numeric" min="-720" max="840"/>
 	</setting>

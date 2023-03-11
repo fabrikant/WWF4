@@ -32,7 +32,9 @@ class GeneralMenu extends WatchUi.Menu2{
 		if (!System.getDeviceSettings().is24Hour){
 			addItem(new TogleItem("ShowAmPm", Rez.Strings.ShowAmPm));
 		}
-		
+		if (Toybox has :Weather){
+			addItem(new TogleItem("GWLocation", Rez.Strings.GWLocation));
+		}
 		addItem(new PickerItem("T1TZ", Rez.Strings.T1TZ));
 		addItem(new Item("WndU", Rez.Strings.WndU, :subMenuPatternWindSpeeddUnit));
 		addItem(new Item("PrU", Rez.Strings.PrU, :subMenuPatternPressureUnit));

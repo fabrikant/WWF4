@@ -18,6 +18,8 @@
     <string id="ShowAmPm">Show AM/PM</string>
     
     <string id="WndU">Wind speed unit</string>
+	<string id="GWLocation">Use location of Garmin weather</string>
+
  	<!--WIND UNITS -->
 	<!--USE VERY!!!! SHOT STRING. its displayed on screen-->
 	<string id="SpeedUnitMSec" scope="foreground">m/s</string>

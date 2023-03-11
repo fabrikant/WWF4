@@ -18,6 +18,9 @@
     <string id="ShowAmPm">Показывать AM/PM</string>
     
     <string id="WndU">Единицы скорости ветра</string>
+
+	<string id="GWLocation">Использовать местоположение Garmin погоды</string>
+
  	<!--WIND UNITS -->
 	<!--USE VERY!!!! SHOT STRING. its displayed on screen-->
 	<string id="SpeedUnitMSec" scope="foreground">м/с</string>

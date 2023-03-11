@@ -30,4 +30,6 @@
 
 	<property id="PrU" type="number">0</property>
 
+	<property id="GWLocation" type="boolean">true</property>
+
 </properties>
