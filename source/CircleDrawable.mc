@@ -44,9 +44,6 @@ class CircleDrawable extends BasicDrawable{
 			
 			imageX = locX + ((width - image.getWidth())/2).toNumber();
 			imageY = locY + ((height/2 - image.getHeight())/2).toNumber()+3;
-			
-			var center = getCenter();
-			
 			textY = fontCenter[1] + (height/4).toNumber()-9;
 			
 		}else if (fieldType == CIRCLE_TYPE_SECONDS){

@@ -1,5 +1,5 @@
 <fonts>
-	<font id="big" scope="foreground" antialias="true"
+	<font id="big" scope="foreground" antialias="true" filter="0123456789:"
 		filename="../../resources/fonts/bebas-number/bebas-number-bold-75.fnt" />
 	<font id="medium" scope="foreground" antialias="false" filter="-0123456789:k°,.|n/a%"
 		filename="../../resources/fonts/roboto/roboto-20.fnt" />

@@ -1,0 +1,8 @@
+<fonts>
+	<font id="big" scope="foreground" antialias="true" filter="0123456789:"
+		filename="../../resources/fonts/roboto/roboto-180.fnt" />
+	<font id="medium" scope="foreground" antialias="false" filter="-0123456789:k°,.|n/a%"
+		filename="../../resources/fonts/roboto/roboto-44.fnt" />
+	<font id="small" scope="foreground" antialias="false"
+		filename="../../resources/fonts/roboto/roboto-35.fnt" />
+</fonts>

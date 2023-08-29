@@ -112,7 +112,9 @@ class WWF4View extends WatchUi.WatchFace {
 		}else if (themeNumber == THEME_INSTINCT_LIKE_1){
 			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK];
 		}else if (themeNumber == THEME_INSTINCT_LIKE_2){
-			theme = [Graphics.COLOR_DK_GRAY, Graphics.COLOR_WHITE, Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK];
+			theme = [Graphics.COLOR_DK_GRAY, Graphics.COLOR_WHITE, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK];
+		}else if (themeNumber == THEME_INSTINCT_LIKE_3){
+			theme = [Graphics.COLOR_DK_GRAY, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK];
 		}else if (themeNumber == THEME_BLUE_YELLOW){
 			theme = [Graphics.COLOR_DK_BLUE, Graphics.COLOR_WHITE, Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK];
 		}else{

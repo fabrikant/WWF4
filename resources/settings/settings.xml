@@ -6,6 +6,7 @@
             <listEntry value="1">@Strings.ThemeLight</listEntry>
             <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
             <listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
+			<listEntry value="5">@Strings.ThemeInstinctLike3</listEntry>
             <listEntry value="4">@Strings.ThemeBlueYellow</listEntry>
         </settingConfig>
 	</setting>
@@ -16,6 +17,7 @@
             <listEntry value="1">@Strings.ThemeLight</listEntry>
             <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
             <listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
+			<listEntry value="5">@Strings.ThemeInstinctLike3</listEntry>
             <listEntry value="4">@Strings.ThemeBlueYellow</listEntry>
         </settingConfig>
 	</setting>
