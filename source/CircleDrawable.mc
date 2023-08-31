@@ -54,6 +54,12 @@ class CircleDrawable extends BasicDrawable{
 	public function draw(dc as Graphics.Dc){
 
 		dc.setClip(locX, locY, width, height);
+		if (Application.getApp().mView.isAmoledSaveMode){
+			dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+			dc.clearClip();
+			return;
+		}
+
 		if (Graphics.Dc has :setAntiAlias){
 			dc.setAntiAlias(true);
 		}
@@ -63,7 +69,7 @@ class CircleDrawable extends BasicDrawable{
 		dc.setColor(bkColor, Graphics.COLOR_TRANSPARENT);
 		
 		var center = getCenter();
-		var r = width/2.toNumber()-(penWidth/2).toNumber();
+		var r = width/2.toNumber()-(penWidth/2).toNumber()-1;
 		dc.fillCircle(center[0], center[1], r);
 		
 		var now = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
@@ -91,6 +97,7 @@ class CircleDrawable extends BasicDrawable{
 		}
 		
 		drawBorder(dc);
+
 	}
 
 	private function drawHR(dc, now){

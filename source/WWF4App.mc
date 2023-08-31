@@ -29,7 +29,7 @@ class WWF4App extends Application.AppBase {
     // Return the initial view of your application here
     function getInitialView(){
     	mView = new WWF4View();
-        return [ mView ];
+        return [ mView , new WatchDelegate()];
     }
 	
 	function getSettingsView(){

@@ -4,16 +4,19 @@ using Toybox.System;
 using Toybox.WatchUi;
 using Toybox.Activity;
 using Toybox.Math;
+using Toybox.Time;
 
 class WWF4View extends WatchUi.WatchFace {
 
 	var circle;
 	var notifyOnSettingsChanged;
-	
+	var isAmoledSaveMode;
+
     function initialize() {
         WatchFace.initialize();
         notifyOnSettingsChanged = [];
         nowIsDay = true;
+		isAmoledSaveMode = false;
         setTheme();
     }
 
@@ -62,14 +65,32 @@ class WWF4View extends WatchUi.WatchFace {
 		Application.getApp().registerEvents();
     }
 
+	function saveAmoled(dc){
+		var step = 3;
+		dc.setClip(0, 0, dc.getWidth(), dc.getHeight());
+		dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+		var greg = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		var i = greg.min%step;
+		dc.setPenWidth(step-1);
+		while (i<dc.getHeight()){
+			dc.drawLine(0, i, dc.getWidth(), i);
+			dc.drawLine(i, 0, i, dc.getHeight());
+			// dc.fillRectangle(0, i, dc.getWidth(), step-1);
+			// dc.fillRectangle(i, 0, step-1, dc.getHeight());
+			i += step;
+		}
+	}
+
     // Update the view
     function onUpdate(dc) {
 		
 		if (dayThemeIsSet != nowIsDay){
 			onSettingsChanged();
 		}
-	
         View.onUpdate(dc);
+		if (isAmoledSaveMode){
+			saveAmoled(dc);
+		}
     }
 
 	function onPartialUpdate(dc){
@@ -83,7 +104,6 @@ class WWF4View extends WatchUi.WatchFace {
 			var id = notifyOnSettingsChanged[i];
 			var obj = findDrawableById(id);
 			obj.onSettingsChanged();
-			
 		}
 	}
 	
@@ -105,7 +125,7 @@ class WWF4View extends WatchUi.WatchFace {
 		
 		//[backcgroundColorSize, foregroundColorSize, backcgroundColorCenter, foregroundColorCenter]
 		var themeNumber = Application.Properties.getValue(themeKey);
-		if (themeNumber == THEME_DARK){
+		if (themeNumber == THEME_DARK || isAmoledSaveMode){
 			theme = [Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE];
 		}else if (themeNumber == THEME_LIGHT){
 			theme = [Graphics.COLOR_WHITE, Graphics.COLOR_BLACK, Graphics.COLOR_WHITE, Graphics.COLOR_BLACK];
@@ -130,10 +150,19 @@ class WWF4View extends WatchUi.WatchFace {
 
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
+		if (isAmoledSaveMode){
+			isAmoledSaveMode = false;
+			onSettingsChanged();
+		}
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+		var settings = System.getDeviceSettings();
+		if (settings has :requiresBurnInProtection && settings.requiresBurnInProtection) {
+			isAmoledSaveMode = true;
+			onSettingsChanged();
+		}
     }
 
 }
