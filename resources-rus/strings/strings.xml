@@ -8,8 +8,10 @@
     <string id="ThemeDark">Темная</string>
     <string id="ThemeLight">Светлая</string>
     <string id="ThemeInstinctLike1">Instinct</string>
-    <string id="ThemeInstinctLike2">Instinct серый</string>
+    <string id="ThemeInstinctLike2">Instinct серый 1</string>
 	<string id="ThemeInstinctLike3">Instinct серый 2</string>
+    <string id="ThemeInstinctLike4">Instinct светло-серый 1</string>
+	<string id="ThemeInstinctLike5">Instinct светло-серый 2</string>
     <string id="ThemeBlueYellow">Сине-желтая</string>
 
     

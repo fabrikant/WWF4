@@ -7,7 +7,9 @@
             <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
             <listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
 			<listEntry value="4">@Strings.ThemeInstinctLike3</listEntry>
-            <listEntry value="5">@Strings.ThemeBlueYellow</listEntry>
+            <listEntry value="5">@Strings.ThemeInstinctLike4</listEntry>
+			<listEntry value="6">@Strings.ThemeInstinctLike5</listEntry>
+            <listEntry value="7">@Strings.ThemeBlueYellow</listEntry>
         </settingConfig>
 	</setting>
   	
@@ -18,7 +20,9 @@
             <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
             <listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
 			<listEntry value="4">@Strings.ThemeInstinctLike3</listEntry>
-            <listEntry value="5">@Strings.ThemeBlueYellow</listEntry>
+            <listEntry value="5">@Strings.ThemeInstinctLike4</listEntry>
+			<listEntry value="6">@Strings.ThemeInstinctLike5</listEntry>
+            <listEntry value="7">@Strings.ThemeBlueYellow</listEntry>
         </settingConfig>
 	</setting>
 
