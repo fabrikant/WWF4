@@ -75,7 +75,9 @@ class DataDrawable extends BasicDrawable{
 	
 	function getValue(dataType){
 		var value=null;
-		if (dataType == CALORIES){
+		if (dataType == EMPTY){
+			value = "";
+		}else if (dataType == CALORIES){
 			value = getCalories();
 		}else if (dataType == DISTANCE){
 			value = getDistance();
