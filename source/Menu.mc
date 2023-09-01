@@ -272,6 +272,8 @@ module Patterns{
 			THEME_INSTINCT_LIKE_1 => Rez.Strings.ThemeInstinctLike1,
 			THEME_INSTINCT_LIKE_2 => Rez.Strings.ThemeInstinctLike2,
 			THEME_INSTINCT_LIKE_3 => Rez.Strings.ThemeInstinctLike3,
+			THEME_INSTINCT_LIKE_4 => Rez.Strings.ThemeInstinctLike4,
+			THEME_INSTINCT_LIKE_5 => Rez.Strings.ThemeInstinctLike5,
 			THEME_BLUE_YELLOW => Rez.Strings.ThemeBlueYellow,			
 		};
 	}
