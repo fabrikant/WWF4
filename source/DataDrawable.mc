@@ -127,7 +127,7 @@ class DataDrawable extends BasicDrawable{
 		if (System.getDeviceSettings().weightUnits == System.UNIT_STATUTE){
 			value = (value/453.6).format("%d");
 		}else{
-			value = (value/1000).format("%.1f");
+			value = (value/1000.0).format("%.1f");
 		}
 		return value;
 	}
