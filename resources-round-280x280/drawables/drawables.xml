@@ -1,13 +1,13 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="../../resources/drawables/launcher_icon.png" />
 	
-	<bitmap id="heart" filename="../../resources/drawables/png-22/heart.png">
+	<bitmap id="heart" filename="../../resources/drawables/png-24/heart.png">
 		<palette disableTransparency="false">
 		     <color>FF0000</color>
 		</palette>
 	</bitmap>
 	
-	<bitmap id="heartEmpty" filename="../../resources/drawables/png-22/heart-empty.png">
+	<bitmap id="heartEmpty" filename="../../resources/drawables/png-24/heart-empty.png">
 		<palette disableTransparency="false">
 		     <color>FF0000</color>
 		</palette>
@@ -19,19 +19,19 @@
 		</palette>
 	</bitmap>
 	
-	<bitmap id="Callory" filename="../../resources/drawables/png-30/1041.png" >
+	<bitmap id="Callory" filename="../../resources/drawables/png-28/1041.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 	
-	<bitmap id="Distance" filename="../../resources/drawables/png-30/location.png" >
+	<bitmap id="Distance" filename="../../resources/drawables/png-28/location.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Steps" filename="../../resources/drawables/png-30/walk.png" >
+	<bitmap id="Steps" filename="../../resources/drawables/png-28/walk.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -43,13 +43,13 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Elevation" filename="../../resources/drawables/png-35/mountain.png" >
+	<bitmap id="Elevation" filename="../../resources/drawables/png-36/mountain.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="O2" filename="../../resources/drawables/png-28/o2.png" >
+	<bitmap id="O2" filename="../../resources/drawables/png-24/o2.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -68,7 +68,7 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="BodyBattery" filename="../../resources/drawables/png-30/1014.png" >
+	<bitmap id="BodyBattery" filename="../../resources/drawables/png-26/1014.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -80,13 +80,13 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Pressure" filename="../../resources/drawables/png-25/barometer.png" >
+	<bitmap id="Pressure" filename="../../resources/drawables/png-22/barometer.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Weight" filename="../../resources/drawables/png-25/weight.png" >
+	<bitmap id="Weight" filename="../../resources/drawables/png-24/weight.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>

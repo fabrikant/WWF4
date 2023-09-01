@@ -37,13 +37,13 @@
 		</palette>
 	</bitmap>
 
-	<bitmap id="Floor" filename="../../resources/drawables/png-20/stairs.png" >
+	<bitmap id="Floor" filename="../../resources/drawables/png-22/stairs.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Elevation" filename="../../resources/drawables/png-20/mountain.png" >
+	<bitmap id="Elevation" filename="../../resources/drawables/png-26/mountain.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -67,7 +67,7 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="BodyBattery" filename="../../resources/drawables/png-20/1014.png" >
+	<bitmap id="BodyBattery" filename="../../resources/drawables/png-18/1014.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>

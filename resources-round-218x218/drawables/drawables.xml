@@ -31,19 +31,19 @@
 		</palette>
 	</bitmap>
 
-	<bitmap id="Steps" filename="../../resources/drawables/png-20/walk.png" >
+	<bitmap id="Steps" filename="../../resources/drawables/png-22/walk.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Floor" filename="../../resources/drawables/png-20/stairs.png" >
+	<bitmap id="Floor" filename="../../resources/drawables/png-24/stairs.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Elevation" filename="../../resources/drawables/png-20/mountain.png" >
+	<bitmap id="Elevation" filename="../../resources/drawables/png-26/mountain.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>

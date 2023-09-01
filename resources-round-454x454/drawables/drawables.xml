@@ -1,13 +1,13 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="../../resources/drawables/launcher_icon.png" />
 	
-	<bitmap id="heart" filename="../../resources/drawables/png-40/heart.png">
+	<bitmap id="heart" filename="../../resources/drawables/png-50/heart.png">
 		<palette disableTransparency="false">
 		     <color>FF0000</color>
 		</palette>
 	</bitmap>
 	
-	<bitmap id="heartEmpty" filename="../../resources/drawables/png-40/heart-empty.png">
+	<bitmap id="heartEmpty" filename="../../resources/drawables/png-50/heart-empty.png">
 		<palette disableTransparency="false">
 		     <color>FF0000</color>
 		</palette>
@@ -49,7 +49,7 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="O2" filename="../../resources/drawables/png-42/o2.png" >
+	<bitmap id="O2" filename="../../resources/drawables/png-40/o2.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>

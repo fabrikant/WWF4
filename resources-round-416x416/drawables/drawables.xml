@@ -1,13 +1,13 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="../../resources/drawables/launcher_icon.png" />
 	
-	<bitmap id="heart" filename="../../resources/drawables/png-30/heart.png">
+	<bitmap id="heart" filename="../../resources/drawables/png-40/heart.png">
 		<palette disableTransparency="false">
 		     <color>FF0000</color>
 		</palette>
 	</bitmap>
 	
-	<bitmap id="heartEmpty" filename="../../resources/drawables/png-30/heart-empty.png">
+	<bitmap id="heartEmpty" filename="../../resources/drawables/png-40/heart-empty.png">
 		<palette disableTransparency="false">
 		     <color>FF0000</color>
 		</palette>
@@ -31,31 +31,31 @@
 		</palette>
 	</bitmap>
 
-	<bitmap id="Steps" filename="../../resources/drawables/png-35/walk.png" >
+	<bitmap id="Steps" filename="../../resources/drawables/png-38/walk.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>
 
-	<bitmap id="Floor" filename="../../resources/drawables/png-35/stairs.png" >
+	<bitmap id="Floor" filename="../../resources/drawables/png-40/stairs.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Elevation" filename="../../resources/drawables/png-50/mountain.png" >
+	<bitmap id="Elevation" filename="../../resources/drawables/png-52/mountain.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="O2" filename="../../resources/drawables/png-35/o2.png" >
+	<bitmap id="O2" filename="../../resources/drawables/png-34/o2.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 	
-	<bitmap id="TimeZone" filename="../../resources/drawables/png-35/time-zones.png" >
+	<bitmap id="TimeZone" filename="../../resources/drawables/png-38/time-zones.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
