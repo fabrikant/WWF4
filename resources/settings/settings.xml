@@ -51,6 +51,7 @@
            	<listEntry value="15">@Strings.FIELD_TYPE_WEATHER</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
+			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
        	</settingConfig>	
 	</setting>
 
