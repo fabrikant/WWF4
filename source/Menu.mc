@@ -226,6 +226,7 @@ module Patterns{
 			pattern[PRESSURE] = Rez.Strings.FIELD_TYPE_PRESSURE;
 		}
 		
+		pattern[WEIGHT] = Rez.Strings.FIELD_TYPE_WEIGHT;
 		return pattern;
 	}
 

@@ -74,6 +74,7 @@
     
 	<string id="FIELD_TYPE_TEMPERATURE" scope="foreground">Temperature</string>
 	<string id="FIELD_TYPE_PRESSURE" scope="foreground">Air pressure</string>
+	<string id="FIELD_TYPE_WEIGHT" scope="foreground">Weight</string>
 
 	<!--PRESSURE UNITS -->
 	<string id="PrU" scope="foreground">Pressure Unit</string>

@@ -43,13 +43,13 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Elevation" filename="../../resources/drawables/png-28/mountain.png" >
+	<bitmap id="Elevation" filename="../../resources/drawables/png-32/mountain.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="O2" filename="../../resources/drawables/png-20/o2.png" >
+	<bitmap id="O2" filename="../../resources/drawables/png-25/o2.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -84,5 +84,11 @@
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
+
+	<bitmap id="Weight" filename="../../resources/drawables/png-22/weight.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
 
 </drawables>

@@ -5,6 +5,7 @@ using Toybox.System;
 using Toybox.ActivityMonitor;
 using Toybox.Activity;
 using Toybox.Lang;
+using Toybox.UserProfile;
 
 class DataDrawable extends BasicDrawable{
 
@@ -112,7 +113,21 @@ class DataDrawable extends BasicDrawable{
 			value = getLasValueSensorHistory(:getPressureHistory);
 			if (value != null){
 				value = convertPressure(value);
-			}	
+			}
+		}else if (dataType == WEIGHT){
+			value = UserProfile.getProfile().weight;
+			if (value != null){
+				value = convertWeight(value);
+			}
+		}
+		return value;
+	}
+	
+	function convertWeight(value){
+		if (System.getDeviceSettings().weightUnits == System.UNIT_STATUTE){
+			value = (value/453.6).format("%d");
+		}else{
+			value = (value/1000).format("%.1f");
 		}
 		return value;
 	}
@@ -272,6 +287,7 @@ class DataDrawable extends BasicDrawable{
 			BODY_BATTERY => Rez.Drawables.BodyBattery,
 			TEMPERATURE => Rez.Drawables.Temperature,
 			PRESSURE => Rez.Drawables.Pressure,
+			WEIGHT => Rez.Drawables.Weight,
 		};
 		return ref[dataType];
 	}

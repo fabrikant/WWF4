@@ -72,6 +72,7 @@
  	<string id="FIELD_TYPE_WEATHER" scope="foreground">Погода</string>
 	<string id="FIELD_TYPE_TEMPERATURE" scope="foreground">Температура</string>
 	<string id="FIELD_TYPE_PRESSURE" scope="foreground">Атм. давление</string>
+	<string id="FIELD_TYPE_WEIGHT" scope="foreground">Масса тела</string>
 
 	<!--PRESSURE UNITS -->
 	<string id="PrU" scope="foreground">Единицы давления</string>

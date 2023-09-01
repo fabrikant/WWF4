@@ -85,4 +85,10 @@
 		</palette>
 	</bitmap>	
 
+	<bitmap id="Weight" filename="../../resources/drawables/png-16/weight.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
+
 </drawables>

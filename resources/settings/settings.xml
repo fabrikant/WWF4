@@ -73,6 +73,7 @@
            	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
+			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
        	</settingConfig>	
 	</setting>
 
@@ -95,6 +96,7 @@
            	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
+			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
       	</settingConfig>	
 	</setting>
 
@@ -114,6 +116,7 @@
            	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
+			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
         </settingConfig>	
 	</setting>
 
@@ -132,6 +135,7 @@
            	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
+			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
         </settingConfig>	
 	</setting>
 	

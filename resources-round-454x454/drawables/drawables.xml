@@ -13,7 +13,7 @@
 		</palette>
 	</bitmap>
 
-	<bitmap id="sunEvent" filename="../../resources/drawables/png-42/sun-event.png" >
+	<bitmap id="sunEvent" filename="../../resources/drawables/png-50/sun-event.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -43,13 +43,13 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Elevation" filename="../../resources/drawables/png-42/mountain.png" >
+	<bitmap id="Elevation" filename="../../resources/drawables/png-54/mountain.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="O2" filename="../../resources/drawables/png-22/o2.png" >
+	<bitmap id="O2" filename="../../resources/drawables/png-42/o2.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
@@ -74,16 +74,22 @@
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Temperature" filename="../../resources/drawables/png-22/termometer.png" >
+	<bitmap id="Temperature" filename="../../resources/drawables/png-40/termometer.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
 
-	<bitmap id="Pressure" filename="../../resources/drawables/png-22/barometer.png" >
+	<bitmap id="Pressure" filename="../../resources/drawables/png-40/barometer.png" >
 		<palette disableTransparency="false">
 		     <color>555555</color>
 		</palette>
 	</bitmap>	
+
+	<bitmap id="Weight" filename="../../resources/drawables/png-40/weight.png" >
+		<palette disableTransparency="false">
+		     <color>555555</color>
+		</palette>
+	</bitmap>
 
 </drawables>
