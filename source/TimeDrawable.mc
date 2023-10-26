@@ -28,10 +28,13 @@ class TimeDrawable extends BasicDrawable{
 			var col_pos = time.find(":");
 			var hours_w = dc.getTextWidthInPixels(time.substring(0, col_pos), fontBig);
 			var x_left = center[0]-time_w/2;
-			var interval = hours_w / 10;
+			var interval = hours_w / 8;
+			if (interval < 10){
+				interval = 10;
+			}
 			dc.setClip(x_left, locY, hours_w, height);
 			dc.setColor(backgroundColor(), Graphics.COLOR_TRANSPARENT);
-			dc.setPenWidth(1);
+			dc.setPenWidth(2);
 			for (var offset = hours_w+2*interval; offset > 0; offset -= interval){
 				dc.drawLine(x_left, locY+height-offset, x_left+offset, locY+height);
 			}
