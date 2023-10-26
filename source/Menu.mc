@@ -24,6 +24,7 @@ class GeneralMenu extends WatchUi.Menu2{
 
 		addItem(new TogleItem("DNDisN", Rez.Strings.DNDisN));
 		addItem(new TogleItem("InvertCircle", Rez.Strings.InvertCircle));
+		addItem(new TogleItem("DecorateHours", Rez.Strings.DecorateHours));
 		addItem(new TogleItem("SBat", Rez.Strings.SBat));
 		addItem(new Item("SBt", Rez.Strings.SBt, :subMenuPatternBluetooth));		
 		addItem(new TogleItem("SAl", Rez.Strings.SAl));		

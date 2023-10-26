@@ -149,6 +149,11 @@
 		<settingConfig type="boolean" />
 	</setting>
 
+	<setting propertyKey="@Properties.DecorateHours"
+		title="@Strings.DecorateHours">
+		<settingConfig type="boolean" />
+	</setting>
+
 	<setting propertyKey="@Properties.InvertCircle"
 		title="@Strings.InvertCircle">
 		<settingConfig type="boolean" />

@@ -1,27 +1,29 @@
 <properties>
 
 	<property id="keyOW" type="string"></property>
-	
+
 	<property id="ThemeD" type="number">0</property>
 	<property id="ThemeN" type="number">1</property>
+	<property id="DecorateHours" type="boolean">true</property>
+
 	<property id="DNDisN" type="boolean">true</property>
-	
+
 
 	<property id="InvertCircle" type="boolean">true</property>
-	
+
 	<property id="SBt" type="number">1</property>
 	<property id="SAl" type="boolean">false</property>
 	<property id="ShowDND" type="boolean">false</property>
 	<property id="ShowAmPm" type="boolean">true</property>
-	
+
 	<property id="SBat" type="boolean">true</property>
-	
+
 	<property id="Circle" type="number">1</property>
 	<property id="Widget" type="number">15</property>
 
 	<property id="Top" type="number">12</property>
 	<property id="Bot" type="number">2</property>
-	
+
 	<property id="Dt1" type="number">5</property>
 	<property id="Dt2" type="number">6</property>
 

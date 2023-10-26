@@ -1,30 +1,31 @@
 <strings>
-    <string id="AppName">WWF4</string>
+	<string id="AppName">WWF4</string>
 
-    <string id="keyOW">API ключ</string>
-    <string id="ThemeD">Дневная тема</string>
-   	<string id="ThemeN">Ночная тема</string>
-    
-    <string id="ThemeDark">Темная</string>
-    <string id="ThemeLight">Светлая</string>
-    <string id="ThemeInstinctLike1">Instinct</string>
-    <string id="ThemeInstinctLike2">Instinct серый 1</string>
+	<string id="keyOW">API ключ</string>
+	<string id="ThemeD">Дневная тема</string>
+	<string id="ThemeN">Ночная тема</string>
+
+	<string id="ThemeDark">Темная</string>
+	<string id="ThemeLight">Светлая</string>
+	<string id="ThemeInstinctLike1">Instinct</string>
+	<string id="ThemeInstinctLike2">Instinct серый 1</string>
 	<string id="ThemeInstinctLike3">Instinct серый 2</string>
-    <string id="ThemeInstinctLike4">Instinct светло-серый 1</string>
+	<string id="ThemeInstinctLike4">Instinct светло-серый 1</string>
 	<string id="ThemeInstinctLike5">Instinct светло-серый 2</string>
-    <string id="ThemeBlueYellow">Сине-желтая</string>
+	<string id="ThemeBlueYellow">Сине-желтая</string>
 
-    
-    <string id="DNDisN">Вкл. ночн. тему если DND</string>
-    <string id="InvertCircle">Инвертировать цвета круга</string>
-    <string id="SBat">Шкала батареи</string>
-    <string id="ShowAmPm">Показывать AM/PM</string>
-    
-    <string id="WndU">Единицы скорости ветра</string>
+	<string id="DecorateHours">Decorate hours</string>
+
+	<string id="DNDisN">Вкл. ночн. тему если DND</string>
+	<string id="InvertCircle">Инвертировать цвета круга</string>
+	<string id="SBat">Шкала батареи</string>
+	<string id="ShowAmPm">Показывать AM/PM</string>
+
+	<string id="WndU">Единицы скорости ветра</string>
 
 	<string id="GWLocation">Использовать местоположение Garmin погоды</string>
 
- 	<!--WIND UNITS -->
+	<!--WIND UNITS -->
 	<!--USE VERY!!!! SHOT STRING. its displayed on screen-->
 	<string id="SpeedUnitMSec" scope="foreground">м/с</string>
 	<string id="SpeedUnitKmH" scope="foreground">км/ч</string>
@@ -32,23 +33,23 @@
 	<string id="SpeedUnitFtSec" scope="foreground">фт</string>
 	<string id="SpeedUnitBof" scope="foreground">баллы</string>
 	<string id="SpeedUnitKnots" scope="foreground">узлы</string>
-    
-    <string id="SBt">Показать bluetooth</string>
-    <string id="ShowBluetoothIfConnect">если подключен</string>
-    <string id="ShowBluetoothIfDisconnect">если отключен</string>
-    <string id="ShowBluetoothHide">спрятать</string>
-    
-    
-    <string id="SAl">Показать будильник</string>
-    <string id="ShowDND">Показать DND</string>
- 
-    <string id="Circle" scope="foreground">Данные в круге</string>
- 	<string id="Widget" scope="foreground">Виджет</string>
-    <string id="Top" scope="foreground">Верхнее поле</string>
-    <string id="Bot" scope="foreground">Нижнее поле</string>
-    <string id="Dt1">Левое поле</string>
-    <string id="Dt2">Правое поле</string>
-    
+
+	<string id="SBt">Показать bluetooth</string>
+	<string id="ShowBluetoothIfConnect">если подключен</string>
+	<string id="ShowBluetoothIfDisconnect">если отключен</string>
+	<string id="ShowBluetoothHide">спрятать</string>
+
+
+	<string id="SAl">Показать будильник</string>
+	<string id="ShowDND">Показать DND</string>
+
+	<string id="Circle" scope="foreground">Данные в круге</string>
+	<string id="Widget" scope="foreground">Виджет</string>
+	<string id="Top" scope="foreground">Верхнее поле</string>
+	<string id="Bot" scope="foreground">Нижнее поле</string>
+	<string id="Dt1">Левое поле</string>
+	<string id="Dt2">Правое поле</string>
+
 	<!--SECOND TIME -->
 	<string id="T1TZ" scope="foreground">Сдвиг доп. времени ±UTC (в минутах)</string>
 
@@ -66,12 +67,12 @@
 	<string id="FIELD_TYPE_MOON" scope="foreground">Фаза луны</string>
 	<string id="FIELD_TYPE_STRESS" scope="foreground">Стресс</string>
 	<string id="FIELD_TYPE_BODY_BATTERY" scope="foreground">Body bat</string>
-	
+
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Аккумулятор</string>
 	<string id="FIELD_TYPE_DATE" scope="foreground">Дата</string>
 	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Погодные условия</string>
 	<string id="FIELD_TYPE_CITY" scope="foreground">Город</string>
- 	<string id="FIELD_TYPE_WEATHER" scope="foreground">Погода</string>
+	<string id="FIELD_TYPE_WEATHER" scope="foreground">Погода</string>
 	<string id="FIELD_TYPE_TEMPERATURE" scope="foreground">Температура</string>
 	<string id="FIELD_TYPE_PRESSURE" scope="foreground">Атм. давление</string>
 	<string id="FIELD_TYPE_WEIGHT" scope="foreground">Масса тела</string>
@@ -84,17 +85,17 @@
 	<string id="PrUBar" scope="foreground">мБар</string>
 	<string id="PrUKPa" scope="foreground">кПА</string>
 
-	
-   
+
+
 	<!-- Menu -->
- 	<string id="MenuHeader" scope="foreground">Настройки</string>
+	<string id="MenuHeader" scope="foreground">Настройки</string>
 
 	<!-- Screen messge -->
- 	<string id="NA" scope="foreground">n/a</string>
- 	<string id="NoLocation" scope="foreground">местополож.\nнеопред.</string>
- 	<string id="NoApiKey" scope="foreground">API ключ\nне указ.</string>
- 	<string id="Error" scope="foreground">ошибка</string>
- 	<string id="WaitingData" scope="foreground">ожидание\nданных</string>
- 	<string id="OldData" scope="foreground">данные\nустарели</string>
+	<string id="NA" scope="foreground">n/a</string>
+	<string id="NoLocation" scope="foreground">местополож.\nнеопред.</string>
+	<string id="NoApiKey" scope="foreground">API ключ\nне указ.</string>
+	<string id="Error" scope="foreground">ошибка</string>
+	<string id="WaitingData" scope="foreground">ожидание\nданных</string>
+	<string id="OldData" scope="foreground">данные\nустарели</string>
 
 </strings>
