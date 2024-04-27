@@ -1,10 +1,10 @@
-using Toybox.Lang;
-using Toybox.Graphics;
-using Toybox.Time;
-using Toybox.System;
+import Toybox.Lang;
+import Toybox.Graphics;
+import Toybox.Time;
+import Toybox.System;
 
 class TimeDrawable extends BasicDrawable {
-  function initialize(params as Lang.Dictonary) {
+  function initialize(params) {
     if (params[:autocenter]) {
       params[:locX] = (
         (System.getDeviceSettings().screenWidth - params[:width]) /

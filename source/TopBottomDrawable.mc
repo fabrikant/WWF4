@@ -1,14 +1,14 @@
-using Toybox.WatchUi;
-using Toybox.Graphics;
-using Toybox.System;
-using Toybox.Lang;
-using Toybox.Math;
+import Toybox.WatchUi;
+import Toybox.Graphics;
+import Toybox.System;
+import Toybox.Lang;
+import Toybox.Math;
 
 class TopBottomDrawable extends DataDrawable {
   var isTop;
   var lastWeatherRead, lastValue;
 
-  function initialize(params as Lang.Dictonary) {
+  function initialize(params) {
     DataDrawable.initialize(params);
     isTop = params[:isTop];
     onSettingsChanged();

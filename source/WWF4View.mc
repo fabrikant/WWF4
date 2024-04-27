@@ -1,10 +1,10 @@
-using Toybox.Graphics;
-using Toybox.Lang;
-using Toybox.System;
-using Toybox.WatchUi;
-using Toybox.Activity;
-using Toybox.Math;
-using Toybox.Time;
+import Toybox.Graphics;
+import Toybox.Lang;
+import Toybox.System;
+import Toybox.WatchUi;
+import Toybox.Activity;
+import Toybox.Math;
+import Toybox.Time;
 
 class WWF4View extends WatchUi.WatchFace {
   var circle;
@@ -44,8 +44,10 @@ class WWF4View extends WatchUi.WatchFace {
     var location = Activity.getActivityInfo().currentLocation;
     if (location != null) {
       location = location.toDegrees();
-      Application.Storage.setValue(STORAGE_KEY_LAT, location[0].toFloat());
-      Application.Storage.setValue(STORAGE_KEY_LON, location[1].toFloat());
+      if (location[0] != 0f || location[1] != 0f) {
+        Application.Storage.setValue(STORAGE_KEY_LAT, location[0]);
+        Application.Storage.setValue(STORAGE_KEY_LON, location[1]);
+      }
     } else {
       if (Toybox has :Weather) {
         if (Application.Properties.getValue("GWLocation")) {
@@ -54,14 +56,10 @@ class WWF4View extends WatchUi.WatchFace {
             location = location.observationLocationPosition;
             if (location != null) {
               location = location.toDegrees();
-              Application.Storage.setValue(
-                STORAGE_KEY_LAT,
-                location[0].toFloat()
-              );
-              Application.Storage.setValue(
-                STORAGE_KEY_LON,
-                location[1].toFloat()
-              );
+              if (location[0] != 0f || location[1] != 0f) {
+                Application.Storage.setValue(STORAGE_KEY_LAT, location[0]);
+                Application.Storage.setValue(STORAGE_KEY_LON, location[1]);
+              }
             }
           }
         }

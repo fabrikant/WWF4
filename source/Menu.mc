@@ -1,11 +1,11 @@
-using Toybox.Application;
-using Toybox.WatchUi;
-using Toybox.System;
-using Toybox.Graphics;
-using Toybox.Activity;
-using Toybox.ActivityMonitor;
-using Toybox.SensorHistory;
-using Toybox.Lang;
+import Toybox.Application;
+import Toybox.WatchUi;
+import Toybox.System;
+import Toybox.Graphics;
+import Toybox.Activity;
+import Toybox.ActivityMonitor;
+import Toybox.SensorHistory;
+import Toybox.Lang;
 
 //*****************************************************************************
 class GeneralMenu extends WatchUi.Menu2 {

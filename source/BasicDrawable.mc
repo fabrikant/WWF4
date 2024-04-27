@@ -1,13 +1,13 @@
-using Toybox.WatchUi;
-using Toybox.Graphics;
-using Toybox.System;
-using Toybox.Lang;
-using Toybox.Application;
+import Toybox.WatchUi;
+import Toybox.Graphics;
+import Toybox.System;
+import Toybox.Lang;
+import Toybox.Application;
 
 class BasicDrawable extends WatchUi.Drawable {
   var centerPosition;
 
-  function initialize(params as Lang.Dictonary) {
+  function initialize(params) {
     centerPosition = params[:centerPosition];
     if (centerPosition == null) {
       centerPosition = -1;

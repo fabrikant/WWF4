@@ -1,6 +1,6 @@
-using Toybox.Lang;
-using Toybox.Graphics;
-using Toybox.System;
+import Toybox.Lang;
+import Toybox.Graphics;
+import Toybox.System;
 
 class GroundDrawable extends BasicDrawable {
   var xy, wh as Lang.Number;

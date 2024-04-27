@@ -1,16 +1,16 @@
-using Toybox.Lang;
-using Toybox.Graphics;
-using Toybox.Time;
-using Toybox.System;
-using Toybox.Position;
-using Toybox.Time.Gregorian;
-using Toybox.Application;
+import Toybox.Lang;
+import Toybox.Graphics;
+import Toybox.Time;
+import Toybox.System;
+import Toybox.Position;
+import Toybox.Time.Gregorian;
+import Toybox.Application;
 
 class SunEventsDrawable extends BasicDrawable {
   var image, imageX, sunriseX, sunsetX;
   var sunCalculator;
 
-  function initialize(params as Lang.Dictonary) {
+  function initialize(params) {
     BasicDrawable.initialize(params);
     sunCalculator = new SunCalc();
     onSettingsChanged();

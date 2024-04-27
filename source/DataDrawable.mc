@@ -1,17 +1,17 @@
-using Toybox.Application;
-using Toybox.Graphics;
-using Toybox.Time;
-using Toybox.System;
-using Toybox.ActivityMonitor;
-using Toybox.Activity;
-using Toybox.Lang;
-using Toybox.UserProfile;
+import Toybox.Application;
+import Toybox.Graphics;
+import Toybox.Time;
+import Toybox.System;
+import Toybox.ActivityMonitor;
+import Toybox.Activity;
+import Toybox.Lang;
+import Toybox.UserProfile;
 
 class DataDrawable extends BasicDrawable {
   var image, dataType;
   var additionalValue;
 
-  function initialize(params as Lang.Dictonary) {
+  function initialize(params) {
     BasicDrawable.initialize(params);
     onSettingsChanged();
     Application.getApp().mView.registerNotifyOnSettingsChanged(identifier);

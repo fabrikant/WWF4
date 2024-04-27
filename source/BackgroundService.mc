@@ -59,11 +59,11 @@
 //   ]
 //}
 
-using Toybox.Background;
-using Toybox.Communications;
-using Toybox.System;
-using Toybox.Position;
-using Toybox.Time;
+import Toybox.Background;
+import Toybox.Communications;
+import Toybox.System;
+import Toybox.Position;
+import Toybox.Time;
 
 (:background)
 class BackgroundService extends System.ServiceDelegate {

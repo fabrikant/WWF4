@@ -1,9 +1,9 @@
-using Toybox.Lang;
-using Toybox.Graphics;
-using Toybox.Time;
-using Toybox.System;
-using Toybox.Application;
-using Toybox.Activity;
+import Toybox.Lang;
+import Toybox.Graphics;
+import Toybox.Time;
+import Toybox.System;
+import Toybox.Application;
+import Toybox.Activity;
 
 class CircleDrawable extends BasicDrawable {
   var image, imageEmpty, imageX, imageY, textX, textY;

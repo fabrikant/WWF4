@@ -1,8 +1,8 @@
-using Toybox.Time;
-using Toybox.Time.Gregorian;
-using Toybox.System;
-using Toybox.Graphics;
-using Toybox.Math;
+import Toybox.Time;
+import Toybox.Time.Gregorian;
+import Toybox.System;
+import Toybox.Graphics;
+import Toybox.Math;
 
 module Moon {
   function moonPhase(d) {

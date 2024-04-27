@@ -1,15 +1,15 @@
-using Toybox.Graphics;
-using Toybox.System;
-using Toybox.Time;
-using Toybox.Application;
-using Toybox.Math;
-using Toybox.Lang;
+import Toybox.Graphics;
+import Toybox.System;
+import Toybox.Time;
+import Toybox.Application;
+import Toybox.Math;
+import Toybox.Lang;
 
 class WidgetDrawable extends TopBottomDrawable {
   var lastWeatherRead;
   var buffBitmap;
 
-  function initialize(params as Lang.Dictonary) {
+  function initialize(params) {
     TopBottomDrawable.initialize(params);
     onSettingsChanged();
   }

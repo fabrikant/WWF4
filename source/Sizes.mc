@@ -1,7 +1,7 @@
-using Toybox.Graphics;
-using Toybox.System;
-using Toybox.Lang;
-using Toybox.Math;
+import Toybox.Graphics;
+import Toybox.System;
+import Toybox.Lang;
+import Toybox.Math;
 
 module Sizes {
   var screenH, screenW;

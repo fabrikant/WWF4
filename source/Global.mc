@@ -1,9 +1,9 @@
-using Toybox.Graphics;
-using Toybox.WatchUi;
-using Toybox.System;
-using Toybox.Application;
-using Toybox.Time;
-using Toybox.Lang;
+import Toybox.Graphics;
+import Toybox.WatchUi;
+import Toybox.System;
+import Toybox.Application;
+import Toybox.Time;
+import Toybox.Lang;
 
 var fontBig as WatchUi.FontResource;
 var fontMed as WatchUi.FontResource;

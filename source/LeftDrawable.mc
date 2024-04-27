@@ -1,8 +1,8 @@
-using Toybox.WatchUi;
-using Toybox.Graphics;
-using Toybox.System;
-using Toybox.Application;
-using Toybox.Lang;
+import Toybox.WatchUi;
+import Toybox.Graphics;
+import Toybox.System;
+import Toybox.Application;
+import Toybox.Lang;
 
 class LeftDrawable extends BasicDrawable {
   var drawScale, showAmPm;

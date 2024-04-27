@@ -1,8 +1,8 @@
-using Toybox.Application;
-using Toybox.Lang;
-using Toybox.WatchUi;
-using Toybox.Time;
-using Toybox.Background;
+import Toybox.Application;
+import Toybox.Lang;
+import Toybox.WatchUi;
+import Toybox.Time;
+import Toybox.Background;
 
 (:background)
 class WWF4App extends Application.AppBase {
@@ -85,9 +85,31 @@ class WWF4App extends Application.AppBase {
     }
     var kewOw = Application.Properties.getValue("keyOW");
     if (kewOw.equals("")) {
+      if (Toybox has :Complications) {
+        if (Toybox.Complications has :getComplications) {
+          //try to get owm api key from RoseOfWind
+          var iter = Toybox.Complications.getComplications();
+          var compl = iter.next();
+          while (compl != null) {
+            if (compl.shortLabel != null) {
+              if (compl.shortLabel.equals("owm_key")) {
+                if (compl.value != null) {
+                  if (!compl.value.equals("")) {
+                    kewOw = compl.value;
+                    Application.Properties.setValue("keyOW", kewOw);
+                    break;
+                  }
+                }
+              }
+            }
+            compl = iter.next();
+          }
+        }
+      }
+    }
+    if (kewOw.equals("")) {
       return;
     }
-
     var registeredTime = Background.getTemporalEventRegisteredTime();
     if (registeredTime != null) {
       //////////////////////////////////////////////////////////

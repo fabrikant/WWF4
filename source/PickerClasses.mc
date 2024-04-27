@@ -1,6 +1,6 @@
-using Toybox.WatchUi;
-using Toybox.Graphics;
-using Toybox.System;
+import Toybox.WatchUi;
+import Toybox.Graphics;
+import Toybox.System;
 
 class StringPicker extends WatchUi.Picker {
   hidden var mCharacterSet;

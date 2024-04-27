@@ -1,10 +1,10 @@
-using Toybox.WatchUi;
-using Toybox.Graphics;
-using Toybox.System;
-using Toybox.Application;
-using Toybox.Time;
-using Toybox.Time.Gregorian;
-using Toybox.Lang;
+import Toybox.WatchUi;
+import Toybox.Graphics;
+import Toybox.System;
+import Toybox.Application;
+import Toybox.Time;
+import Toybox.Time.Gregorian;
+import Toybox.Lang;
 
 class DecorationDrawable extends BasicDrawable {
   var decorations;

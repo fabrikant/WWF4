@@ -26,8 +26,8 @@ USA
 // The complete project is located on Github at: https://github.com/haraldh/SunCalc
 //
 
-using Toybox.Math as Math;
-using Toybox.Time as Time;
+import Toybox.Math;
+import Toybox.Time;
 
 enum {
   NIGHT_END,
