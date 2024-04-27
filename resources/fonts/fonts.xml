@@ -1,8 +1,5 @@
 <fonts>
-	<font id="big" scope="foreground" antialias="true" filter="0123456789:"
-		filename="bebas-number/bebas-number-bold-90.fnt" />
-	<font id="medium" scope="foreground" antialias="false" filter="-10123456789:k°,.|n/a%"
-		filename="roboto/roboto-25.fnt" />
-	<font id="small" scope="foreground" antialias="false"
-		filename="roboto/roboto-20.fnt" />
+	<font id="big" scope="foreground" antialias="true" filter="0123456789:" filename="bebas-number/bebas-number-bold-90.fnt" />
+	<font id="medium" scope="foreground" antialias="false" filter="-10123456789:k°,.|n/a%" filename="roboto/roboto-25.fnt" />
+	<font id="small" scope="foreground" antialias="false" filename="roboto/roboto-20.fnt" />
 </fonts>

@@ -1,30 +1,30 @@
 <strings>
-    <string id="AppName">WWF4</string>
+	<string id="AppName">WWF4</string>
 
-    <string id="keyOW">API key</string>
-    <string id="ThemeD">Day theme</string>
-   	<string id="ThemeN">Night theme</string>
-    
-    <string id="ThemeDark">Dark</string>
-    <string id="ThemeLight">Light</string>
-    <string id="ThemeInstinctLike1">Instinct</string>
-    <string id="ThemeInstinctLike2">Instinct gray 1</string>
+	<string id="keyOW">API key</string>
+	<string id="ThemeD">Day theme</string>
+	<string id="ThemeN">Night theme</string>
+
+	<string id="ThemeDark">Dark</string>
+	<string id="ThemeLight">Light</string>
+	<string id="ThemeInstinctLike1">Instinct</string>
+	<string id="ThemeInstinctLike2">Instinct gray 1</string>
 	<string id="ThemeInstinctLike3">Instinct gray 2</string>
-    <string id="ThemeInstinctLike4">Instinct light gray 1</string>
+	<string id="ThemeInstinctLike4">Instinct light gray 1</string>
 	<string id="ThemeInstinctLike5">Instinct light gray 2</string>
-    <string id="ThemeBlueYellow">Blue and yellow</string>
+	<string id="ThemeBlueYellow">Blue and yellow</string>
 
 	<string id="DecorateHours">Decorate hours</string>
-    
-    <string id="DNDisN">Set night theme if DND enable</string>
-    <string id="InvertCircle">invert circle colors</string>
-    <string id="SBat">Show battery scale</string>
-    <string id="ShowAmPm">Show AM/PM</string>
-    
-    <string id="WndU">Wind speed unit</string>
+
+	<string id="DNDisN">Set night theme if DND enable</string>
+	<string id="InvertCircle">invert circle colors</string>
+	<string id="SBat">Show battery scale</string>
+	<string id="ShowAmPm">Show AM/PM</string>
+
+	<string id="WndU">Wind speed unit</string>
 	<string id="GWLocation">Use location of Garmin weather</string>
 
- 	<!--WIND UNITS -->
+	<!--WIND UNITS -->
 	<!--USE VERY!!!! SHOT STRING. its displayed on screen-->
 	<string id="SpeedUnitMSec" scope="foreground">m/s</string>
 	<string id="SpeedUnitKmH" scope="foreground">km/h</string>
@@ -32,25 +32,25 @@
 	<string id="SpeedUnitFtSec" scope="foreground">fps</string>
 	<string id="SpeedUnitBof" scope="foreground">bouf</string>
 	<string id="SpeedUnitKnots" scope="foreground">knots</string>
-    
-    <string id="SBt">Show bluetooth</string>
-    <string id="ShowBluetoothIfConnect">if connected</string>
-    <string id="ShowBluetoothIfDisconnect">if not connected</string>
-    <string id="ShowBluetoothHide">hide</string>
-    
-    
-    <string id="SAl">Show alarm</string>
-    <string id="ShowDND">Show DND</string>
- 
-    <string id="Circle" scope="foreground">Circle data</string>
-	<string id="Widget" scope="foreground">Widget</string>
-    <string id="Top" scope="foreground">Header data</string>
-    <string id="Bot" scope="foreground">Footer data</string>
-    <string id="Dt1">Left data</string>
-    <string id="Dt2">Right data</string>
-    
 
-     
+	<string id="SBt">Show bluetooth</string>
+	<string id="ShowBluetoothIfConnect">if connected</string>
+	<string id="ShowBluetoothIfDisconnect">if not connected</string>
+	<string id="ShowBluetoothHide">hide</string>
+
+
+	<string id="SAl">Show alarm</string>
+	<string id="ShowDND">Show DND</string>
+
+	<string id="Circle" scope="foreground">Circle data</string>
+	<string id="Widget" scope="foreground">Widget</string>
+	<string id="Top" scope="foreground">Header data</string>
+	<string id="Bot" scope="foreground">Footer data</string>
+	<string id="Dt1">Left data</string>
+	<string id="Dt2">Right data</string>
+
+
+
 	<!--SECOND TIME -->
 	<string id="T1TZ" scope="foreground">Time zone ±UTC (minutes)</string>
 
@@ -68,13 +68,13 @@
 	<string id="FIELD_TYPE_MOON" scope="foreground">Moon phase</string>
 	<string id="FIELD_TYPE_STRESS" scope="foreground">Stress</string>
 	<string id="FIELD_TYPE_BODY_BATTERY" scope="foreground">Body bat</string>
-	
+
 	<string id="FIELD_TYPE_BATTERY" scope="foreground">Battery</string>
 	<string id="FIELD_TYPE_DATE" scope="foreground">Date</string>
 	<string id="FIELD_TYPE_WEATHER_CONDITION" scope="foreground">Weather condition</string>
 	<string id="FIELD_TYPE_CITY" scope="foreground">City</string>
 	<string id="FIELD_TYPE_WEATHER" scope="foreground">Weather</string>
-    
+
 	<string id="FIELD_TYPE_TEMPERATURE" scope="foreground">Temperature</string>
 	<string id="FIELD_TYPE_PRESSURE" scope="foreground">Air pressure</string>
 	<string id="FIELD_TYPE_WEIGHT" scope="foreground">Weight</string>
@@ -87,16 +87,16 @@
 	<string id="PrUBar" scope="foreground">milibar</string>
 	<string id="PrUKPa" scope="foreground">kPa</string>
 
-	
+
 	<!-- Menu -->
- 	<string id="MenuHeader" scope="foreground">Settings</string>
+	<string id="MenuHeader" scope="foreground">Settings</string>
 
 	<!-- Screen messge -->
- 	<string id="NA" scope="foreground">n/a</string>
- 	<string id="NoLocation" scope="foreground">location\nundefined</string>
- 	<string id="NoApiKey" scope="foreground">API key\nnot set</string>
- 	<string id="Error" scope="foreground">error</string>
- 	<string id="WaitingData" scope="foreground">waiting\nfor data</string>
- 	<string id="OldData" scope="foreground">data\ntoo old</string>
+	<string id="NA" scope="foreground">n/a</string>
+	<string id="NoLocation" scope="foreground">location\nundefined</string>
+	<string id="NoApiKey" scope="foreground">API key\nnot set</string>
+	<string id="Error" scope="foreground">error</string>
+	<string id="WaitingData" scope="foreground">waiting\nfor data</string>
+	<string id="OldData" scope="foreground">data\ntoo old</string>
 
 </strings>

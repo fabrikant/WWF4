@@ -1,224 +1,216 @@
 <settings>
-  	
-  	<setting propertyKey="@Properties.ThemeD" title="@Strings.ThemeD">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.ThemeDark</listEntry>
-            <listEntry value="1">@Strings.ThemeLight</listEntry>
-            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
-            <listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
+
+	<setting propertyKey="@Properties.ThemeD" title="@Strings.ThemeD">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.ThemeDark</listEntry>
+			<listEntry value="1">@Strings.ThemeLight</listEntry>
+			<listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
+			<listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
 			<listEntry value="4">@Strings.ThemeInstinctLike3</listEntry>
-            <listEntry value="5">@Strings.ThemeInstinctLike4</listEntry>
+			<listEntry value="5">@Strings.ThemeInstinctLike4</listEntry>
 			<listEntry value="6">@Strings.ThemeInstinctLike5</listEntry>
-            <listEntry value="7">@Strings.ThemeBlueYellow</listEntry>
-        </settingConfig>
-	</setting>
-  	
-  	<setting propertyKey="@Properties.ThemeN" title="@Strings.ThemeN">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.ThemeDark</listEntry>
-            <listEntry value="1">@Strings.ThemeLight</listEntry>
-            <listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
-            <listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
-			<listEntry value="4">@Strings.ThemeInstinctLike3</listEntry>
-            <listEntry value="5">@Strings.ThemeInstinctLike4</listEntry>
-			<listEntry value="6">@Strings.ThemeInstinctLike5</listEntry>
-            <listEntry value="7">@Strings.ThemeBlueYellow</listEntry>
-        </settingConfig>
+			<listEntry value="7">@Strings.ThemeBlueYellow</listEntry>
+		</settingConfig>
 	</setting>
 
-	
+	<setting propertyKey="@Properties.ThemeN" title="@Strings.ThemeN">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.ThemeDark</listEntry>
+			<listEntry value="1">@Strings.ThemeLight</listEntry>
+			<listEntry value="2">@Strings.ThemeInstinctLike1</listEntry>
+			<listEntry value="3">@Strings.ThemeInstinctLike2</listEntry>
+			<listEntry value="4">@Strings.ThemeInstinctLike3</listEntry>
+			<listEntry value="5">@Strings.ThemeInstinctLike4</listEntry>
+			<listEntry value="6">@Strings.ThemeInstinctLike5</listEntry>
+			<listEntry value="7">@Strings.ThemeBlueYellow</listEntry>
+		</settingConfig>
+	</setting>
+
+
 	<setting propertyKey="@Properties.Circle" title="@Strings.Circle">
 		<settingConfig type="list">
-            <listEntry value="1">@Strings.FIELD_TYPE_HR</listEntry>
-            <listEntry value="2">@Strings.FIELD_TYPE_SECONDS</listEntry>
-       	</settingConfig>	
+			<listEntry value="1">@Strings.FIELD_TYPE_HR</listEntry>
+			<listEntry value="2">@Strings.FIELD_TYPE_SECONDS</listEntry>
+		</settingConfig>
 	</setting>
-	
 
-  	<setting propertyKey="@Properties.Widget" title="@Strings.Widget">
+
+	<setting propertyKey="@Properties.Widget" title="@Strings.Widget">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
-            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
-            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
-            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
-            <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
-            <listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
-            <listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
-            <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
-            <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
-           	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
-           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
-           	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
-           	<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
-           	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
-           	<listEntry value="15">@Strings.FIELD_TYPE_WEATHER</listEntry>
+			<listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+			<listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+			<listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+			<listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+			<listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
+			<listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+			<listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
+			<listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
+			<listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
+			<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+			<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+			<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
+			<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
+			<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
+			<listEntry value="15">@Strings.FIELD_TYPE_WEATHER</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
 			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
-       	</settingConfig>	
+		</settingConfig>
 	</setting>
 
 	<setting propertyKey="@Properties.Top" title="@Strings.Top">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
-            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
-            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
-            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
-            <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
-            <listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
-            <listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
-            <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
-            <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
-           	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
-           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
-           	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
-           	<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
-           	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
+			<listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+			<listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+			<listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+			<listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+			<listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
+			<listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+			<listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
+			<listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
+			<listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
+			<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+			<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+			<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
+			<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
+			<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
 			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
-       	</settingConfig>	
+		</settingConfig>
 	</setting>
 
- 	<setting propertyKey="@Properties.Bot" title="@Strings.Bot">
+	<setting propertyKey="@Properties.Bot" title="@Strings.Bot">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-            <listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
-            <listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
-            <listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
-            <listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
-            <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
-            <listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
-            <listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
-            <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
-            <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
-           	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
-           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
-          	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
-           	<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
-           	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
+			<listEntry value="1">@Strings.FIELD_TYPE_BATTERY</listEntry>
+			<listEntry value="2">@Strings.FIELD_TYPE_DATE</listEntry>
+			<listEntry value="3">@Strings.FIELD_TYPE_WEATHER_CONDITION</listEntry>
+			<listEntry value="4">@Strings.FIELD_TYPE_CITY</listEntry>
+			<listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
+			<listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+			<listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
+			<listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
+			<listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
+			<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+			<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+			<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
+			<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
+			<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
 			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
-      	</settingConfig>	
+		</settingConfig>
 	</setting>
 
 
- 	<setting propertyKey="@Properties.Dt1" title="@Strings.Dt1">
+	<setting propertyKey="@Properties.Dt1" title="@Strings.Dt1">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-            <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
-            <listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
-            <listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
-            <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
-            <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
-           	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
-           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
-          	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
-           	<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
-           	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
+			<listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
+			<listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+			<listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
+			<listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
+			<listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
+			<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+			<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+			<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
+			<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
+			<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
 			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
-        </settingConfig>	
+		</settingConfig>
 	</setting>
 
- 	<setting propertyKey="@Properties.Dt2" title="@Strings.Dt2">
+	<setting propertyKey="@Properties.Dt2" title="@Strings.Dt2">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.FIELD_TYPE_EMPTY</listEntry>
-            <listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
-            <listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
-            <listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
-            <listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
-            <listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
-           	<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
-           	<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
-          	<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
-           	<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
-           	<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
+			<listEntry value="5">@Strings.FIELD_TYPE_CALORIES</listEntry>
+			<listEntry value="6">@Strings.FIELD_TYPE_DISTANCE</listEntry>
+			<listEntry value="7">@Strings.FIELD_TYPE_STEPS</listEntry>
+			<listEntry value="8">@Strings.FIELD_TYPE_FLOOR</listEntry>
+			<listEntry value="9">@Strings.FIELD_TYPE_O2</listEntry>
+			<listEntry value="10">@Strings.FIELD_TYPE_ELEVATION</listEntry>
+			<listEntry value="11">@Strings.FIELD_TYPE_TIME1</listEntry>
+			<listEntry value="12">@Strings.FIELD_TYPE_MOON</listEntry>
+			<listEntry value="13">@Strings.FIELD_TYPE_STRESS</listEntry>
+			<listEntry value="14">@Strings.FIELD_TYPE_BODY_BATTERY</listEntry>
 			<listEntry value="16">@Strings.FIELD_TYPE_TEMPERATURE</listEntry>
 			<listEntry value="17">@Strings.FIELD_TYPE_PRESSURE</listEntry>
 			<listEntry value="18">@Strings.FIELD_TYPE_WEIGHT</listEntry>
-        </settingConfig>	
+		</settingConfig>
 	</setting>
-	
-	<setting propertyKey="@Properties.DNDisN"
-		title="@Strings.DNDisN">
+
+	<setting propertyKey="@Properties.DNDisN" title="@Strings.DNDisN">
 		<settingConfig type="boolean" />
 	</setting>
 
-	<setting propertyKey="@Properties.DecorateHours"
-		title="@Strings.DecorateHours">
+	<setting propertyKey="@Properties.DecorateHours" title="@Strings.DecorateHours">
 		<settingConfig type="boolean" />
 	</setting>
 
-	<setting propertyKey="@Properties.InvertCircle"
-		title="@Strings.InvertCircle">
-		<settingConfig type="boolean" />
-	</setting>
-	
-	<setting propertyKey="@Properties.SBat"
-		title="@Strings.SBat">
+	<setting propertyKey="@Properties.InvertCircle" title="@Strings.InvertCircle">
 		<settingConfig type="boolean" />
 	</setting>
 
- 	<setting propertyKey="@Properties.SBt" title="@Strings.SBt">
+	<setting propertyKey="@Properties.SBat" title="@Strings.SBat">
+		<settingConfig type="boolean" />
+	</setting>
+
+	<setting propertyKey="@Properties.SBt" title="@Strings.SBt">
 		<settingConfig type="list">
-            <listEntry value="0">@Strings.ShowBluetoothIfConnect</listEntry>
-            <listEntry value="1">@Strings.ShowBluetoothIfDisconnect</listEntry>
-            <listEntry value="2">@Strings.ShowBluetoothHide</listEntry>
-        </settingConfig>	
+			<listEntry value="0">@Strings.ShowBluetoothIfConnect</listEntry>
+			<listEntry value="1">@Strings.ShowBluetoothIfDisconnect</listEntry>
+			<listEntry value="2">@Strings.ShowBluetoothHide</listEntry>
+		</settingConfig>
 	</setting>
 
-	<setting propertyKey="@Properties.SAl"
-		title="@Strings.SAl">
-		<settingConfig type="boolean" />
-	</setting>
-	
-	<setting propertyKey="@Properties.ShowDND"
-		title="@Strings.ShowDND">
-		<settingConfig type="boolean" />
-	</setting>
-	
-	<setting propertyKey="@Properties.ShowAmPm"
-		title="@Strings.ShowAmPm">
+	<setting propertyKey="@Properties.SAl" title="@Strings.SAl">
 		<settingConfig type="boolean" />
 	</setting>
 
-	<setting propertyKey="@Properties.GWLocation"
-		title="@Strings.GWLocation">
+	<setting propertyKey="@Properties.ShowDND" title="@Strings.ShowDND">
 		<settingConfig type="boolean" />
 	</setting>
 
- 	<setting propertyKey="@Properties.T1TZ" title="@Strings.T1TZ">
+	<setting propertyKey="@Properties.ShowAmPm" title="@Strings.ShowAmPm">
+		<settingConfig type="boolean" />
+	</setting>
+
+	<setting propertyKey="@Properties.GWLocation" title="@Strings.GWLocation">
+		<settingConfig type="boolean" />
+	</setting>
+
+	<setting propertyKey="@Properties.T1TZ" title="@Strings.T1TZ">
 		<settingConfig type="numeric" min="-720" max="840"/>
 	</setting>
 
-  	<setting propertyKey="@Properties.WndU" title="@Strings.WndU">
+	<setting propertyKey="@Properties.WndU" title="@Strings.WndU">
 		<settingConfig type="list">
-            <listEntry value="0">@Strings.SpeedUnitMSec</listEntry>
-            <listEntry value="1">@Strings.SpeedUnitKmH</listEntry>
-            <listEntry value="2">@Strings.SpeedUnitMileH</listEntry>
-            <listEntry value="3">@Strings.SpeedUnitFtSec</listEntry>
-            <listEntry value="4">@Strings.SpeedUnitBof</listEntry>
-            <listEntry value="5">@Strings.SpeedUnitKnots</listEntry>
-        </settingConfig>	
-     </setting>
+			<listEntry value="0">@Strings.SpeedUnitMSec</listEntry>
+			<listEntry value="1">@Strings.SpeedUnitKmH</listEntry>
+			<listEntry value="2">@Strings.SpeedUnitMileH</listEntry>
+			<listEntry value="3">@Strings.SpeedUnitFtSec</listEntry>
+			<listEntry value="4">@Strings.SpeedUnitBof</listEntry>
+			<listEntry value="5">@Strings.SpeedUnitKnots</listEntry>
+		</settingConfig>
+	</setting>
 
-  	<setting propertyKey="@Properties.PrU" title="@Strings.PrU">
+	<setting propertyKey="@Properties.PrU" title="@Strings.PrU">
 		<settingConfig type="list">
-            <listEntry value="0">@Strings.PrUMmHg</listEntry>
-            <listEntry value="1">@Strings.PrUPsi</listEntry>
-            <listEntry value="2">@Strings.PrUInchHg</listEntry>
-            <listEntry value="3">@Strings.PrUBar</listEntry>
-            <listEntry value="4">@Strings.PrUKPa</listEntry>
-        </settingConfig>	
-     </setting>
+			<listEntry value="0">@Strings.PrUMmHg</listEntry>
+			<listEntry value="1">@Strings.PrUPsi</listEntry>
+			<listEntry value="2">@Strings.PrUInchHg</listEntry>
+			<listEntry value="3">@Strings.PrUBar</listEntry>
+			<listEntry value="4">@Strings.PrUKPa</listEntry>
+		</settingConfig>
+	</setting>
 
 	<setting propertyKey="@Properties.keyOW" title="@Strings.keyOW">
 		<settingConfig type="alphaNumeric" />
 	</setting>
- 
+
 </settings>
